@@ -1,63 +1,81 @@
 import SNavbar from "./style";
 
 export default function Navbar() {
+  const clubMenus = [
+    "Origine de la Meute",
+    "Chefs de Meute",
+    "Bergers des louveteaux",
+    "Arbitres",
+  ];
+  const lbeMenus = ["Les Louves", "Calendrier", "Classement"];
+  const cfMenus = [
+    "Philosophie",
+    "Effectif",
+    "Vie Quotidienne",
+    "Formation",
+    "Candidature",
+  ];
+  const amateurMenus = [
+    "N1F",
+    "SF3",
+    "SG",
+    "U18F",
+    "U18G",
+    "U17F",
+    "U15F1",
+    "U15F2",
+    "U13F1",
+    "U13F2",
+    "U13G",
+    "U11F",
+    "U11G",
+    "Mini",
+    "Baby",
+    "Loisir",
+  ];
   return (
     <SNavbar>
-      <div>
-        <ul>
+      <div className="upperNav">
+        <ul className="visible">
           <li>Actus</li>
-          <li>Club</li>
-          <ul>
-            <li>Origine de la Meute</li>
-            <li>Chefs de Meute</li>
-            <li>Bergers des louveteaux</li>
-            <li>Arbitres</li>
-          </ul>
+          <li>
+            Club
+            <ul className="submenu">
+              {clubMenus.map((clubMenu) => (
+                <li>{clubMenu}</li>
+              ))}
+            </ul>
+          </li>
           <li>
             LBE
-            <ul>
-              <li>Les Louves</li>
-              <li>Calendrier</li>
-              <li>Classement</li>
+            <ul className="submenu">
+              {lbeMenus.map((lbeMenu) => (
+                <li>{lbeMenu}</li>
+              ))}
             </ul>
           </li>
           <li>
             CF
-            <ul>
-              <li>Philosophie</li>
-              <li>Effectif</li>
-              <li>Vie Quotidienne</li>
-              <li>Formation</li>
-              <li>Candidature</li>
+            <ul className="submenu">
+              {cfMenus.map((cfMenu) => (
+                <li>{cfMenu}</li>
+              ))}
             </ul>
           </li>
           <li>
             Amateur
-            <ul>
-              <li>N1F</li>
-              <li>SF3</li>
-              <li>SG</li>
-              <li>U18F</li>
-              <li>U18G</li>
-              <li>U17F</li>
-              <li>U15F1</li>
-              <li>U15F2</li>
-              <li>U13F1</li>
-              <li>U13F2</li>
-              <li>U13G</li>
-              <li>U11F</li>
-              <li>U11G</li>
-              <li>Mini</li>
-              <li>Baby</li>
-              <li>Loisir</li>
+            <ul className="submenu">
+              {amateurMenus.map((amateurMenu) => (
+                <li>{amateurMenu}</li>
+              ))}
             </ul>
           </li>
           <li>Boutique</li>
           <li>Billetterie</li>
         </ul>
       </div>
-      <div>
-        <ul>
+      <div className="underNav">
+        <ul className="visible">
           <li>Ambition 2024</li>
           <li>Partenaires</li>
         </ul>
