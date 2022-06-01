@@ -3,6 +3,8 @@ import styled from "styled-components";
 export default styled.header`
   display: flex;
   background-color: var(--blue);
+  background-image: url("@assets/Pictures/test.jpg");
+  height: 30vh;
 
   div {
     display: flex;
@@ -10,7 +12,7 @@ export default styled.header`
     align-items: center;
   }
   img {
-    width: 100%;
+    width: 75%;
   }
   .logo {
     position: absolute;
