@@ -33,19 +33,14 @@ export default styled.div`
     align-items: center;
     color: var(--white);
   }
-  /* @media screen and (max-width: 700px) {
-    .name {
-      width: 16.12vw;
-      top: 15.6vw;
-      left: 16vw;
-    }
+  @media screen and (max-width: 700px) {
+    width: 39.6vw;
+    margin-bottom: 7.2vw;
     img {
-      width: 41.6vw;
+      width: 28.8vw;
     }
-    .picto {
-      width: 10.4vw;
-      bottom: 7.8vw;
-      left: 35.1vw;
+    .detail {
+      width: 8.64vw;
     }
-  } */
+  }
 `;
