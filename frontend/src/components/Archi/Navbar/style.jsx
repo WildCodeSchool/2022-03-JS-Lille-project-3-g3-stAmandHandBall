@@ -6,15 +6,11 @@ export default styled.nav`
   font-size: 1.5rem;
 
   .upperNav {
-    /* border: 1px solid red;
-    box-sizing: border-box; */
     height: 10vh;
     background-color: var(--blue);
     color: var(--white);
   }
   .underNav {
-    /* border: 1px solid yellow;
-    box-sizing: border-box; */
     height: 5vh;
     background-color: var(--white);
     color: var(--blue);
@@ -23,7 +19,7 @@ export default styled.nav`
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   li {
     margin: 0.8rem;
@@ -40,6 +36,15 @@ export default styled.nav`
   li:hover {
     .submenu {
       visibility: visible;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .visible {
+      display: none;
+    }
+    .underNav {
+      background-color: var(--yellow);
+      height: 2vh;
     }
   }
 `;
