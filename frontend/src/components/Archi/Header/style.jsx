@@ -17,7 +17,6 @@ export default styled.header`
     left: 0;
     position: absolute;
     position: fixed;
-    z-index: 1;
     width: 10%;
   }
   .logoMobile {
@@ -35,7 +34,6 @@ export default styled.header`
     .logoMobile {
       display: block;
       position: absolute;
-      z-index: 1;
       width: 20%;
     }
     .logoDesktop {
