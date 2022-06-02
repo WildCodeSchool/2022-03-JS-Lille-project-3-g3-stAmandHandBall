@@ -2,38 +2,47 @@ import styled from "styled-components";
 import Frontimg from "@assets/Pictures/test.jpg";
 
 export default styled.header`
-  height: 60vh;
+  height: 600vh;
 
-  .Navbar {
-    height: 15vh;
-  }
   .baseHeader {
     background-image: url(${Frontimg});
     background-repeat: no-repeat;
-    background-position: 100% 30%;
+    background-position: 50% 15%;
     background-size: cover;
+    padding-top: 15vh;
     width: 100vw;
     height: 45vh;
   }
-  .logo {
+  .logoDesktop {
+    left: 0;
     position: absolute;
+    position: fixed;
     z-index: 1;
     width: 10%;
+  }
+  .logoMobile {
+    display: none;
   }
   @media screen and (max-width: 700px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 55vh;
+    height: 30vh;
 
     .visible {
       display: none;
     }
-    .logo {
+    .logoMobile {
+      display: block;
+      position: absolute;
+      z-index: 1;
       width: 20%;
     }
+    .logoDesktop {
+      display: none;
+    }
     .baseHeader {
-      background-position: 50% 30%;
+      background-position: 50% -100%;
     }
   }
 `;

@@ -4,6 +4,7 @@ export default styled.nav`
   width: 100vw;
   font-weight: bold;
   font-size: 1.5rem;
+  position: fixed;
 
   .upperNav {
     height: 10vh;
