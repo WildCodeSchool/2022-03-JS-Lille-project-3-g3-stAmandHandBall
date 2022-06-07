@@ -25,10 +25,10 @@ export default styled.section`
   @media screen and (max-width: 640px) {
     height: 13vh;
     .buttonPosition {
-      height: 8vh;
+      height: 9vh;
       button {
         margin-top: 0.5rem;
-        font-size: 4vmin;
+        font-size: 2vmax;
       }
     }
   }
