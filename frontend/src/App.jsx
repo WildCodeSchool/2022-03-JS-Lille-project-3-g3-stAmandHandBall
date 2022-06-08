@@ -7,6 +7,7 @@ import Rookies from "@pages/Rookies";
 import Shop from "@pages/Shop";
 import PlayerList from "@pages/PlayerList";
 import StaffList from "@pages/StaffList";
+import Contact from "@pages/Contact";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/boutique" element={<Shop />} />
           <Route path="/equipe" element={<PlayerList />} />
           <Route path="/staff" element={<StaffList />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
