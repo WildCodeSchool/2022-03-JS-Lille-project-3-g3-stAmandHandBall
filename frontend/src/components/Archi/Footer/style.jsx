@@ -5,7 +5,7 @@ export default styled.footer`
   height: 50vh;
   width: 100vw;
   position: absolute;
-  bottom: 0;
+  //bottom: 0;
   overflow: hidden;
   display: flex;
   .imgPosition {
