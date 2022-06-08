@@ -7,7 +7,6 @@ export default function CardEvent({ id, date, text }) {
       <div className="timeline">
         <div className={id % 2 === 0 ? "container right" : "container left"}>
           <div className="date">{date}</div>
-          <i className="icon fa fa-home" />
           <div className="content">
             <h2>TITRE ???</h2>
             <p>{text}</p>
