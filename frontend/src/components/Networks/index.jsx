@@ -11,6 +11,7 @@ export default function Networks() {
   return (
     <SNetworks>
       <div className="imgPosition">
+        <img src={imgNetworks} alt="imgNetworks" />
         <div className="cube">
           <div className="title"> rejoignez la meute</div>
           <div className="logo">
@@ -26,7 +27,6 @@ export default function Networks() {
             <p>#sahpartaucombat</p>
           </div>
         </div>
-        <img src={imgNetworks} alt="imgNetworks" />
       </div>
     </SNetworks>
   );

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export default styled.section`
-  //background-color: red;
   width: 100vw;
   height: 90vh;
   .imgPosition {
@@ -20,7 +19,6 @@ export default styled.section`
       background-color: var(--yellow);
       left: 10%;
       top: 10%;
-      z-index: 1;
       .title {
         height: 5vh;
         text-transform: uppercase;
