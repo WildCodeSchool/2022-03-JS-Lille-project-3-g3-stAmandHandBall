@@ -1,4 +1,5 @@
 import Ambition from "@components/Ambition";
+import Partner from "@components/Partner";
 import SHome from "./style";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <SHome>
       <p>Home</p>
       <Ambition />
+      <Partner />
     </SHome>
   );
 }
