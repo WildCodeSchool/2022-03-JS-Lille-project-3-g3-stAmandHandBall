@@ -38,7 +38,7 @@ export default function Calendar() {
       place: "domicile",
       club1: "SAH-PH",
       club2: "TOULON",
-      result: "28 - 45",
+      result: "10 - 12",
     },
   ];
 

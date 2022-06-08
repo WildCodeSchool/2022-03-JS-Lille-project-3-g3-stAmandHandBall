@@ -80,8 +80,6 @@ export default styled.div`
     background-color: var(--yellow);
     margin: 1vw;
     color: var(--white);
-    /* text-shadow: 2px 2px 5px black;
-    box-shadow: 2px 2px 5px black; */
     height: 2em;
     display: inline-block;
     h3 {
