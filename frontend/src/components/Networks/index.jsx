@@ -1,5 +1,5 @@
 import SNetworks from "./style";
-import imgNetworks from "../../assets/pictures/imgNetworks.jpg";
+import imgNetworks from "../../assets/imgNetworks.jpg";
 import imgfacebook from "../../assets/Facebook.png";
 import imginstagram from "../../assets/Instagram.png";
 import imglinkedin from "../../assets/LinkedIn.png";
