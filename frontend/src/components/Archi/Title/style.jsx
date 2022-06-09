@@ -10,10 +10,8 @@ export default styled.div`
   display: inline-block;
   h1 {
     font-size: 2em;
-    border: 1px solid black;
     margin-left: 10px;
     margin-right: 10px;
-
     position: relative;
     bottom: 1vw;
   }
