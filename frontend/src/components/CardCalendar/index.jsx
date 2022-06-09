@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import SCardCalendar from "@components/CardCalendar/style";
 import Title from "@components/Archi/Title";
-import domicile from "../../assets/Pictures/cards/calendar/picto-maison.png";
-import exterieur from "../../assets/Pictures/cards/calendar/picto-avion.png";
+import domicile from "@assets/Pictures/cards/calendar/picto-maison.png";
+import exterieur from "@assets/Pictures/cards/calendar/picto-avion.png";
 
 export default function CardCalendar({
   day,

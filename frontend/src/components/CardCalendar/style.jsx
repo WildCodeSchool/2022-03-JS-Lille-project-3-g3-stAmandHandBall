@@ -16,16 +16,15 @@ export default styled.div`
     align-items: center;
   }
   h3 {
+    border: 1px solid black;
     color: var(--white);
     font-size: 2em;
   }
-
   .hit {
     width: 4vw;
     background-size: contain;
     background-position: center;
   }
-
   .date {
     display: flex;
     flex-direction: column;
