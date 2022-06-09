@@ -1,11 +1,11 @@
+import imgNetworks from "@assets/imgNetworks.jpg";
+import imgfacebook from "@assets/Facebook.png";
+import imginstagram from "@assets/Instagram.png";
+import imglinkedin from "@assets/LinkedIn.png";
+import imgtwitch from "@assets/twitch.png";
+import imgyoutube from "@assets/picto-bleu-youtube.png";
+import imgtwitter from "@assets/Twitter.png";
 import SNetworks from "./style";
-import imgNetworks from "../../assets/imgNetworks.jpg";
-import imgfacebook from "../../assets/Facebook.png";
-import imginstagram from "../../assets/Instagram.png";
-import imglinkedin from "../../assets/LinkedIn.png";
-import imgtwitch from "../../assets/twitch.png";
-import imgyoutube from "../../assets/picto-bleu-youtube.png";
-import imgtwitter from "../../assets/Twitter.png";
 
 export default function Networks() {
   return (
