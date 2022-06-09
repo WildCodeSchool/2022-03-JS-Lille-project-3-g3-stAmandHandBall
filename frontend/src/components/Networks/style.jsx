@@ -3,6 +3,8 @@ import styled from "styled-components";
 export default styled.section`
   width: 100vw;
   height: 90vh;
+  margin-bottom: 5%;
+  margin-top: 10%;
   .imgPosition {
     display: flex;
     justify-content: center;
@@ -12,45 +14,45 @@ export default styled.section`
       margin-top: 5%;
       position: relative;
     }
-    .cube {
-      position: absolute;
-      width: 35vw;
-      height: 70vh;
-      background-color: var(--yellow);
-      left: 10%;
-      top: 10%;
-      .title {
-        height: 5vh;
-        text-transform: uppercase;
-        color: white;
+  }
+  .cube {
+    position: relative;
+    width: 35vw;
+    height: 70vh;
+    background-color: var(--yellow);
+    left: 10%;
+    top: -100%;
+    .title {
+      height: 5vh;
+      text-transform: uppercase;
+      color: white;
+      font-size: 3.5vmax;
+      text-align: center;
+      margin-top: -5%;
+    }
+    .logo {
+      height: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 6%;
+      margin-top: 8%;
+      img {
+        height: 45%;
+        width: 20%;
+        margin-right: 6%;
+      }
+    }
+    .hash {
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      p {
         font-size: 3.5vmax;
-        text-align: center;
-        margin-top: -5%;
-      }
-      .logo {
-        height: 40%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 6%;
-        margin-top: 8%;
-        img {
-          height: 45%;
-          width: 20%;
-          margin-right: 6%;
-        }
-      }
-      .hash {
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        p {
-          font-size: 3.5vmax;
-          color: var(--blue);
-        }
+        color: var(--blue);
       }
     }
   }
