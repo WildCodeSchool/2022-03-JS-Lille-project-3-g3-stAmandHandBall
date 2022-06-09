@@ -7,7 +7,6 @@ export default styled.section`
   .buttonPosition {
     width: 100vw;
     height: 20vh;
-    position: absolute;
     text-align: center;
     button {
       height: 55%;

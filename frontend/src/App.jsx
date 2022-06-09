@@ -8,6 +8,7 @@ import Shop from "@pages/Shop";
 import PlayerList from "@pages/PlayerList";
 import StaffList from "@pages/StaffList";
 import Contact from "@pages/Contact";
+import Calendar from "@pages/Calendar";
 import History from "@pages/History";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/equipe" element={<PlayerList />} />
           <Route path="/staff" element={<StaffList />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/calendrier" element={<Calendar />} />
           <Route path="/histoire" element={<History />} />
         </Routes>
       </main>
