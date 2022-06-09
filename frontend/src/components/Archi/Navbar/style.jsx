@@ -39,6 +39,10 @@ export default styled.nav`
       visibility: visible;
     }
   }
+  .burger {
+    display: none;
+  }
+
   @media screen and (max-width: 700px) {
     .visible {
       display: none;
@@ -46,6 +50,9 @@ export default styled.nav`
     .underNav {
       background-color: var(--yellow);
       height: 2vh;
+    }
+    .burger {
+      display: block;
     }
   }
 `;

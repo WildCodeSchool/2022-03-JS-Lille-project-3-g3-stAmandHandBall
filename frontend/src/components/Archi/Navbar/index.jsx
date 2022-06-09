@@ -1,6 +1,13 @@
+import { useState } from "react";
+import Burger from "@components/Archi/Burger";
 import SNavbar from "./style";
 
 export default function Navbar() {
+  const [burgerOpen, setBurgerOpen] = useState(false);
+  const toggleBurger = () => {
+    setBurgerOpen(!burgerOpen);
+  };
+
   const clubMenus = [
     "Origine de la Meute",
     "Chefs de Meute",
@@ -15,26 +22,9 @@ export default function Navbar() {
     "Formation",
     "Candidature",
   ];
-  const amateurMenus = [
-    "N1F",
-    "SF3",
-    "SG",
-    "U18F",
-    "U18G",
-    "U17F",
-    "U15F1",
-    "U15F2",
-    "U13F1",
-    "U13F2",
-    "U13G",
-    "U11F",
-    "U11G",
-    "Mini",
-    "Baby",
-    "Loisir",
-  ];
   return (
     <SNavbar>
+      <Burger className="burger" burger={burgerOpen} func={toggleBurger} />
       <div className="upperNav">
         <ul className="visible">
           <li>Actus</li>
@@ -62,14 +52,7 @@ export default function Navbar() {
               ))}
             </ul>
           </li>
-          <li>
-            Amateur
-            <ul className="submenu">
-              {amateurMenus.map((amateurMenu) => (
-                <li>{amateurMenu}</li>
-              ))}
-            </ul>
-          </li>
+          <li>Amateur</li>
           <li>Boutique</li>
           <li>Billetterie</li>
         </ul>
