@@ -14,12 +14,9 @@ export default styled.header`
   }
   @media screen and (max-width: 700px) {
     height: 0vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: 30vh; */
-
     .visible {
       display: none;
     }
