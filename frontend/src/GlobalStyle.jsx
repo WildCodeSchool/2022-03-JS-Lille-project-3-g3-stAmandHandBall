@@ -11,5 +11,8 @@ const GlobalStyle = createGlobalStyle`
   background-color: var(--blue);
   font-family: var(--font-family);
 }
+h1,h2,h3,h4,h5,h6, p, li{
+  font-family: var(--font-family);
+}
  `;
 export default GlobalStyle;
