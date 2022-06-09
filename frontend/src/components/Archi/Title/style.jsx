@@ -11,7 +11,6 @@ export default styled.div`
     font-size: 2em;
     margin-left: 10px;
     margin-right: 10px;
-
     position: relative;
     bottom: 1vw;
   }
