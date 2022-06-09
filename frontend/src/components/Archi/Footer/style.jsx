@@ -4,7 +4,7 @@ export default styled.footer`
   background-color: var(--yellow);
   height: 50vh;
   width: 100vw;
-  position: absolute;
+  position: relative;
   bottom: 0;
   overflow: hidden;
   display: flex;
