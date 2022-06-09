@@ -1,5 +1,6 @@
 import CardEvent from "@components/CardEvent";
 import SHistory from "./style";
+
 export default function History() {
   const history = [
     { id: 0, date: 1984, text: "Création du HandBall Club Saint-Amand" },

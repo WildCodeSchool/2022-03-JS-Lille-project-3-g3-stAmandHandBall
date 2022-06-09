@@ -1,18 +1,8 @@
 import styled from "styled-components";
-import Frontimg from "@assets/Pictures/test.jpg";
 
 export default styled.header`
-  height: 600vh;
+  height: 15vh;
 
-  .baseHeader {
-    background-image: url(${Frontimg});
-    background-repeat: no-repeat;
-    background-position: 50% 15%;
-    background-size: cover;
-    padding-top: 15vh;
-    width: 100vw;
-    height: 45vh;
-  }
   .logoDesktop {
     left: 0;
     position: absolute;
@@ -23,10 +13,12 @@ export default styled.header`
     display: none;
   }
   @media screen and (max-width: 700px) {
+    height: 0vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 30vh;
+    /* height: 30vh; */
 
     .visible {
       display: none;

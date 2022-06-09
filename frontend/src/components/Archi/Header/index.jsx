@@ -9,7 +9,6 @@ export default function Header() {
       <Navbar />
       <img className="logoDesktop" src={LogoDesktop} alt="Wolf_Logo" />
       <img className="logoMobile" src={LogoMobile} alt="Wolf_Logo" />
-      <div className="baseHeader" />
     </SHeader>
   );
 }
