@@ -5,9 +5,13 @@ const GlobalStyle = createGlobalStyle`
   --blue: #004696;
   --yellow: #FCCA26;
   --white: #f2f6fa;
+  --white-opacity: #f2f6fa30;
   --green: #2D9C4E;
   --blue-opacity:rgba(0, 27, 59, 0.7);
+  --black:rgba(0, 11, 23, 0.927);
   --font-family: 'Francois One', sans-serif;
+  --text-shadow: 2px 2px 5px var(--black);
+  --box-shadow: 2px 2px 5px var(--black);
   background-color: var(--blue);
   font-family: var(--font-family);
 }
