@@ -1,4 +1,6 @@
 import CardPlayer from "@components/CardPlayer";
+import BigTitle from "@components/Archi/BigTitle";
+import BigPicture from "@components/Archi/BigPicture";
 
 import SPlayerList from "./style";
 
@@ -85,17 +87,21 @@ export default function PlayerList() {
   ];
 
   return (
-    <SPlayerList>
-      {players.map((player) => {
-        return (
-          <CardPlayer
-            key={player.name}
-            name={player.name}
-            img={player.img}
-            number={player.number}
-          />
-        );
-      })}
-    </SPlayerList>
+    <>
+      <BigPicture />
+      <BigTitle title="LES LOUVES" />
+      <SPlayerList>
+        {players.map((player) => {
+          return (
+            <CardPlayer
+              key={player.name}
+              name={player.name}
+              img={player.img}
+              number={player.number}
+            />
+          );
+        })}
+      </SPlayerList>
+    </>
   );
 }
