@@ -1,5 +1,7 @@
 import CardCalendar from "@components/CardCalendar";
 import Title from "@components/Archi/Title";
+import BigTitle from "@components/Archi/BigTitle";
+import BigPicture from "@components/Archi/BigPicture";
 import SCalendar from "./style";
 
 export default function Calendar() {
@@ -11,7 +13,6 @@ export default function Calendar() {
       hit: "ligue-butagaz",
       date: "3 SEPT",
       hour: "19H30",
-      place: "domicile",
       club1: "SAH-PH",
       club2: "TOULON",
       result: "-",
@@ -23,7 +24,6 @@ export default function Calendar() {
       hit: "ligue-butagaz",
       date: "7 SEPT",
       hour: "20H30",
-      place: "exterieur",
       club1: "TOULON",
       club2: "SAH-PH",
       result: "20 - 29",
@@ -35,12 +35,13 @@ export default function Calendar() {
       hit: "ligue-butagaz",
       date: "10 OCT",
       hour: "12H30",
-      place: "domicile",
       club1: "SAH-PH",
       club2: "TOULON",
-      result: "10 - 12",
+      result: "28 - 45",
     },
   ];
+
+  const indexOfNextMatch = 2;
 
   let uniqueMonth = [];
   function unique() {
@@ -52,34 +53,46 @@ export default function Calendar() {
   uniqueMonth = [...new Set(uniqueMonth)];
 
   return (
-    <SCalendar>
-      {uniqueMonth.map((month) => {
-        return (
-          <div>
-            <Title title={month} />
-            {dates
-              .filter((date) => date.month === month)
-              .map((date) => {
-                return (
-                  <div>
-                    <CardCalendar
-                      key={date.id}
-                      month={date.month}
-                      day={date.day}
-                      hit={date.hit}
-                      date={date.date}
-                      hour={date.hour}
-                      place={date.place}
-                      club1={date.club1}
-                      club2={date.club2}
-                      result={date.result}
-                    />
-                  </div>
-                );
-              })}
-          </div>
-        );
-      })}
-    </SCalendar>
+    <>
+      <BigPicture
+        img="test"
+        date={dates[indexOfNextMatch].date}
+        hour={dates[indexOfNextMatch].hour}
+        club1={dates[indexOfNextMatch].club1}
+        club2={dates[indexOfNextMatch].club2}
+      />
+      <BigTitle title="CALENDRIER DES LOUVES" />
+      <SCalendar>
+        {uniqueMonth.map((month) => {
+          return (
+            <div className="month">
+              <Title title={month} />
+              {dates
+                .filter((date) => date.month === month)
+                .map((date) => {
+                  return (
+                    <div>
+                      <CardCalendar
+                        key={date.id}
+                        month={date.month}
+                        day={date.day}
+                        hit={date.hit}
+                        date={date.date}
+                        hour={date.hour}
+                        place={`${
+                          date.club1 === "SAH-PH" ? "domicile" : "calendar"
+                        }`}
+                        club1={date.club1}
+                        club2={date.club2}
+                        result={date.result}
+                      />
+                    </div>
+                  );
+                })}
+            </div>
+          );
+        })}
+      </SCalendar>
+    </>
   );
 }
