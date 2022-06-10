@@ -32,7 +32,6 @@ export default styled.section`
     }
   }
   .mainImages {
-    //background-color: red;
     width: 100%;
     height: 75vh;
     position: relative;
