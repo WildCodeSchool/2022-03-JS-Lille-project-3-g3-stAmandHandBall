@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
 :root{
   --blue: #004696;
   --yellow: #FCCA26;
