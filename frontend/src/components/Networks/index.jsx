@@ -12,20 +12,20 @@ export default function Networks() {
     <SNetworks>
       <div className="imgPosition">
         <img src={imgNetworks} alt="imgNetworks" />
-        <div className="cube">
-          <div className="title"> rejoignez la meute</div>
-          <div className="logo">
-            <img src={imgfacebook} alt="imgfacebook" />
-            <img src={imginstagram} alt="imginstagram" />
-            <img src={imgtwitter} alt="imgtwitter" />
-            <img src={imgyoutube} alt="imgyoutube" />
-            <img src={imglinkedin} alt="imglinkedin" />
-            <img src={imgtwitch} alt="imgmail" />
-          </div>
-          <div className="hash">
-            <p>#louves</p>
-            <p>#sahpartaucombat</p>
-          </div>
+      </div>
+      <div className="cube">
+        <div className="title"> rejoignez la meute</div>
+        <div className="logo">
+          <img src={imgfacebook} alt="imgfacebook" />
+          <img src={imginstagram} alt="imginstagram" />
+          <img src={imgtwitter} alt="imgtwitter" />
+          <img src={imgyoutube} alt="imgyoutube" />
+          <img src={imglinkedin} alt="imglinkedin" />
+          <img src={imgtwitch} alt="imgmail" />
+        </div>
+        <div className="hash">
+          <p>#louves</p>
+          <p>#sahpartaucombat</p>
         </div>
       </div>
     </SNetworks>
