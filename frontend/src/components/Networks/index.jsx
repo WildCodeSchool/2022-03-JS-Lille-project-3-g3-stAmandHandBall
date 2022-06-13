@@ -14,7 +14,7 @@ export default function Networks() {
         <img src={imgNetworks} alt="imgNetworks" />
       </div>
       <div className="cube">
-        <div className="title"> rejoignez la meute</div>
+        <div className="title">rejoignez la meute</div>
         <div className="logo">
           <img src={imgfacebook} alt="imgfacebook" />
           <img src={imginstagram} alt="imginstagram" />
