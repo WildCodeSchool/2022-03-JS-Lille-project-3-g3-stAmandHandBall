@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export default styled.section`
-  width: 100vw;
   height: 90vh;
   margin-bottom: 5%;
   margin-top: 10%;
