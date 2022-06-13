@@ -6,7 +6,6 @@ export default styled.section`
   margin: auto;
   display: flex;
   position: relative;
-  border: 5px solid green;
   .photoDiv {
     top: 0;
     bottom: 3vh;
@@ -52,9 +51,6 @@ export default styled.section`
     flex-flow: column nowrap;
     width: 100vw;
     .photoDiv {
-      //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      //width: 20vw;
-      //height: 20vh;
       left: 20;
       height: 18vh;
     }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default styled.section`
   position: relative;
-  width: 100vw;
+  width: 90vw;
   margin: auto;
   display: flex;
   .photoDiv {
@@ -14,7 +14,7 @@ export default styled.section`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-top: -70vh;
+    margin-top: -60vh;
   }
   .titlePhoto {
     color: white;
@@ -39,7 +39,7 @@ export default styled.section`
     flex-flow: column nowrap;
     width: 100vw;
     .photoDiv {
-      width: 100vw;
+      width: 100%;
       left: 20;
       height: 18vh;
     }
