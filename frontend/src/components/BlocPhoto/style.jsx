@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export default styled.section`
   width: 90vw;
+  height: 100vh;
   margin: auto;
   display: flex;
   position: relative;
-  height: 60vh;
   border: 5px solid green;
   .photoDiv {
+    top: 0;
     bottom: 3vh;
     height: 25vh;
     display: flex;
@@ -49,12 +50,13 @@ export default styled.section`
   }
   @media screen and (max-width: 640px) {
     flex-flow: column nowrap;
-
+    width: 100vw;
     .photoDiv {
       //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       //width: 20vw;
       //height: 20vh;
       left: 20;
+      height: 18vh;
     }
   }
 `;
