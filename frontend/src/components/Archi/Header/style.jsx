@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export default styled.header`
   height: 15vh;
+  top: 0;
+  position: fixed;
   .logoDesktop {
     left: 0;
-    position: absolute;
     position: fixed;
     width: 10%;
   }
