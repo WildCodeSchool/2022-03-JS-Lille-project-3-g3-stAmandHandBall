@@ -1,8 +1,7 @@
 import CardStaff from "@components/CardStaff";
+import SStaffList from "./style";
 
-import STeamList from "./style";
-
-export default function TeamList() {
+export default function StaffList() {
   const staff = [
     {
       name: "name-1",
@@ -47,7 +46,7 @@ export default function TeamList() {
   ];
 
   return (
-    <STeamList>
+    <SStaffList>
       {staff.map((member) => {
         return (
           <CardStaff
@@ -58,6 +57,6 @@ export default function TeamList() {
           />
         );
       })}
-    </STeamList>
+    </SStaffList>
   );
 }
