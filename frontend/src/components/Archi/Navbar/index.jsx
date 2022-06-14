@@ -68,7 +68,7 @@ export default function Navbar() {
             </ul>
           </li>
           <li>
-            <Link to="amateur">Amateur</Link>
+            <Link to="amateurs">Amateur</Link>
           </li>
           <li>
             <Link to="boutique">Boutique</Link>
