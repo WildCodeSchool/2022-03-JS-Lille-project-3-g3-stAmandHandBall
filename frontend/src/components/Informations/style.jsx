@@ -25,4 +25,8 @@ export default styled.section`
     background-color: var(--white);
     box-shadow: var(--box-shadow);
   }
+  .googleMap {
+    width: 100%;
+    height: 100%;
+  }
 `;
