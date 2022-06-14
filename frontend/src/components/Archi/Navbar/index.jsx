@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
 
   const lbeMenus = [
-    { title: "Les Louves", target: "/lesLouves" },
+    { title: "Les Louves", target: "/equipe" },
     { title: "Calendrier", target: "/calendrier" },
     { title: "Classement", target: "/classement" },
   ];

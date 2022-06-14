@@ -14,7 +14,6 @@ import OrigineDeLaMeute from "@pages/OrigineDeLaMeute";
 import ChefDeLaMeute from "@pages/ChefDeLaMeute";
 import BergersDesLouveteaux from "@pages/BergersDesLouveteaux";
 import Arbitre from "@pages/Arbitre";
-import LesLouves from "@pages/LesLouves";
 import Classement from "@pages/Classement";
 import Philosophie from "@pages/Philosophie";
 import Effectif from "@pages/Effectif";
@@ -32,14 +31,9 @@ function App() {
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
+          {/* page actus */}
           <Route path="/actus" element={<News />} />
-          <Route path="/amateurs" element={<Rookies />} />
-          <Route path="/boutique" element={<Shop />} />
-          <Route path="/equipe" element={<PlayerList />} />
-          <Route path="/staff" element={<StaffList />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/calendrier" element={<Calendar />} />
-          <Route path="/histoire" element={<History />} />
+          {/* menu club */}
           <Route path="/origineDeLaMeute" element={<OrigineDeLaMeute />} />
           <Route path="/chefsDeLaMeute" element={<ChefDeLaMeute />} />
           <Route
@@ -47,15 +41,36 @@ function App() {
             element={<BergersDesLouveteaux />}
           />
           <Route path="/arbitres" element={<Arbitre />} />
-          <Route path="/lesLouves" element={<LesLouves />} />
+          {/* menu D1F former LBE */}
+          <Route path="/equipe" element={<PlayerList />} />
+          <Route path="/calendrier" element={<Calendar />} />
           <Route path="/classement" element={<Classement />} />
+          {/* menu CF */}
           <Route path="/philosophie" element={<Philosophie />} />
           <Route path="/effectif" element={<Effectif />} />
           <Route path="/vieQuotidienne" element={<VieQuotidienne />} />
           <Route path="/formation" element={<Formation />} />
           <Route path="/candidature" element={<Candidature />} />
+          {/* page Rookies */}
+          <Route path="/amateurs" element={<Rookies />} />
+          {/* page Shop */}
+          <Route path="/boutique" element={<Shop />} />
+          {/* page billeterie */}
+
+          {/* page ambition 2024 */}
           <Route path="/ambition" element={<Ambition />} />
+          {/* page partenaires */}
           <Route path="/partenaires" element={<Partenaire />} />
+          {/* Button contact */}
+          <Route path="/contact" element={<Contact />} />
+          {/* TODO
+           
+            SOCIAL NETWORK, LIGUE BUTAGAZ, LFH, BILLETERIE
+
+           */}
+          {/* Need validation */}
+          <Route path="/staff" element={<StaffList />} />
+          <Route path="/histoire" element={<History />} />
         </Routes>
       </main>
       <Footer />
