@@ -11,15 +11,38 @@ function MyTimer({ expiryTimestamp }) {
 
   return (
     <SMyTimer>
-      <div className="counter">
-        <h1>PROCHAIN MATCH </h1>
-        <div className="timerGlobal">
-          <div className="timer">
-            <span> {days} JOURS </span> <span>{hours} HEURES</span>
-            <span> {minutes} MINUTES</span>
-          </div>
-        </div>
+      <div>
+        <h2>PROCHAIN MATCH</h2>
       </div>
+
+      <ul className="nextMatch">
+        <li>SAH</li>
+        <li>VS</li>
+        <li>HAC</li>
+      </ul>
+      <ul className="dayTime">
+        <li className="day">J1 </li>
+        <p>SAMEDI 3 SEPTEMBRE</p>
+        <p>19H30</p>
+        <p>SALLE MAURICE HUGOT</p>
+      </ul>
+      <div className="timer">
+        <ul>
+          <li className="numbersCount"> {days} </li>
+          <li>Jours</li>
+        </ul>
+        <span>-</span>
+        <ul>
+          <li className="numbersCount"> {hours} </li>
+          <li>heure</li>
+        </ul>
+        <span>-</span>
+        <ul>
+          <li className="numbersCount"> {minutes} </li>
+          <li>minute</li>
+        </ul>
+      </div>
+      <h3>BILLETERIE</h3>
     </SMyTimer>
   );
 }

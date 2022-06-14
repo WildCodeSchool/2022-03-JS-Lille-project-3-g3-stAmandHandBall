@@ -1,36 +1,54 @@
 import styled from "styled-components";
 
-export default styled.section`
-  width: 100vw;
-  background-color: red;
+export default styled.div`
+  background-color: var(--yellow);
+  color: var(--white);
+  text-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 5px black;
+  height: 20vh;
+  width: 80vw;
+  position: relative;
+  bottom: 10vh;
+  margin: auto;
   display: flex;
-  justify-content: center;
-  .counter {
-    height: 55%;
-    width: 50vw;
-    border: none;
-    background-color: var(--yellow);
-    box-shadow: 0rem 0.3rem 0.3rem black;
-    margin-top: 1rem;
+  .nextMatch {
+    border: 2px solid yellowgreen;
     color: var(--blue);
-    font-size: 1.9vmax;
-    font-weight: 90;
-    text-transform: uppercase;
-    padding: 0%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+  .dayTime {
+    border: 2px solid yellowgreen;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--blue);
+  }
+  .timer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    border: 2px solid green;
+    width: 50%;
+
+    ul {
+      padding: 1rem;
+    }
+    span {
+      font-size: 2.8rem;
+      color: var(--blue);
+    }
   }
-  h1 {
-    padding: 2%;
-    position: absolute;
-    display: flex;
-    left: 26%;
-    top: 30%;
-    color: var(--white);
-  }
-  .timerGlobal {
-    display: flex;
-    margin-bottom: 2%;
-    margin-top: 2%;
+  .numbersCount {
+    font-size: 2.8rem;
+    color: var(--blue);
+    text-align: center;
   }
 `;
