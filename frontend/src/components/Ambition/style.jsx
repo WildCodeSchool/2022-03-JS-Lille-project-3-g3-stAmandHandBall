@@ -7,6 +7,9 @@ export default styled.div`
     rgba(78, 147, 67, 1) 50%,
     rgba(21, 97, 185, 1) 100%
   );
+  a {
+    text-decoration: none;
+  }
   width: 100vw;
   height: 50vh;
   .title {
@@ -19,6 +22,7 @@ export default styled.div`
     color: var(--white);
     font-size: 3.5vmax;
     font-weight: 900;
+
     img {
       width: 15%;
       margin-top: -4%;

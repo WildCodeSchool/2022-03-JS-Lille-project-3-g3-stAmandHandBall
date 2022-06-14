@@ -8,6 +8,7 @@ export default styled.section`
     width: 100vw;
     height: 20vh;
     text-align: center;
+
     button {
       height: 55%;
       width: 45vw;
@@ -19,6 +20,7 @@ export default styled.section`
       font-size: 3.5vmax;
       font-weight: 900;
       text-transform: uppercase;
+      cursor: pointer;
     }
   }
   @media screen and (max-width: 640px) {

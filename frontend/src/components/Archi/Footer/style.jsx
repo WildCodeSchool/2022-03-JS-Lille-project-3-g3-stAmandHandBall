@@ -18,6 +18,7 @@ export default styled.footer`
       margin-top: -8%;
     }
   }
+
   .buttonPosition {
     width: 100vw;
     height: 20vh;
@@ -30,6 +31,7 @@ export default styled.footer`
       background-color: var(--blue);
       box-shadow: 0rem 0.3rem 0.3rem black;
       margin-top: 1rem;
+      cursor: pointer;
       p {
         color: var(--white);
         font-size: 3.5vmax;
