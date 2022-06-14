@@ -1,9 +1,9 @@
-import STeste from "./style";
+import SOrigineDeLaMeute from "./style";
 
-export default function test() {
+export default function OrigineDeLaMeute() {
   return (
-    <STeste>
+    <SOrigineDeLaMeute>
       <p>valide</p>
-    </STeste>
+    </SOrigineDeLaMeute>
   );
 }
