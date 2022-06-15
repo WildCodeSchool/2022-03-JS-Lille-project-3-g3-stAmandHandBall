@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export default styled.section`
-  border: 2px dotted green;
   *,
   *::before,
   *::after {
@@ -93,8 +92,7 @@ export default styled.section`
     }
     .container {
       width: 100%;
-      padding-left: 120px;
-      padding-right: 30px;
+      padding: 13px;
     }
     .container.right {
       left: 0%;
@@ -117,6 +115,9 @@ export default styled.section`
     .container.right .content {
       padding: 30px 30px 30px 90px;
       border-radius: 500px 0 0 500px;
+    }
+    .container::before {
+      display: none;
     }
   }
 `;
