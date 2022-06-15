@@ -2,12 +2,16 @@ import Ambition from "@components/Ambition";
 import Partner from "@components/Partner";
 import Networks from "@components/Networks";
 import BanShop from "@components/BanShop";
+import BlocCf from "@components/BlocCf";
+import BlocPhotos from "@components/BlocPhoto";
 import SHome from "./style";
 
 export default function Home() {
   return (
     <SHome>
       <p>Home</p>
+      <BlocPhotos />
+      <BlocCf />
       <BanShop />
       <Networks />
       <Ambition />
