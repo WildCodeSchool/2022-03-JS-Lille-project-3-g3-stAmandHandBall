@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export default styled.form`
+export default styled.section`
   width: 35vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: flex-start;
   p {
     width: 60%;
     line-height: 1.3em;
@@ -35,7 +35,7 @@ export default styled.form`
       border: none;
       width: 100%;
       box-shadow: var(--box-shadow);
-      margin-bottom: 1vw;
+      margin-bottom: 2vh;
       padding-left: 8px;
       text-shadow: var(--text-shadow);
       color: var(--white);
@@ -44,6 +44,25 @@ export default styled.form`
     }
     input[type="submit"] {
       width: 60%;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10vh;
+    form {
+      width: 95%;
+      margin: auto;
+      input[type="submit"] {
+        width: 65%;
+        padding: 0;
+        text-align: center;
+      }
+    }
+    p {
+      width: 95%;
+      margin: 3vh 0;
     }
   }
 `;
