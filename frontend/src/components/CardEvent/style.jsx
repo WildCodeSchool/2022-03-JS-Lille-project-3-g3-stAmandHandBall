@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export default styled.section`
+  border: 2px dotted green;
   *,
   *::before,
   *::after {
@@ -39,7 +40,7 @@ export default styled.section`
     position: absolute;
     width: 1rem;
     height: 16px;
-    top: calc(27% - 8px);
+    top: calc(30px + 1em);
     right: -8px;
     background: var(--white);
     border: 2px solid var(--white);
@@ -54,7 +55,7 @@ export default styled.section`
     position: absolute;
     width: 50px;
     height: 2px;
-    top: calc(27% - 1px);
+    top: calc(29px + 1.5em);
     right: 8px;
     background: var(--white);
     z-index: 1;
