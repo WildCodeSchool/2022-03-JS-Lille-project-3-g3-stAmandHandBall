@@ -2,29 +2,34 @@ import styled from "styled-components";
 
 export default styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  .left {
+  .top {
     width: 2vw;
-    min-height: 3vw;
+    min-height: 2vw;
     background: url("../src/assets/pictures/arrow.svg") no-repeat;
     background-size: contain;
-    background-position: left;
-    transform: rotate(90deg);
+    position: relative;
+    top: 0.2vw;
+    transform: rotate(180deg);
   }
-  .right {
+  .bottom {
     width: 2vw;
-    min-height: 3vw;
+    min-height: 2vw;
     background: url("../src/assets/pictures/arrow.svg") no-repeat;
     background-size: contain;
-    background-position: right;
-    transform: rotate(-90deg);
+    position: relative;
+    bottom: 0.2vw;
   }
   .line {
-    width: 100%;
-    height: 1px;
+    background-color: var(--yellow);
+    width: 1px;
+    height: 100%;
     border: 1px var(--yellow) solid;
-    position: relative;
-    margin: -1vw;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: ${(props) => (props.mobileDisplay ? "block" : "none")};
   }
 `;

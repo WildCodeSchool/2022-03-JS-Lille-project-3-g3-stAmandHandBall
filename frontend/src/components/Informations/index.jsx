@@ -6,8 +6,8 @@ export default function Informations() {
     <SInformations>
       <Title title="INFORMATIONS" />
       <p>
-        232, rue Emile Seigneuret 59230 <br />
-        Saint-Amand-Les-Eaux
+        232, rue Emile Seigneuret <br />
+        59230 Saint-Amand-Les-Eaux
       </p>
       <p>03 27 21 28 14</p>
       <p className="schedules">

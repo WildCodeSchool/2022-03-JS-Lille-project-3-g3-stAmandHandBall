@@ -12,11 +12,13 @@ export default styled.section`
     color: var(--yellow);
     text-shadow: var(--text-shadow);
     text-align: center;
-    margin: 0vw 0 2vw 0;
+    margin-top: 3vh;
     line-height: 1.3em;
   }
   .schedules {
     text-align: right;
+    margin-right: 5vw;
+    margin-bottom: 3vh;
   }
   .map {
     width: 80%;
@@ -28,5 +30,15 @@ export default styled.section`
   .googleMap {
     width: 100%;
     height: 100%;
+  }
+  @media screen and (max-width: 700px) {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    .schedules {
+      font-size: 1em;
+    }
   }
 `;
