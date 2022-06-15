@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200&display=swap');
 :root{
   --blue: #004696;
   --yellow: #FCCA26;
@@ -15,6 +16,7 @@ justify-content: flex-start;
   --font-family: 'Francois One', sans-serif;
   --text-shadow: 2px 2px 6px var(--black);
   --box-shadow: 2px 2px 5px var(--black);
+  
   background-color: var(--blue);
   font-family: var(--font-family);
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default styled.div`
+export default styled.section`
   *,
   *::before,
   *::after {
@@ -37,9 +37,9 @@ export default styled.div`
   .container::after {
     content: "";
     position: absolute;
-    width: 16px;
+    width: 1rem;
     height: 16px;
-    top: calc(50% - 8px);
+    top: calc(27% - 8px);
     right: -8px;
     background: var(--white);
     border: 2px solid var(--white);
@@ -54,7 +54,7 @@ export default styled.div`
     position: absolute;
     width: 50px;
     height: 2px;
-    top: calc(50% - 1px);
+    top: calc(27% - 1px);
     right: 8px;
     background: var(--white);
     z-index: 1;
@@ -62,46 +62,26 @@ export default styled.div`
   .container.right::before {
     left: 8px;
   }
-  .container .date {
-    position: absolute;
-    display: inline-block;
-    top: calc(50% - 8px);
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    z-index: 1;
-  }
-  .container.left .date {
-    right: -75px;
-  }
-  .container.right .date {
-    left: -75px;
-  }
-
   .container .content {
     padding: 30px 90px 30px 30px;
-    background: var(--yellow);
     position: relative;
-    border-radius: 0 500px 500px 0;
   }
   .container.right .content {
     padding: 30px 30px 30px 90px;
-    border-radius: 500px 0 0 500px;
   }
   .container .content h2 {
     margin: 0 0 10px 0;
     font-size: 18px;
     font-weight: normal;
-    color: var(--white);
+    color: var(--blue);
+    text-align: center;
+    background-color: var(--yellow);
   }
   .container .content p {
     margin: 0;
     font-size: 16px;
     line-height: 22px;
-    color: var(--blue);
+    color: var(--white);
   }
   @media (max-width: 700px) {
     .timeline {
