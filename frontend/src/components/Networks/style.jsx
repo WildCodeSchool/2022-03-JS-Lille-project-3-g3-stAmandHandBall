@@ -27,7 +27,9 @@ export default styled.section`
       color: white;
       font-size: 3.5vmax;
       text-align: center;
-      margin-top: -5%;
+      margin-top: 5%;
+      position: relative;
+      top: -4%;
     }
     .logo {
       height: 40%;
@@ -63,25 +65,26 @@ export default styled.section`
         height: 30vh;
         width: 100vw;
       }
-      .cube {
-        position: absolute;
-        width: 45vw;
-        height: 30vh;
-        left: 0;
-        top: 5%;
-        .title {
+    }
+    .cube {
+      position: relative;
+      width: 45vw;
+      height: 25vh;
+      left: 0;
+      top: -95%;
+      .title {
+        font-size: 2vmax;
+      }
+      .logo {
+        img {
+          height: 40%;
+          width: 25%;
+          margin-top: -15%;
+        }
+      }
+      .hash {
+        p {
           font-size: 2vmax;
-        }
-        .logo {
-          img {
-            height: 40%;
-            width: 27%;
-          }
-        }
-        .hash {
-          p {
-            font-size: 2vmax;
-          }
         }
       }
     }

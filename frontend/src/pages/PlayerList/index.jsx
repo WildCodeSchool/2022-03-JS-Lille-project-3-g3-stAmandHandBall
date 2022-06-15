@@ -88,7 +88,7 @@ export default function PlayerList() {
 
   return (
     <>
-      <BigPicture />
+      <BigPicture img="test" date="" hour="" club1="" club2="" />
       <BigTitle title="LES LOUVES" />
       <SPlayerList>
         {players.map((player) => {
