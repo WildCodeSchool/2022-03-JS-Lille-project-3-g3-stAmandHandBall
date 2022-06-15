@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
   --yellow: #FCCA26;
   --white: #f2f6fa;
   --green: #2D9C4E;
+  --size-h3: 2em;
   --blue-opacity:rgba(0, 27, 59, 0.7);
   --font-family: 'Francois One', sans-serif;
   background-color: var(--blue);
