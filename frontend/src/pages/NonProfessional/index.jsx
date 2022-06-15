@@ -1,19 +1,14 @@
+import TableAmateurTeam from "@components/Archi/TableAmateurTeam";
+import BigPicture from "@components/Archi/BigPicture";
+import BigTitle from "@components/Archi/BigTitle";
 import SNonProfessional from "./style";
 
-export default function Rookies() {
+export default function nonProfessional() {
   return (
     <SNonProfessional>
-      <div className="table">
-        <div className="divisions">
-          <h2>NATIONAL</h2>
-        </div>
-        <div className="divisions">
-          <h2>TERRITORIAL</h2>
-        </div>
-        <div className="divisions">
-          <h2>FORMATION</h2>
-        </div>
-      </div>
+      <BigPicture />
+      <BigTitle />
+      <TableAmateurTeam />
     </SNonProfessional>
   );
 }
