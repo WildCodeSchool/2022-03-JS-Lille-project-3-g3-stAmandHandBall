@@ -4,7 +4,7 @@ export default styled.footer`
   background-color: var(--yellow);
   height: 50vh;
   width: 100vw;
-  position: absolute;
+  position: relative;
   bottom: 0;
   overflow: hidden;
   display: flex;
@@ -32,8 +32,9 @@ export default styled.footer`
       margin-top: 1rem;
       p {
         color: var(--white);
-        font-size: 7vh;
+        font-size: 3.5vmax;
         font-weight: 900;
+        text-transform: uppercase;
       }
     }
   }
@@ -53,7 +54,7 @@ export default styled.footer`
     bottom: 0;
     color: var(--white);
     text-transform: uppercase;
-    font-size: 3vmax;
+    font-size: 3.5vmax;
     font-weight: 900;
   }
   @media screen and (max-width: 640px) {
@@ -71,7 +72,7 @@ export default styled.footer`
       button {
         margin-top: 0.5rem;
         p {
-          font-size: 5vmin;
+          font-size: 2vmax;
         }
       }
     }
