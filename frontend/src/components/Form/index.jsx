@@ -6,9 +6,8 @@ export default function Form() {
     <SForm>
       <Title title="CONTACT" />
       <p>
-        Pour toutes demandes d’informations, <br />
-        contactez-nous via notre formulaire ci-dessous. <br />
-        Nous vous apporterons une réponse rapidement.
+        Pour toutes demandes d’informations, contactez-nous via notre formulaire
+        ci-dessous. Nous vous apporterons une réponse rapidement.
       </p>
       <form action="">
         <input type="text" name="name" value="NOM :" />

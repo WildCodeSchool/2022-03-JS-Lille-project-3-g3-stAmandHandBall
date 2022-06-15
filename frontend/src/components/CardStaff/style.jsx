@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export default styled.div`
+  margin-top: -5vh;
+
   .name {
     width: 6.2vw;
     aspect-ratio: 1/1.16;

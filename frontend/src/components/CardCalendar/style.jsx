@@ -16,7 +16,6 @@ export default styled.div`
     align-items: center;
   }
   h3 {
-    border: 1px solid black;
     color: var(--white);
     font-size: 2em;
   }

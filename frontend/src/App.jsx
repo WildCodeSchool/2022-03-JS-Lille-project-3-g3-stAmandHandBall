@@ -5,8 +5,7 @@ import Header from "@components/Archi/Header";
 import News from "@pages/News";
 import Rookies from "@pages/Rookies";
 import Shop from "@pages/Shop";
-import PlayerList from "@pages/PlayerList";
-import StaffList from "@pages/StaffList";
+import FirstTeam from "@pages/FirstTeam";
 import Contact from "@pages/Contact";
 import Calendar from "@pages/Calendar";
 import History from "@pages/History";
@@ -62,6 +61,7 @@ function App() {
           {/* page partenaires */}
           <Route path="/partenaires" element={<Partenaire />} />
           {/* Button contact */}
+          <Route path="/equipe" element={<FirstTeam />} />
           <Route path="/contact" element={<Contact />} />
           {/* TODO
            
