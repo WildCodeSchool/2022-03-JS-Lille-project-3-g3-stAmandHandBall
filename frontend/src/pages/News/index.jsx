@@ -1,9 +1,10 @@
+import Resume from "@components/Resume";
 import SNews from "./style";
 
 export default function News() {
   return (
     <SNews>
-      <p>News</p>
+      <Resume />
     </SNews>
   );
 }
