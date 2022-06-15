@@ -11,8 +11,29 @@ export default styled.section`
   width: 100vw;
   height: 65vh;
   display: flex;
+  justify-content: right;
   text-shadow: var(--text-shadow);
 
+  .blocInfo {
+    text-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f2f6fa85;
+    width: 25vw;
+    color: var(--blue);
+    padding-top: 7vh;
+    text-align: center;
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.2rem;
+      padding: 4vw;
+    }
+  }
   .none {
     display: none;
   }
