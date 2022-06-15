@@ -82,7 +82,6 @@ export default styled.div`
       font-size: 1.5rem;
     }
     .nextMatch {
-      border: 1px solid red;
       width: 30%;
       margin-top: 2%;
       display: block;
@@ -94,7 +93,6 @@ export default styled.div`
       }
     }
     .dayTime {
-      border: 1px solid green;
       width: 30%;
       justify-content: center;
       font-size: 1rem;
@@ -103,7 +101,6 @@ export default styled.div`
       }
     }
     .timer {
-      border: 1px solid black;
       width: 50%;
       font-size: 0.8rem;
       display: flex;
