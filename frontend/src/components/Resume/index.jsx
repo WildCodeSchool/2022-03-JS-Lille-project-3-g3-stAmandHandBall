@@ -1,4 +1,4 @@
-import ImgNews from "@assets/imgNews.png";
+import ImgNews from "@assets/ImgNews.png";
 import SResume from "./style";
 
 export default function Networks() {
