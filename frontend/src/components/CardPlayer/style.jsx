@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export default styled.div`
+  margin-top: -5vh;
   .number {
     width: 6.8vw;
     aspect-ratio: 1/1.06;
