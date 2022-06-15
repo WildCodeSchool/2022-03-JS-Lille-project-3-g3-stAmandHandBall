@@ -24,7 +24,7 @@ export default function Caroussel() {
           &lsaquo;
         </button>
         {players
-          .filter((toto, img) => img >= position && img < position + 4)
+          .filter((data, img) => img >= position && img < position + 4)
           .map((player) => {
             return (
               <CardPlayer
