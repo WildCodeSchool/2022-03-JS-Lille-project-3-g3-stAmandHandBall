@@ -4,7 +4,6 @@ const GlobalStyle = createGlobalStyle`
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200&display=swap');
 :root{
   --blue: #004696;
   --yellow: #FCCA26;
