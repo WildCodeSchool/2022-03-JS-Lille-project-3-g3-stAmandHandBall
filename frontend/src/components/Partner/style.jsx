@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export default styled.section`
   background-color: var(--blue);
-  width: 100vw;
+
   height: 30vh;
   .buttonPosition {
-    width: 100vw;
     height: 20vh;
     text-align: center;
     button {

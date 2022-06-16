@@ -13,7 +13,6 @@ import History from "@pages/History";
 function App() {
   return (
     <div>
-      <Header />
       <main>
         <Routes>
           <Route path="*" element={<Home />} />
@@ -27,6 +26,7 @@ function App() {
           <Route path="/histoire" element={<History />} />
         </Routes>
       </main>
+      <Header />
       <Footer />
     </div>
   );
