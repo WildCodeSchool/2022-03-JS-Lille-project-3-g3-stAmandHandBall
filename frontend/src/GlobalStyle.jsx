@@ -15,6 +15,7 @@ justify-content: flex-start;
   --font-family: 'Francois One', sans-serif;
   --text-shadow: 2px 2px 6px var(--black);
   --box-shadow: 2px 2px 5px var(--black);
+  
   background-color: var(--blue);
   font-family: var(--font-family);
 }
