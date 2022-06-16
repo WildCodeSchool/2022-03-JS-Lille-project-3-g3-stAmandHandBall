@@ -13,7 +13,6 @@ export default styled.div`
   width: 100vw;
   height: 50vh;
   .title {
-    width: 100vw;
     height: 30vh;
     display: flex;
     align-items: center;

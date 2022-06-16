@@ -4,22 +4,17 @@ export default styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  .arrows {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   .left {
-    width: 5vw;
-    min-height: 5vw;
+    width: 2vw;
+    min-height: 3vw;
     background: url("../src/assets/pictures/arrow.svg") no-repeat;
     background-size: contain;
     background-position: left;
     transform: rotate(90deg);
   }
   .right {
-    width: 5vw;
-    min-height: 5vw;
+    width: 2vw;
+    min-height: 3vw;
     background: url("../src/assets/pictures/arrow.svg") no-repeat;
     background-size: contain;
     background-position: right;
@@ -27,8 +22,9 @@ export default styled.div`
   }
   .line {
     width: 100%;
+    height: 1px;
     border: 1px var(--yellow) solid;
     position: relative;
-    margin: -2vw;
+    margin: -1vw;
   }
 `;

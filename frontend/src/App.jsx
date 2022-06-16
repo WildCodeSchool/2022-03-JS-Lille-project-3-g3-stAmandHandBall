@@ -5,8 +5,7 @@ import Header from "@components/Archi/Header";
 import News from "@pages/News";
 import Rookies from "@pages/Rookies";
 import Shop from "@pages/Shop";
-import PlayerList from "@pages/PlayerList";
-import StaffList from "@pages/StaffList";
+import FirstTeam from "@pages/FirstTeam";
 import Contact from "@pages/Contact";
 import Calendar from "@pages/Calendar";
 import History from "@pages/History";
@@ -26,7 +25,6 @@ import Partner from "@pages/Partner";
 function App() {
   return (
     <div>
-      <Header />
       <main>
         <Routes>
           <Route path="*" element={<Home />} />
@@ -59,6 +57,7 @@ function App() {
           {/* page partenaires */}
           <Route path="/partenaires" element={<Partner />} />
           {/* Button contact */}
+          <Route path="/equipe" element={<FirstTeam />} />
           <Route path="/contact" element={<Contact />} />
           {/* TODO
            
@@ -70,6 +69,7 @@ function App() {
           <Route path="/histoire" element={<History />} />
         </Routes>
       </main>
+      <Header />
       <Footer />
     </div>
   );
