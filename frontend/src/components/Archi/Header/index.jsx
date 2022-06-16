@@ -1,7 +1,7 @@
-import Navbar from "@components/Archi/Navbar";
 import LogoDesktop from "@assets/Pictures/LogoDesktop.svg";
 import LogoMobile from "@assets/Pictures/LogoMobile.png";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar";
 import SHeader from "./style";
 
 export default function Header() {

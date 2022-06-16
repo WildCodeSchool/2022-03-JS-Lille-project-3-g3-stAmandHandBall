@@ -35,7 +35,6 @@ export default styled.section`
     }
   }
   .mainImages {
-    width: 100%;
     height: 75vh;
     position: relative;
     top: -133%;

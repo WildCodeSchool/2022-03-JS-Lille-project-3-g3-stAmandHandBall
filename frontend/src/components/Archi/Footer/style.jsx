@@ -3,7 +3,6 @@ import styled from "styled-components";
 export default styled.footer`
   background-color: var(--yellow);
   height: 50vh;
-  width: 100vw;
   position: relative;
   bottom: 0;
   overflow: hidden;
