@@ -10,7 +10,7 @@ export default function BlocCf() {
         </div>
       </Link>
       <Link to="formation">
-        <div className="photoDiv 	fifthPhoto">
+        <div className="photoDiv fifthPhoto">
           <h3 className="titlePhoto">FORMATION</h3>
         </div>
       </Link>
