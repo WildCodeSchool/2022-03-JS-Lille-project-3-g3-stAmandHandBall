@@ -34,7 +34,7 @@ export default styled.div`
     color: var(--white);
   }
   @media screen and (max-width: 700px) {
-    width: 39.6vw;
+    width: 100vw;
     margin-bottom: 7.2vw;
     img {
       width: 28.8vw;
