@@ -39,7 +39,7 @@ export default styled.div`
     display: block;
     justify-content: space-between;
     img {
-      width: 100vw;
+      width: 90vw;
     }
     .details {
       display: flex;
@@ -47,7 +47,8 @@ export default styled.div`
       justify-content: flex-start;
     }
     .detail {
-      width: 8.64vw;
+      width: 30vw;
+      outline: 1px solid var(--blue);
     }
   }
 `;
