@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Title from "@components/Archi/Title";
-import SForm from "./style";
 import Modal from "@components/Modal";
+import SForm from "./style";
 
 export default function Form() {
   const [message, setMessage] = useState("");
@@ -11,6 +11,7 @@ export default function Form() {
 
   return (
     <SForm>
+      <Modal />
       <Title title="CONTACT" />
       <p>
         Pour toutes demandes d’informations, contactez-nous via notre formulaire
