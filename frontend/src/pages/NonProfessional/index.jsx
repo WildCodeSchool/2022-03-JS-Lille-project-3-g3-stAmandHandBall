@@ -6,8 +6,8 @@ import SNonProfessional from "./style";
 export default function nonProfessional() {
   return (
     <SNonProfessional>
-      <BigPicture />
-      <BigTitle />
+      <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
+      <BigTitle title="Amateur" />
       <TableAmateurTeam />
     </SNonProfessional>
   );
