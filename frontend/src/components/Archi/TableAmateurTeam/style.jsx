@@ -23,6 +23,7 @@ export default styled.div`
     display: flex;
     justify-content: space-evenly;
     margin-top: 2rem;
+    margin-bottom: 5rem;
   }
   .divisions {
     width: 25%;
