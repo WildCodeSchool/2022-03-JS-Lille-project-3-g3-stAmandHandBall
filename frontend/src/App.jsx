@@ -13,13 +13,12 @@ import Staff from "@pages/Staff";
 import Coachs from "@pages/Coachs";
 import Referee from "@pages/Referee";
 import Philosophy from "@pages/Philosophy";
-import Team from "@pages/Team";
+import HeadCount from "@pages/HeadCount";
 import LifeStyle from "@pages/LifeStyle";
 import Training from "@pages/Training";
 import Apply from "@pages/Apply";
-import Ambition from "@pages/Ambitions";
+import Ambitions from "@pages/Ambitions";
 import Partner from "@pages/Partner";
-import StaffList from "@components/StaffList";
 
 function App() {
   return (
@@ -32,7 +31,7 @@ function App() {
           <Route path="/actus" element={<News />} />
           {/* menu club */}
           <Route path="/origineDeLaMeute" element={<History />} />
-          <Route path="/lesChefsDeMeute" element={<Staff />} />
+          <Route path="/ChefsDeMeute" element={<Staff />} />
           <Route path="/bergersDesLouveteaux" element={<Coachs />} />
           <Route path="/arbitres" element={<Referee />} />
           {/* menu D1F former LBE */}
@@ -40,7 +39,7 @@ function App() {
           <Route path="/calendrier" element={<Calendar />} />
           {/* menu CF */}
           <Route path="/philosophie" element={<Philosophy />} />
-          <Route path="/effectif" element={<Team />} />
+          <Route path="/effectif" element={<HeadCount />} />
           <Route path="/vieQuotidienne" element={<LifeStyle />} />
           <Route path="/formation" element={<Training />} />
           <Route path="/candidature" element={<Apply />} />
@@ -51,7 +50,7 @@ function App() {
           {/* page billeterie */}
 
           {/* page ambition 2024 */}
-          <Route path="/ambition" element={<Ambition />} />
+          <Route path="/ambitions" element={<Ambitions />} />
           {/* page partenaires */}
           <Route path="/partenaires" element={<Partner />} />
           {/* Button contact */}
@@ -61,8 +60,6 @@ function App() {
             SOCIAL NETWORK, LIGUE BUTAGAZ, LFH, BILLETERIE
 
            */}
-          {/* Need validation */}
-          <Route path="/staff" element={<StaffList />} />
         </Routes>
       </main>
       <Header />
