@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useTimer } from "react-timer-hook";
-import billeterie from "@assets/billeterie.png";
+import boxOffice from "@assets/boxOffice.png";
 import logoSah from "@assets/Logo_SAH.png";
 import SMyTimer from "./style";
 
@@ -46,7 +46,7 @@ function MyTimer({ expiryTimestamp }) {
       </div>
       <div className="billetDiv">
         <a href="https://www.sah-ph.fr/billetterie/">
-          <img className="billeterie" src={billeterie} alt="billeterie" />
+          <img className="boxOffice" src={boxOffice} alt="billeterie" />
         </a>
       </div>
     </SMyTimer>
@@ -55,7 +55,7 @@ function MyTimer({ expiryTimestamp }) {
 
 export default function App() {
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 691200); // 8 jours : obligation de convertir la durée en secondes, mais pb quand actualisation de la page
+  time.setSeconds(time.getSeconds() + 691200); // = 8 days, mandatory conversion to seconds to program the timer
   return (
     <div>
       <MyTimer expiryTimestamp={time} />

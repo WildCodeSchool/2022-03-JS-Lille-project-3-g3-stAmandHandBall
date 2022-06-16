@@ -65,7 +65,7 @@ export default styled.div`
     display: flex;
     align-items: center;
   }
-  .billeterie {
+  .boxOffice {
     position: absolute;
     margin-left: -4rem;
     top: 1.2rem;
@@ -116,7 +116,7 @@ export default styled.div`
         padding: 0rem;
       }
     }
-    .billeterie {
+    .boxOffice {
       display: none;
     }
   }
