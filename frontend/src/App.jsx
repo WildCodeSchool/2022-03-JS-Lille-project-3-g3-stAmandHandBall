@@ -10,18 +10,18 @@ import StaffList from "@pages/StaffList";
 import Contact from "@pages/Contact";
 import Calendar from "@pages/Calendar";
 import History from "@pages/History";
-import OrigineDeLaMeute from "@pages/OrigineDeLaMeute";
-import ChefDeLaMeute from "@pages/ChefDeLaMeute";
-import BergersDesLouveteaux from "@pages/BergersDesLouveteaux";
-import Arbitre from "@pages/Arbitre";
-import Classement from "@pages/Classement";
-import Philosophie from "@pages/Philosophie";
-import Effectif from "@pages/Effectif";
-import VieQuotidienne from "@pages/VieQuotidienne";
-import Formation from "@pages/Formation";
-import Candidature from "@pages/Candidature";
+import Origin from "@pages/Origin";
+import Chief from "@pages/Chief";
+import Trainer from "@pages/Trainer";
+import Referee from "@pages/Referee";
+import Ranking from "@pages/Ranking";
+import Philosophy from "@pages/Philosophy";
+import Team from "@pages/Team";
+import LifeStyle from "@pages/LifeStyle";
+import Training from "@pages/Training";
+import Apply from "@pages/Apply";
 import Ambition from "@pages/Ambition";
-import Partenaire from "@pages/Partenaire";
+import Partner from "@pages/Partner";
 
 function App() {
   return (
@@ -34,23 +34,20 @@ function App() {
           {/* page actus */}
           <Route path="/actus" element={<News />} />
           {/* menu club */}
-          <Route path="/origineDeLaMeute" element={<OrigineDeLaMeute />} />
-          <Route path="/chefsDeLaMeute" element={<ChefDeLaMeute />} />
-          <Route
-            path="/bergersDesLouveteaux"
-            element={<BergersDesLouveteaux />}
-          />
-          <Route path="/arbitres" element={<Arbitre />} />
+          <Route path="/origineDeLaMeute" element={<Origin />} />
+          <Route path="/chefsDeLaMeute" element={<Chief />} />
+          <Route path="/bergersDesLouveteaux" element={<Trainer />} />
+          <Route path="/arbitres" element={<Referee />} />
           {/* menu D1F former LBE */}
           <Route path="/equipe" element={<PlayerList />} />
           <Route path="/calendrier" element={<Calendar />} />
-          <Route path="/classement" element={<Classement />} />
+          <Route path="/classement" element={<Ranking />} />
           {/* menu CF */}
-          <Route path="/philosophie" element={<Philosophie />} />
-          <Route path="/effectif" element={<Effectif />} />
-          <Route path="/vieQuotidienne" element={<VieQuotidienne />} />
-          <Route path="/formation" element={<Formation />} />
-          <Route path="/candidature" element={<Candidature />} />
+          <Route path="/philosophie" element={<Philosophy />} />
+          <Route path="/effectif" element={<Team />} />
+          <Route path="/vieQuotidienne" element={<LifeStyle />} />
+          <Route path="/formation" element={<Training />} />
+          <Route path="/candidature" element={<Apply />} />
           {/* page Rookies */}
           <Route path="/amateurs" element={<Rookies />} />
           {/* page Shop */}
@@ -60,7 +57,7 @@ function App() {
           {/* page ambition 2024 */}
           <Route path="/ambition" element={<Ambition />} />
           {/* page partenaires */}
-          <Route path="/partenaires" element={<Partenaire />} />
+          <Route path="/partenaires" element={<Partner />} />
           {/* Button contact */}
           <Route path="/contact" element={<Contact />} />
           {/* TODO
