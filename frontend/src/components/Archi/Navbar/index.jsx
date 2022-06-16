@@ -19,7 +19,6 @@ export default function Navbar() {
   const lbeMenus = [
     { title: "Les Louves", target: "/equipe" },
     { title: "Calendrier", target: "/calendrier" },
-    { title: "Classement", target: "/classement" },
   ];
   const cfMenus = [
     { title: "Philosophie", target: "/philosophie" },
@@ -55,6 +54,11 @@ export default function Navbar() {
                   <Link to={lbeMenu.target}>{lbeMenu.title}</Link>
                 </li>
               ))}
+              <li>
+                <a href="https://www.wordreference.com/fren/effectif">
+                  classement
+                </a>
+              </li>
             </ul>
           </li>
           <li>
@@ -81,7 +85,7 @@ export default function Navbar() {
       <div className="underNav">
         <ul className="visible">
           <li>
-            <Link to="ambition">Ambition 2024</Link>
+            <Link to="ambitions">Ambition 2024</Link>
           </li>
           <li>
             <Link to="partenaires">Partenaires</Link>
