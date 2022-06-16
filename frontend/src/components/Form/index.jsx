@@ -3,10 +3,10 @@ import Title from "@components/Archi/Title";
 import SForm from "./style";
 
 export default function Form() {
-  const [message, setMessage] = React.useState("");
-  const [name, setName] = React.useState("");
-  const [object, setObject] = React.useState("");
-  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [object, setObject] = useState("");
+  const [email, setEmail] = useState("");
 
   return (
     <SForm>
