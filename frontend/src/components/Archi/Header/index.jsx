@@ -1,5 +1,5 @@
-import LogoDesktop from "@assets/Pictures/LogoDesktop.svg";
-import LogoMobile from "@assets/Pictures/LogoMobile.png";
+import LogoDesktop from "@assets/images/logos/sah-wolf-triangle.svg";
+import LogoMobile from "@assets/images/logos/clubs/sah.png";
 import Navbar from "../Navbar";
 import SHeader from "./style";
 
