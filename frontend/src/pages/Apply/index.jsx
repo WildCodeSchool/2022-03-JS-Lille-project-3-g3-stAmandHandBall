@@ -1,9 +1,9 @@
-import SCandidature from "./style";
+import SApply from "./style";
 
-export default function Candidature() {
+export default function Apply() {
   return (
-    <SCandidature>
+    <SApply>
       <p>valide</p>
-    </SCandidature>
+    </SApply>
   );
 }

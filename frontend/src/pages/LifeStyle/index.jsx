@@ -1,9 +1,9 @@
-import SVieQuotidienne from "./style";
+import SLifeStyle from "./style";
 
-export default function VieQuotidienne() {
+export default function LifeStyle() {
   return (
-    <SVieQuotidienne>
+    <SLifeStyle>
       <p>valide</p>
-    </SVieQuotidienne>
+    </SLifeStyle>
   );
 }

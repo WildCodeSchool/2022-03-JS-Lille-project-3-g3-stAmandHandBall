@@ -9,18 +9,17 @@ import FirstTeam from "@pages/FirstTeam";
 import Contact from "@pages/Contact";
 import Calendar from "@pages/Calendar";
 import History from "@pages/History";
-import Origin from "@pages/Origin";
-import Chief from "@pages/Chief";
-import Trainer from "@pages/Trainer";
+import Staff from "@pages/Staff";
+import Coachs from "@pages/Coachs";
 import Referee from "@pages/Referee";
-import Ranking from "@pages/Ranking";
 import Philosophy from "@pages/Philosophy";
 import Team from "@pages/Team";
 import LifeStyle from "@pages/LifeStyle";
 import Training from "@pages/Training";
 import Apply from "@pages/Apply";
-import Ambition from "@pages/Ambition";
+import Ambition from "@pages/Ambitions";
 import Partner from "@pages/Partner";
+import StaffList from "@components/StaffList";
 
 function App() {
   return (
@@ -32,14 +31,13 @@ function App() {
           {/* page actus */}
           <Route path="/actus" element={<News />} />
           {/* menu club */}
-          <Route path="/origineDeLaMeute" element={<Origin />} />
-          <Route path="/chefsDeLaMeute" element={<Chief />} />
-          <Route path="/bergersDesLouveteaux" element={<Trainer />} />
+          <Route path="/origineDeLaMeute" element={<History />} />
+          <Route path="/lesChefsDeMeute" element={<Staff />} />
+          <Route path="/bergersDesLouveteaux" element={<Coachs />} />
           <Route path="/arbitres" element={<Referee />} />
           {/* menu D1F former LBE */}
-          <Route path="/equipe" element={<PlayerList />} />
+          <Route path="/equipe" element={<FirstTeam />} />
           <Route path="/calendrier" element={<Calendar />} />
-          <Route path="/classement" element={<Ranking />} />
           {/* menu CF */}
           <Route path="/philosophie" element={<Philosophy />} />
           <Route path="/effectif" element={<Team />} />
@@ -57,7 +55,6 @@ function App() {
           {/* page partenaires */}
           <Route path="/partenaires" element={<Partner />} />
           {/* Button contact */}
-          <Route path="/equipe" element={<FirstTeam />} />
           <Route path="/contact" element={<Contact />} />
           {/* TODO
            
@@ -66,7 +63,6 @@ function App() {
            */}
           {/* Need validation */}
           <Route path="/staff" element={<StaffList />} />
-          <Route path="/histoire" element={<History />} />
         </Routes>
       </main>
       <Header />
