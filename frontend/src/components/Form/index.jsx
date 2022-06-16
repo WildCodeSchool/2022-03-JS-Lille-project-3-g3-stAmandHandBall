@@ -1,7 +1,13 @@
+import React, { useState } from "react";
 import Title from "@components/Archi/Title";
 import SForm from "./style";
 
 export default function Form() {
+  const [message, setMessage] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [object, setObject] = React.useState("");
+  const [email, setEmail] = React.useState("");
+
   return (
     <SForm>
       <Title title="CONTACT" />
@@ -10,10 +16,34 @@ export default function Form() {
         ci-dessous. Nous vous apporterons une réponse rapidement.
       </p>
       <form action="">
-        <input type="text" name="name" value="NOM :" />
-        <input type="text" name="email" value="EMAIL :" />
-        <input type="text" name="object" value="SUJET :" />
-        <textarea id="text" name="message" value="MESSAGE :" />
+        <input
+          type="text"
+          placeholder="Nom Prénom"
+          name="name"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Email"
+          name="email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Sujet"
+          name="object"
+          value={object}
+          onChange={(event) => setObject(event.target.value)}
+        />
+        <textarea
+          id="text"
+          placeholder="Laissez-nous votre message ici."
+          name="message"
+          value={message}
+          onChange={(event) => setMessage(event.target.value)}
+        />
         <input type="submit" value="ENVOYER LE MESSAGE" />
       </form>
     </SForm>
