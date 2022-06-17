@@ -1,4 +1,4 @@
-import logoambition from "@assets/Logoambition.png";
+import logoambition from "@assets/images/logos/sah-ambitions.png";
 import SAmbition from "./style";
 
 export default function Ambition() {

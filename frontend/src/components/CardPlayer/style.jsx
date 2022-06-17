@@ -8,7 +8,7 @@ export default styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../src/assets/pictures/cards/players/logo-background.png")
+    background: url("../src/assets/images/logos/sah-logo-for-number.svg")
       no-repeat;
     background-size: cover;
     position: relative;
@@ -22,7 +22,7 @@ export default styled.div`
     top: 0.3vw;
   }
   .image {
-    background: url("../src/assets/pictures/cards/griffe.png") no-repeat;
+    background: url("../src/assets/images/elements/claw-blue.svg") no-repeat;
     background-size: contain;
     background-position: center;
     background-color: var(--white);
