@@ -32,6 +32,7 @@ export default styled.nav`
 
   li {
     margin: 0.8rem;
+    text-transform: uppercase;
   }
   .submenu {
     border: 1px solid var(--white);

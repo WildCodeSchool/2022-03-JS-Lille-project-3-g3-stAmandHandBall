@@ -47,7 +47,7 @@ export default function Navbar() {
             </ul>
           </li>
           <li>
-            LBE
+            D1f
             <ul className="submenu">
               {lbeMenus.map((lbeMenu) => (
                 <li>
