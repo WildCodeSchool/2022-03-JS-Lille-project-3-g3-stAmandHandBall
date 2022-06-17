@@ -11,7 +11,6 @@ export default function Form() {
 
   return (
     <SForm>
-      <Modal />
       <Title title="CONTACT" />
       <p>
         Pour toutes demandes d’informations, contactez-nous via notre formulaire
@@ -46,7 +45,7 @@ export default function Form() {
           value={message}
           onChange={(event) => setMessage(event.target.value)}
         />
-        <input type="submit" value="ENVOYER LE MESSAGE" />
+        <Modal button="ENVOYER LE MESSAGE" />
       </form>
     </SForm>
   );

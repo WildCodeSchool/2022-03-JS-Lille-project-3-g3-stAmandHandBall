@@ -18,8 +18,12 @@ export default function Modal({ button, children }) {
           <div className="overlay" />
           <div className="modal-content">
             <main>{children}</main>
+            <p>
+              Votre message a bien été envoyé, nous vous répondrons dans les
+              plus bref délais.
+            </p>
             <button type="button" className="close" onClick={toggleModal}>
-              CLOSE
+              Fermer
             </button>
           </div>
         </div>
