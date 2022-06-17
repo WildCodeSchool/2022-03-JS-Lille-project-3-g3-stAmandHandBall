@@ -1,9 +1,9 @@
-import SEffectif from "./style";
+import STeam from "./style";
 
-export default function Effectif() {
+export default function Team() {
   return (
-    <SEffectif>
+    <STeam>
       <p>valide</p>
-    </SEffectif>
+    </STeam>
   );
 }

@@ -1,9 +1,9 @@
-import SPhilosophie from "./style";
+import SPhilosophy from "./style";
 
 export default function Philosophy() {
   return (
-    <SPhilosophie>
+    <SPhilosophy>
       <p>valide</p>
-    </SPhilosophie>
+    </SPhilosophy>
   );
 }

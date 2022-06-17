@@ -1,9 +1,9 @@
-import SClassement from "./style";
+import SReferee from "./style";
 
-export default function Classement() {
+export default function Referee() {
   return (
-    <SClassement>
+    <SReferee>
       <p>valide</p>
-    </SClassement>
+    </SReferee>
   );
 }

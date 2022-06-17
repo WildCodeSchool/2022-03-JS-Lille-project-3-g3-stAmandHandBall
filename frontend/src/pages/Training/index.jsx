@@ -1,9 +1,9 @@
-import SAmbition from "./style";
+import STraining from "./style";
 
-export default function Ambition() {
+export default function Training() {
   return (
-    <SAmbition>
+    <STraining>
       <p>valide</p>
-    </SAmbition>
+    </STraining>
   );
 }
