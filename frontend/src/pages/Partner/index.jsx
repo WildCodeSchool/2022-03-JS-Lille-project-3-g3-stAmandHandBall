@@ -1,9 +1,9 @@
-import SPartenaire from "./style";
+import SPartner from "./style";
 
-export default function Partenaire() {
+export default function Partner() {
   return (
-    <SPartenaire>
-      <p>valide</p>
-    </SPartenaire>
+    <SPartner>
+      <p>Partner</p>
+    </SPartner>
   );
 }
