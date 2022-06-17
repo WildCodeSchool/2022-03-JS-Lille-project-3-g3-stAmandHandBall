@@ -37,7 +37,7 @@ export default function Navbar() {
             </ul>
           </li>
           <li>
-            LBE
+            D1f
             <ul className="submenu">
               {lbeMenus.map((lbeMenu) => (
                 <li>{lbeMenu}</li>
@@ -59,7 +59,7 @@ export default function Navbar() {
       </div>
       <div className="underNav">
         <ul className="visible">
-          <li>Ambition 2024</li>
+          <li>Ambitions 2024</li>
           <li>Partenaires</li>
         </ul>
       </div>
