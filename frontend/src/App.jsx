@@ -3,7 +3,6 @@ import Home from "@pages/Home";
 import Footer from "@components/Archi/Footer";
 import Header from "@components/Archi/Header";
 import News from "@pages/News";
-import NonProfessional from "@pages/NonProfessional";
 import Shop from "@pages/Shop";
 import FirstTeam from "@pages/FirstTeam";
 import Contact from "@pages/Contact";
@@ -18,7 +17,6 @@ function App() {
           <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/actus" element={<News />} />
-          <Route path="/amateurs" element={<NonProfessional />} />
           <Route path="/boutique" element={<Shop />} />
           <Route path="/equipe" element={<FirstTeam />} />
           <Route path="/contact" element={<Contact />} />
