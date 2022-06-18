@@ -1,3 +1,5 @@
+import BigTitle from "@components/Archi/BigTitle";
+import BigPicture from "@components/Archi/BigPicture";
 import CardProduct from "@components/CardProduct";
 
 import SShop from "./style";
@@ -54,19 +56,23 @@ export default function Shop() {
     },
   ];
   return (
-    <SShop>
-      {products.map((product) => {
-        return (
-          <CardProduct
-            key={product.id}
-            name={product.name}
-            img1={product.img1}
-            img2={product.img2}
-            img3={product.img3}
-            price={product.price}
-          />
-        );
-      })}
-    </SShop>
+    <>
+      <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
+      <BigTitle title="LA BOUTIQUE DE LA MEUTE" />
+      <SShop>
+        {products.map((product) => {
+          return (
+            <CardProduct
+              key={product.id}
+              name={product.name}
+              img1={product.img1}
+              img2={product.img2}
+              img3={product.img3}
+              price={product.price}
+            />
+          );
+        })}
+      </SShop>
+    </>
   );
 }
