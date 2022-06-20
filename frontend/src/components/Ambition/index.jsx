@@ -1,5 +1,5 @@
-import logoambition from "@assets/Logoambition.png";
 import { Link } from "react-router-dom";
+import logoambition from "@assets/images/logos/sah-ambitions.png";
 import SAmbition from "./style";
 
 export default function Ambition() {

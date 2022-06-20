@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import SCardCalendar from "@components/CardCalendar/style";
 import Title from "@components/Archi/Title";
-import domicile from "@assets/Pictures/cards/calendar/picto-maison.png";
-import exterieur from "@assets/Pictures/cards/calendar/picto-avion.png";
+import domicile from "@assets/images/elements/maison.png";
+import exterieur from "@assets/images/elements/avion.png";
 
 export default function CardCalendar({
   day,
@@ -23,7 +23,7 @@ export default function CardCalendar({
         <h3>J{day}</h3>
       </div>
       <img
-        src={`../../src/assets/Pictures/cards/calendar/${hit}.png`}
+        src={`../../src/assets/images/logos/${hit}.png`}
         alt="hit"
         className="hit"
       />

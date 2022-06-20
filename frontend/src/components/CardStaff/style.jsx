@@ -19,7 +19,7 @@ export default styled.div`
     text-align: center;
   }
   .image {
-    background: url("../src/assets/pictures/cards/griffe.png") no-repeat;
+    background: url("../src/assets/images/elements/claw-yellow.svg") no-repeat;
     background-size: contain;
     background-position: center;
     background-color: var(--white);
@@ -39,7 +39,7 @@ export default styled.div`
   .picto {
     width: 4vw;
     aspect-ratio: 1/1.06;
-    background: url("../src/assets/pictures/cards/staff/picto.png") no-repeat;
+    background: url("../src/assets/images/logos/sah-icon.png") no-repeat;
     background-size: cover;
     position: relative;
     bottom: 3vw;
