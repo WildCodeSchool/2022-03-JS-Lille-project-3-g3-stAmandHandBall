@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import LogoDesktop from "@assets/images/logos/sah-wolf-triangle.svg";
 import LogoMobile from "@assets/images/logos/clubs/sah.png";
-import Navbar from "../Navbar";
+import Navbar from "@components/Archi/Navbar";
 import SHeader from "./style";
 
 export default function Header() {

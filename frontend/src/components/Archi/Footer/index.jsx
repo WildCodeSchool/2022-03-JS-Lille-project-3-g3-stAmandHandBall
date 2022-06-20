@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import imgGriffe from "@assets/images/elements/claw-blue.svg";
 import imgBTZ from "@assets/images/logos/ligue-butagaz.png";
