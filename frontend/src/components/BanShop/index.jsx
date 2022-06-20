@@ -1,7 +1,7 @@
-import imgLogo from "@assets/pictures/Logo_Loup_SAH.png";
-import img1 from "@assets/pictures/AD103016.png";
-import img2 from "@assets/pictures/AD103090.png";
-import img3 from "@assets/pictures/Marketa.png";
+import imgLogo from "@assets/images/logos/sah-icon.png";
+import img1 from "@assets/images/photos/AD103016.png";
+import img2 from "@assets/images/photos/AD103090.png";
+import img3 from "@assets/images/photos/Marketa.png";
 import SBanSHop from "./style";
 
 export default function BanSHop() {

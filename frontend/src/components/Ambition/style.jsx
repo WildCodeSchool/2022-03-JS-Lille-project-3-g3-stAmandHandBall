@@ -7,10 +7,8 @@ export default styled.div`
     rgba(78, 147, 67, 1) 50%,
     rgba(21, 97, 185, 1) 100%
   );
-  width: 100vw;
   height: 50vh;
   .title {
-    width: 100vw;
     height: 30vh;
     display: flex;
     align-items: center;
