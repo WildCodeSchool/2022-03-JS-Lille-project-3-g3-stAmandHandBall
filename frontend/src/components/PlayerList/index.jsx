@@ -11,9 +11,9 @@ export default function PlayerList() {
       {players.map((player) => {
         return (
           <CardPlayer
-            key={player.name}
-            name={player.name}
-            img={player.img}
+            key={player.id}
+            name={`${player.firstname} ${player.lastname}`}
+            img={`./src/assets/images/cards/players/${player.img}`}
             number={player.number}
           />
         );
