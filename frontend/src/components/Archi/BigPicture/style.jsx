@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export default styled.section`
-  background-color: var(--white-opacity);
-
   background: ${(props) => {
     return `url(../../src/assets/images/backgrounds/${props.img}.jpg) no-repeat;`;
   }};
-
+  margin-top: 15vh;
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   height: 65vh;
   display: flex;
   justify-content: right;
@@ -39,8 +37,7 @@ export default styled.section`
   }
   .calendar {
     background-color: var(--blue-opacity);
-    padding: 0 20vw 0 20vw;
-    width: 100vw;
+    width: 100%;
     height: 65vh;
     display: flex;
     flex-direction: column;
@@ -82,7 +79,7 @@ export default styled.section`
       aspect-ratio: 1/1;
     }
     .informations {
-      width: 100%;
+      width: 60%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -105,6 +102,44 @@ export default styled.section`
   }
 
   @media screen and (max-width: 700px) {
-    background-position: 50% -100%;
+    height: 60vh;
+    margin-top: 10vh;
+    justify-content: center;
+    .calendar {
+      height: 60vh;
+      h2 {
+        width: 80%;
+        font-size: 3rem;
+        margin: 4vh 0 2vh 0;
+        text-align: center;
+      }
+      .club1 {
+        height: 16vh;
+      }
+      .dash {
+        width: 5vw;
+        aspect-ratio: 1/0.3;
+      }
+      .club2 {
+        height: 16vh;
+      }
+      .informations {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 3vh 0 3vh 0;
+      }
+      .date,
+      .info {
+        width: 45%;
+        aspect-ratio: 3/1;
+        font-size: 1.2rem;
+      }
+    }
+    .blocInfo {
+      display: none;
+    }
   }
 `;
