@@ -4,6 +4,8 @@ export default styled.section`
   background-color: var(--blue);
 
   height: 30vh;
+  display: flex;
+  align-items: center;
   .buttonPosition {
     height: 20vh;
     text-align: center;
@@ -14,7 +16,6 @@ export default styled.section`
       border: none;
       background-color: var(--yellow);
       box-shadow: 0rem 0.3rem 0.3rem black;
-      margin-top: 1rem;
       color: var(--blue);
       font-size: 3.5vmax;
       font-weight: 900;
@@ -28,7 +29,7 @@ export default styled.section`
       height: 9vh;
       button {
         margin-top: 0.5rem;
-        font-size: 2vmax;
+        font-size: 0.9em;
       }
     }
   }

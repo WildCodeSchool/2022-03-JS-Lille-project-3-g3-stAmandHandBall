@@ -6,9 +6,9 @@ import SContact from "./style";
 export default function Contact() {
   return (
     <SContact>
-      <Form />
-      <ArrowVertical mobileDisplay="none" />
       <Informations />
+      <ArrowVertical mobileDisplay="none" />
+      <Form />
     </SContact>
   );
 }
