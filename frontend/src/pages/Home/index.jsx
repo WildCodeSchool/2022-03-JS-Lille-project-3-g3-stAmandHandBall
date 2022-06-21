@@ -1,4 +1,4 @@
-import Timer from "@components/counter";
+import Counter from "@components/Counter";
 import Ambition from "@components/Ambition";
 import Partner from "@components/Partner";
 import Networks from "@components/Networks";
@@ -17,7 +17,7 @@ export default function Home() {
       <Networks />
       <Ambition />
       <Partner />
-      <Timer />
+      <Counter />
     </SHome>
   );
 }

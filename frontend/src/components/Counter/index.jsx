@@ -1,18 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useTimer } from "react-timer-hook";
 import boxOffice from "@assets/boxOffice.png";
 import logoSah from "@assets/Logo_SAH.png";
-import SMyTimer from "./style";
+import SCounter from "./style";
 
-function MyTimer({ expiryTimestamp }) {
+export default function Counter() {
+  const expiryTimestamp = new Date();
+  expiryTimestamp.setSeconds(expiryTimestamp.getSeconds() + 691200); //  the counter is set hard for the moment by mandatory conversion to seconds to program the timer
+
   const { minutes, hours, days } = useTimer({
     expiryTimestamp,
-    onExpire: () => console.warn("onExpire called"),
   });
 
   return (
-    <SMyTimer>
+    <SCounter>
       <div>
         <h3>PROCHAIN MATCH</h3>
       </div>
@@ -49,19 +50,6 @@ function MyTimer({ expiryTimestamp }) {
           <img className="boxOffice" src={boxOffice} alt="billeterie" />
         </a>
       </div>
-    </SMyTimer>
+    </SCounter>
   );
 }
-
-export default function App() {
-  const time = new Date();
-  time.setSeconds(time.getSeconds() + 691200); // = 8 days, mandatory conversion to seconds to program the timer
-  return (
-    <div>
-      <MyTimer expiryTimestamp={time} />
-    </div>
-  );
-}
-MyTimer.propTypes = {
-  expiryTimestamp: PropTypes.string.isRequired,
-};
