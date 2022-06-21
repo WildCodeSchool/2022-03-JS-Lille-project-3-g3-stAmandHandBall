@@ -15,6 +15,9 @@ export default styled.section`
     justify-content: center;
     cursor: pointer;
   }
+  a {
+    text-decoration: none;
+  }
   .titlePhoto {
     color: white;
     font-size: 2em;

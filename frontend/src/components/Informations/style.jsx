@@ -40,5 +40,9 @@ export default styled.section`
     .schedules {
       font-size: 1em;
     }
+    .schedules {
+      text-align: center;
+      margin-right: 0vw;
+    }
   }
 `;

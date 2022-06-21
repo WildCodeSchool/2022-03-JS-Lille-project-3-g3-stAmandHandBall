@@ -1,25 +1,30 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import SBurger from "./style";
 
 export default function Burger({ ...props }) {
   const stopPropa = (evt) => {
     evt.stopPropagation();
   };
+
   const clubMenus = [
-    "Origine de la Meute",
-    "Chefs de Meute",
-    "Bergers des louveteaux",
-    "Arbitres",
-  ];
-  const lbeMenus = ["Les Louves", "Calendrier", "Classement"];
-  const cfMenus = [
-    "Philosophie",
-    "Effectif",
-    "Vie Quotidienne",
-    "Formation",
-    "Candidature",
+    { title: "Origine de la Meute", target: "/origineDeLaMeute" },
+    { title: "Chefs de Meute", target: "/chefsDeMeute" },
+    { title: "Bergers des louveteaux", target: "/bergersDesLouveteaux" },
+    { title: "Arbitres", target: "/arbitres" },
   ];
 
+  const lbeMenus = [
+    { title: "Les Louves", target: "/equipe" },
+    { title: "Calendrier", target: "/calendrier" },
+  ];
+  const cfMenus = [
+    { title: "Philosophie", target: "/philosophie" },
+    { title: "Effectif", target: "/effectif" },
+    { title: "Vie Quotidienne", target: "/vieQuotidienne" },
+    { title: "Formation", target: "/formation" },
+    { title: "Candidature", target: "/candidature" },
+  ];
   return (
     <SBurger isOpen={props.burger} onClick={props.func}>
       <div className="hamburger">
@@ -29,13 +34,17 @@ export default function Burger({ ...props }) {
       </div>
       <div className="Nav">
         <ul>
-          <li>Actus</li>
+          <Link to="actus">Actus</Link>
           <li>
             <details>
               <summary onClick={stopPropa}>Club</summary>
               <ul className="subMenu">
                 {clubMenus.map((clubMenu) => (
-                  <li>{clubMenu}</li>
+                  <li>
+                    <Link className="aColor" to={clubMenu.target}>
+                      {clubMenu.title}
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </details>
@@ -45,8 +54,20 @@ export default function Burger({ ...props }) {
               <summary onClick={stopPropa}>LBE</summary>
               <ul className="subMenu">
                 {lbeMenus.map((lbeMenu) => (
-                  <li>{lbeMenu}</li>
+                  <li>
+                    <Link className="aColor" to={lbeMenu.target}>
+                      {lbeMenu.title}
+                    </Link>
+                  </li>
                 ))}
+                <li>
+                  <a
+                    className="aColor"
+                    href="https://www.wordreference.com/fren/effectif"
+                  >
+                    classement
+                  </a>
+                </li>
               </ul>
             </details>
           </li>
@@ -55,16 +76,30 @@ export default function Burger({ ...props }) {
               <summary onClick={stopPropa}>CF</summary>
               <ul className="subMenu">
                 {cfMenus.map((cfMenu) => (
-                  <li>{cfMenu}</li>
+                  <li>
+                    <Link className="aColor" to={cfMenu.target}>
+                      {cfMenu.title}
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </details>
           </li>
-          <li>Amateur</li>
-          <li>Boutique</li>
-          <li>Billetterie</li>
-          <li>Ambition 2024</li>
-          <li>Partenaires</li>
+          <li>
+            <Link to="amateurs">Amateur</Link>
+          </li>
+          <li>
+            <Link to="boutique">Boutique</Link>
+          </li>
+          <li>
+            <Link to="billetterie">Billetterie</Link>
+          </li>
+          <li>
+            <Link to="ambitions">Ambition 2024</Link>
+          </li>
+          <li>
+            <Link to="partenaires">Partenaires</Link>
+          </li>
         </ul>
       </div>
     </SBurger>
