@@ -1,3 +1,5 @@
+import BigTitle from "@components/Archi/BigTitle";
+import BigPicture from "@components/Archi/BigPicture";
 import CardEvent from "@components/CardEvent";
 import SHistory from "./style";
 
@@ -47,18 +49,22 @@ export default function History() {
     },
   ];
   return (
-    <SHistory>
-      {history.map((event) => {
-        return (
-          <CardEvent
-            className={event.id % 2 === 0 ? "right" : "left"}
-            key={event.id}
-            id={event.id}
-            date={event.date}
-            text={event.text}
-          />
-        );
-      })}
-    </SHistory>
+    <>
+      <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
+      <BigTitle title="L’ORIGINE DE LA MEUTE" />
+      <SHistory>
+        {history.map((event) => {
+          return (
+            <CardEvent
+              className={event.id % 2 === 0 ? "right" : "left"}
+              key={event.id}
+              id={event.id}
+              date={event.date}
+              text={event.text}
+            />
+          );
+        })}
+      </SHistory>
+    </>
   );
 }

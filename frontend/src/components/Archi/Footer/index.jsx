@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import imgGriffe from "@assets/images/elements/claw-blue.svg";
 import imgBTZ from "@assets/images/logos/ligue-butagaz.png";
 import imgSAH from "@assets/images/logos/sah.png";
@@ -11,9 +12,11 @@ export default function Footer() {
         <img src={imgGriffe} alt="imgGriffe" />
       </div>
       <div className="buttonPosition">
-        <button type="button">
-          <p>Nous contacter</p>
-        </button>
+        <Link to="contact">
+          <button type="button">
+            <p>Nous contacter</p>
+          </button>
+        </Link>
       </div>
       <section className="logo">
         <img src={imgBTZ} alt="imgBTZ" />
