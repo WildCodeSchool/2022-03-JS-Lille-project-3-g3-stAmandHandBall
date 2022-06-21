@@ -50,7 +50,7 @@ export default styled.section`
     width: 90vw;
     display: flex;
     align-items: center;
-    margin-bottom: 10vh;
+    margin: 10vh;
     form {
       width: 95%;
       margin: auto;

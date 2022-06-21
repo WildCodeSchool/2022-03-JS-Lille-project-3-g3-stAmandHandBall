@@ -16,12 +16,20 @@ export default styled.nav`
     background-color: var(--white);
     color: var(--blue);
   }
+  .underNav > ul > li > a {
+    color: var(--blue);
+  }
   .visible {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
   li {
     margin: 0.8rem;
     text-transform: uppercase;

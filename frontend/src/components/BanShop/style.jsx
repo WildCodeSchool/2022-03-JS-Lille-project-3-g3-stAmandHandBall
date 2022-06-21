@@ -14,6 +14,9 @@ export default styled.section`
       opacity: 0.5;
     }
   }
+  a {
+    text-decoration: none;
+  }
   .title {
     position: relative;
     top: -75%;
