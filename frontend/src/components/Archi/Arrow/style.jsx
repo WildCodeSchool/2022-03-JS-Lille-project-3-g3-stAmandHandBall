@@ -7,7 +7,7 @@ export default styled.div`
   .left {
     width: 2vw;
     min-height: 3vw;
-    background: url("../src/assets/pictures/arrow.svg") no-repeat;
+    background: url("../src/assets/images/elements/arrow.svg") no-repeat;
     background-size: contain;
     background-position: left;
     transform: rotate(90deg);
@@ -15,7 +15,7 @@ export default styled.div`
   .right {
     width: 2vw;
     min-height: 3vw;
-    background: url("../src/assets/pictures/arrow.svg") no-repeat;
+    background: url("../src/assets/images/elements/arrow.svg") no-repeat;
     background-size: contain;
     background-position: right;
     transform: rotate(-90deg);

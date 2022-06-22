@@ -8,7 +8,7 @@ import SFirstTeam from "./style";
 export default function FirstTeam() {
   return (
     <>
-      <BigPicture img="test" date="" hour="" club1="" club2="" />
+      <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
       <BigTitle title="LES LOUVES" />
       <SFirstTeam>
         <Title title="JOUEUSES" />

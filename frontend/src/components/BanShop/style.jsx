@@ -14,6 +14,9 @@ export default styled.section`
       opacity: 0.5;
     }
   }
+  a {
+    text-decoration: none;
+  }
   .title {
     position: relative;
     top: -75%;
@@ -32,7 +35,6 @@ export default styled.section`
     }
   }
   .mainImages {
-    width: 100%;
     height: 75vh;
     position: relative;
     top: -133%;

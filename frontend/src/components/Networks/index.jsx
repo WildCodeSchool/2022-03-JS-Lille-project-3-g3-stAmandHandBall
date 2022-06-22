@@ -1,10 +1,10 @@
-import imgNetworks from "@assets/imgNetworks.jpg";
-import imgfacebook from "@assets/Facebook.png";
-import imginstagram from "@assets/Instagram.png";
-import imglinkedin from "@assets/LinkedIn.png";
-import imgtwitch from "@assets/twitch.png";
-import imgyoutube from "@assets/picto-bleu-youtube.png";
-import imgtwitter from "@assets/Twitter.png";
+import imgNetworks from "@assets/images/photos/networks.jpg";
+import imgfacebook from "@assets/images/logos/picto-facebook.png";
+import imginstagram from "@assets/images/logos/picto-instagram.png";
+import imglinkedin from "@assets/images/logos/picto-linkedin.png";
+import imgtwitch from "@assets/images/logos/picto-twitch.png";
+import imgyoutube from "@assets/images/logos/picto-youtube.png";
+import imgtwitter from "@assets/images/logos/picto-twitter.png";
 import SNetworks from "./style";
 
 export default function Networks() {
