@@ -10,7 +10,6 @@ export default styled.div`
   a {
     text-decoration: none;
   }
-  width: 100vw;
   height: 50vh;
   .title {
     height: 30vh;
