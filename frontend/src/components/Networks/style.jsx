@@ -1,58 +1,61 @@
 import styled from "styled-components";
 
 export default styled.section`
-  height: 90vh;
-  margin-bottom: 5%;
-  margin-top: 10%;
-  .imgPosition {
-    display: flex;
-    justify-content: center;
-    img {
-      width: 60vw;
-      height: 80vh;
-      margin-top: 5%;
-      position: relative;
-    }
-  }
+  background: ${(props) => {
+    return `url(../../src/assets/images/photos/${props.image}) no-repeat;`;
+  }};
+  width: 75vw;
+  height: 60vh;
+  aspect-ratio: 5/1;
+  margin: auto;
+  margin-right: 10vw;
+  margin-bottom: 20vh;
+
   .cube {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin-top: 30vh;
     position: relative;
-    width: 35vw;
-    height: 70vh;
+    width: 30vw;
+    height: 55vh;
     background-color: var(--yellow);
-    left: 10%;
-    top: -100%;
+    bottom: 8vh;
+    right: 5vw;
+    box-shadow: var(--box-shadow);
+
     .title {
-      height: 5vh;
-      text-transform: uppercase;
-      color: white;
-      font-size: 3.5vmax;
+      height: 3vh;
+      color: var(--white);
+      text-shadow: var(--text-shadow);
+      font-size: 3em;
       text-align: center;
-      margin-top: 5%;
       position: relative;
-      top: -4%;
+      top: -3vh;
     }
     .logo {
-      height: 40%;
+      width: 80%;
+      height: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 6%;
-      margin-top: 8%;
+      margin: auto;
+      margin-top: 5vh;
       img {
-        height: 45%;
-        width: 20%;
-        margin-right: 6%;
+        width: 5.5vw;
+        aspect-ratio: 1/1;
+        margin: 0 1vw 0 1vw;
       }
     }
     .hash {
-      height: 40%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      margin-bottom: 3vh;
       p {
-        font-size: 3.5vmax;
+        font-size: 3em;
         color: var(--blue);
       }
     }
@@ -60,12 +63,6 @@ export default styled.section`
 
   @media screen and (max-width: 640px) {
     height: 35vh;
-    .imgPosition {
-      img {
-        height: 30vh;
-        width: 100vw;
-      }
-    }
     .cube {
       position: relative;
       width: 45vw;
