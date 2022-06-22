@@ -1,8 +1,7 @@
 import React from "react";
 import { useTimer } from "react-timer-hook";
-import boxOffice from "@assets/boxOffice.png";
+import boxOffice from "@assets/images/elements/boxOffice.png";
 import sah from "@assets/images/logos/clubs/sah.png";
-// import logoSah from "@assets/Logo_SAH.png";
 import SCounter from "./style";
 
 export default function Counter() {
@@ -23,9 +22,6 @@ export default function Counter() {
         <img src={sah} alt="équipe à l'extérieur" />
         <li>VS</li>
         <img src={sah} alt="équipe à l'extérieur" />
-        {/* <img src={logoSah} alt="équipe à l'extérieur" />
-        <li>VS</li>
-        <img src={logoSah} alt="équipe à l'extérieur" /> */}
       </ul>
       <ul className="dayTime">
         <li>J1 </li>
