@@ -24,7 +24,7 @@ export default styled.div`
 
     img {
       width: 15%;
-      margin-top: -4%;
+      margin: -3vh 1vw 0 1vw;
     }
   }
   .secondtitle {

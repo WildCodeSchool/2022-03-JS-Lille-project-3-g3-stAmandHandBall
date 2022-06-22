@@ -1,5 +1,6 @@
 import BigTitle from "@components/Archi/BigTitle";
 import BigPicture from "@components/Archi/BigPicture";
+import Arrow from "@components/Archi/Arrow";
 import Ambition from "@components/Ambition";
 import Partner from "@components/Partner";
 import Networks from "@components/Networks";
@@ -22,7 +23,13 @@ export default function Home() {
       />
       <BigTitle title="COMPTEUR EN COURS" />
       <Caroussel />
+      <div className="arrow">
+        <Arrow />
+      </div>
       <BlocPhotos />
+      <div className="arrow">
+        <Arrow />
+      </div>
       <BlocCf />
       <BanShop />
       <Networks />

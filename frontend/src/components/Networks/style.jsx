@@ -10,12 +10,12 @@ export default styled.section`
   margin: auto;
   margin-right: 10vw;
   margin-bottom: 20vh;
+  margin-top: 30vh;
 
   .cube {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    margin-top: 30vh;
     position: relative;
     width: 30vw;
     height: 55vh;

@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
 export default styled.div`
-  main {
-    background-color: #18399d;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  .arrow {
+    width: 80vw;
   }
 `;
