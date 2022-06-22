@@ -34,7 +34,11 @@ export default function Burger({ ...props }) {
       </div>
       <div className="Nav">
         <ul>
-          <Link to="actus">Actus</Link>
+          <li>
+            <Link className="linkColor" to="actus">
+              Actus
+            </Link>
+          </li>
           <li>
             <details>
               <summary onClick={stopPropa}>Club</summary>
@@ -86,19 +90,29 @@ export default function Burger({ ...props }) {
             </details>
           </li>
           <li>
-            <Link to="amateurs">Amateur</Link>
+            <Link className="linkColor" to="amateurs">
+              Amateur
+            </Link>
           </li>
           <li>
-            <Link to="boutique">Boutique</Link>
+            <Link className="linkColor" to="boutique">
+              Boutique
+            </Link>
           </li>
           <li>
-            <Link to="billetterie">Billetterie</Link>
+            <Link className="linkColor" to="billetterie">
+              Billetterie
+            </Link>
           </li>
           <li>
-            <Link to="ambitions">Ambition 2024</Link>
+            <Link className="linkColor" to="ambitions">
+              Ambition 2024
+            </Link>
           </li>
           <li>
-            <Link to="partenaires">Partenaires</Link>
+            <Link className="linkColor" to="partenaires">
+              Partenaires
+            </Link>
           </li>
         </ul>
       </div>
