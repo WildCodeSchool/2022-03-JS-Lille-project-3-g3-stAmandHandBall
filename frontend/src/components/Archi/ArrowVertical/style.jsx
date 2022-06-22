@@ -8,7 +8,7 @@ export default styled.div`
   .top {
     width: 2vw;
     min-height: 2vw;
-    background: url("../src/assets/pictures/arrow.svg") no-repeat;
+    background: url("../src/assets/images/elements/arrow.svg") no-repeat;
     background-size: contain;
     position: relative;
     top: 0.2vw;
@@ -17,7 +17,7 @@ export default styled.div`
   .bottom {
     width: 2vw;
     min-height: 2vw;
-    background: url("../src/assets/pictures/arrow.svg") no-repeat;
+    background: url("../src/assets/images/elements/arrow.svg") no-repeat;
     background-size: contain;
     position: relative;
     bottom: 0.2vw;

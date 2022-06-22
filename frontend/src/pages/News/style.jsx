@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default styled.div`
+export default styled.section`
   main {
     background-color: #118611;
   }

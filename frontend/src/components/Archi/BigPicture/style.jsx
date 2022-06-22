@@ -4,7 +4,7 @@ export default styled.section`
   background-color: var(--white-opacity);
 
   background: ${(props) => {
-    return `url(../../src/assets/Pictures/backgrounds/${props.img}.jpg) no-repeat;`;
+    return `url(../../src/assets/images/backgrounds/${props.img}.jpg) no-repeat;`;
   }};
 
   background-size: cover;
@@ -58,7 +58,7 @@ export default styled.section`
     }
     .club1 {
       background: ${(props) => {
-        return `url(../src/assets/pictures/cards/calendar/${props.club1}.png) no-repeat`;
+        return `url(../src/assets/images/logos/clubs/${props.club1}.png) no-repeat`;
       }};
       background-size: contain;
       background-position: center;
@@ -74,7 +74,7 @@ export default styled.section`
     }
     .club2 {
       background: ${(props) => {
-        return `url(../src/assets/pictures/cards/calendar/${props.club2}.png) no-repeat`;
+        return `url(../src/assets/images/logos/clubs/${props.club2}.png) no-repeat`;
       }};
       background-size: contain;
       background-position: center;
