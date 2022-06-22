@@ -10,9 +10,11 @@ export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/players").then(({ data }) => {
-      setPlayers(data).then(() => {});
-    });
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
+      .then(({ data }) => {
+        setPlayers(data).then(() => {});
+      });
   }, []);
 
   return (
