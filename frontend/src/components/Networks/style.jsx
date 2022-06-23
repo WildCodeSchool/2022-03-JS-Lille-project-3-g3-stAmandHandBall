@@ -4,6 +4,7 @@ export default styled.section`
   background: ${(props) => {
     return `url(../../src/assets/images/photos/${props.image}) no-repeat;`;
   }};
+  background-size: cover;
   width: 75vw;
   height: 60vh;
   aspect-ratio: 5/1;
@@ -61,27 +62,39 @@ export default styled.section`
     }
   }
 
-  @media screen and (max-width: 640px) {
-    height: 35vh;
+  @media screen and (max-width: 700px) {
+    width: 80vw;
+    height: 40vh;
+    position: relative;
+    left: 10vw;
+    background-size: contain;
     .cube {
       position: relative;
+      display: flex;
+      flex-direction: column;
       width: 45vw;
       height: 25vh;
-      left: 0;
-      top: -95%;
+      bottom: 3vh;
+      right: 19vw;
+      padding-top: 1vh;
       .title {
-        font-size: 2vmax;
+        font-size: 1.5em;
       }
       .logo {
+        width: 90%;
+        position: relative;
+        bottom: 2.5vh;
         img {
-          height: 40%;
-          width: 25%;
-          margin-top: -15%;
+          width: 5vh;
+          margin: 0.5vh;
+          aspect-ratio: 1/1;
         }
       }
       .hash {
+        position: relative;
+        bottom: 1vh;
         p {
-          font-size: 2vmax;
+          font-size: 1em;
         }
       }
     }
