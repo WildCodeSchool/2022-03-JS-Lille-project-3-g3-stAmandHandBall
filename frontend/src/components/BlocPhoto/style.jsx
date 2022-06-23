@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
 export default styled.section`
-  width: 90vw;
-  height: 100vh;
+  width: 80vw;
+  height: 50vh;
   margin: auto;
   display: flex;
-  position: relative;
-  .photoDiv {
-    top: 0;
-    bottom: 3vh;
-    height: 25vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  a {
+    text-decoration: none;
   }
   .titlePhoto {
-    color: white;
+    color: var(--white);
     font-size: 2em;
+    text-align: center;
   }
   .firstPhoto {
     background-image: url("https://cdn.pixabay.com/photo/2022/03/08/07/08/water-7055153_960_720.jpg");
@@ -28,30 +25,109 @@ export default styled.section`
   .thirdPhoto {
     background-image: url("https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_960_720.jpg");
   }
-
-  @media screen and (min-width: 640px) {
+  .fourthPhoto {
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_960_720.jpg");
+  }
+  .fifthPhoto {
+    background-image: url("https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_960_720.jpg");
+  }
+  @media screen and (min-width: 700px) {
     .photoDiv {
-      position: absolute;
-      width: calc(100% / 3 + 2em);
-      margin-bottom: 30vh;
+      height: 25vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .firstPart,
+    .secondPart {
+      width: 100%;
+      height: 25vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .firstPart {
+      margin-bottom: 2vh;
     }
     .firstPhoto {
-      clip-path: polygon(0 0, 100% 0, 78% 100%, 0% 100%);
+      position: relative;
+      left: 5vw;
+      width: 30vw;
+      clip-path: polygon(0 0, 30vw 0, 24vw 25vh, 0 25vh);
     }
     .secondPhoto {
-      clip-path: polygon(22% 0, 100% 0, 78% 100%, 0% 100%);
-      left: calc((100% / 3) - 2em);
+      width: 30vw;
+      clip-path: polygon(6vw 0, 30vw 0, 24vw 25vh, 0 25vh);
     }
     .thirdPhoto {
-      left: calc((2 * 100% / 3) - 4em);
-      clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+      position: relative;
+      right: 5vw;
+      width: 30vw;
+      clip-path: polygon(6vw 0, 30vw 0, 30vw 25vh, 0 25vh);
+    }
+    .fourthPhoto {
+      position: relative;
+      left: 5vw;
+      width: 42.5vw;
+      clip-path: polygon(0 0, 42.5vw 0, 36.5vw 25vh, 0 25vh);
+    }
+    .fifthPhoto {
+      position: relative;
+      right: 5vw;
+      width: 42.5vw;
+      clip-path: polygon(6vw 0, 42.5vw 0, 42.5vw 25vh, 0 25vh);
     }
   }
-  @media screen and (max-width: 640px) {
-    flex-flow: column nowrap;
+  @media screen and (max-width: 700px) {
     width: 100vw;
+    height: 90vh;
     .photoDiv {
-      left: 20;
+      height: 25vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .firstPart,
+    .secondPart {
+      width: 100vw;
+      height: 54vh;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .secondPart {
+      margin-bottom: 0;
+      height: 36vh;
+    }
+    .firstPhoto {
+      position: static;
+      left: 0;
+      width: 100vw;
+      height: 18vh;
+    }
+    .secondPhoto {
+      position: static;
+      width: 100vw;
+      height: 18vh;
+    }
+    .thirdPhoto {
+      position: static;
+      right: 0;
+      width: 100vw;
+      height: 18vh;
+    }
+    .fourthPhoto {
+      position: static;
+      left: 0;
+      width: 100vw;
+      height: 18vh;
+    }
+    .fifthPhoto {
+      position: static;
+      right: 0;
+      width: 100vw;
       height: 18vh;
     }
   }

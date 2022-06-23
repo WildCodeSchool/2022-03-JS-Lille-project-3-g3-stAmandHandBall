@@ -1,20 +1,33 @@
-import { createContext, useState } from "react";
+import axios from "axios";
+import { createContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-const context = createContext(null);
-export default context;
+const ctxProvider = createContext();
+export default ctxProvider;
+
 export function CtxProvider({ children }) {
   const [test, setTest] = useState();
+  const [players, setPlayers] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
+      .then(({ data }) => {
+        setPlayers(data).then(() => {});
+      });
+  }, []);
+
   return (
-    <context.Provider
+    <ctxProvider.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         test,
         setTest,
+        players,
       }}
     >
       {children}
-    </context.Provider>
+    </ctxProvider.Provider>
   );
 }
 

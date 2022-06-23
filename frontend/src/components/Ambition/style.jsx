@@ -7,10 +7,11 @@ export default styled.div`
     rgba(78, 147, 67, 1) 50%,
     rgba(21, 97, 185, 1) 100%
   );
-  width: 100vw;
+  a {
+    text-decoration: none;
+  }
   height: 50vh;
   .title {
-    width: 100vw;
     height: 30vh;
     display: flex;
     align-items: center;
@@ -19,9 +20,10 @@ export default styled.div`
     color: var(--white);
     font-size: 3.5vmax;
     font-weight: 900;
+
     img {
       width: 15%;
-      margin-top: -4%;
+      margin: -3vh 1vw 0 1vw;
     }
   }
   .secondtitle {

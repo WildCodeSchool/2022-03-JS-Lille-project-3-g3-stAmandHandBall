@@ -1,20 +1,16 @@
-import imgNetworks from "@assets/imgNetworks.jpg";
-import imgfacebook from "@assets/Facebook.png";
-import imginstagram from "@assets/Instagram.png";
-import imglinkedin from "@assets/LinkedIn.png";
-import imgtwitch from "@assets/twitch.png";
-import imgyoutube from "@assets/picto-bleu-youtube.png";
-import imgtwitter from "@assets/Twitter.png";
+import imgfacebook from "@assets/images/logos/picto-facebook.png";
+import imginstagram from "@assets/images/logos/picto-instagram.png";
+import imglinkedin from "@assets/images/logos/picto-linkedin.png";
+import imgtwitch from "@assets/images/logos/picto-twitch.png";
+import imgyoutube from "@assets/images/logos/picto-youtube.png";
+import imgtwitter from "@assets/images/logos/picto-twitter.png";
 import SNetworks from "./style";
 
 export default function Networks() {
   return (
-    <SNetworks>
-      <div className="imgPosition">
-        <img src={imgNetworks} alt="imgNetworks" />
-      </div>
+    <SNetworks image="networks.jpg">
       <div className="cube">
-        <div className="title">rejoignez la meute</div>
+        <div className="title">REJOIGNEZ LA MEUTE</div>
         <div className="logo">
           <img src={imgfacebook} alt="imgfacebook" />
           <img src={imginstagram} alt="imginstagram" />

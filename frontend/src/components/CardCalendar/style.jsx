@@ -6,6 +6,12 @@ export default styled.div`
   align-items: center;
   text-shadow: 2px 2px 5px black;
   margin-bottom: 2vw;
+  .firstPart {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .day {
     width: 4vw;
     aspect-ratio: 1/1;
@@ -33,6 +39,12 @@ export default styled.div`
       color: var(--yellow);
     }
   }
+  .firstClub,
+  .secondClub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .place {
     width: 4vw;
     aspect-ratio: 1/1;
@@ -43,14 +55,14 @@ export default styled.div`
   }
   .club1 {
     background: ${(props) => {
-      return `url(../src/assets/pictures/cards/calendar/${props.club1}.png) no-repeat`;
+      return `url(../src/assets/images/logos/clubs/${props.club1}.png) no-repeat`;
     }};
     background-size: contain;
     background-position: center;
   }
   .club2 {
     background: ${(props) => {
-      return `url(../src/assets/pictures/cards/calendar/${props.club2}.png) no-repeat`;
+      return `url(../src/assets/images/logos/clubs/${props.club2}.png) no-repeat`;
     }};
     background-size: contain;
     background-position: center;
@@ -85,6 +97,56 @@ export default styled.div`
       margin-right: 10px;
       position: relative;
       bottom: 1vw;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    background-color: var(--white-opacity);
+    padding: 2px 10px 2px 10px;
+    margin: auto;
+    width: 90%;
+    flex-direction: column;
+    margin-bottom: 5vh;
+    .firstPart {
+      margin-top: 2vh;
+      width: 100%;
+    }
+    .day {
+      width: 12vw;
+    }
+    .hit {
+      width: 12vw;
+    }
+    .place {
+      width: 12vw;
+    }
+    .club {
+      width: 15vw;
+      margin-bottom: 2vh;
+    }
+    .secondClub {
+      display: flex;
+      flex-direction: column;
+    }
+    .firstClub {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .result {
+      width: 100%;
+    }
+    .meeting {
+      margin-top: 2vh;
+      margin-bottom: 5vh;
+    }
+    h3 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .meeting > h3 {
+      margin-bottom: 6vh;
+    }
+    .link {
+      margin-bottom: 5vh;
     }
   }
 `;

@@ -60,6 +60,7 @@ export default function Calendar() {
         hour={dates[indexOfNextMatch].hour}
         club1={dates[indexOfNextMatch].club1}
         club2={dates[indexOfNextMatch].club2}
+        text=""
       />
       <BigTitle title="CALENDRIER DES LOUVES" />
       <SCalendar>

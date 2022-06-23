@@ -34,13 +34,21 @@ export default styled.div`
     color: var(--white);
   }
   @media screen and (max-width: 700px) {
-    width: 39.6vw;
+    width: 90vw;
     margin-bottom: 7.2vw;
+    display: block;
+    justify-content: space-between;
     img {
-      width: 28.8vw;
+      width: 90vw;
+    }
+    .details {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
     }
     .detail {
-      width: 8.64vw;
+      width: 30vw;
+      outline: 1px solid var(--blue);
     }
   }
 `;

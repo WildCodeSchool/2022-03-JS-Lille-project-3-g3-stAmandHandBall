@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import SCardCalendar from "@components/CardCalendar/style";
 import Title from "@components/Archi/Title";
-import domicile from "@assets/Pictures/cards/calendar/picto-maison.png";
-import exterieur from "@assets/Pictures/cards/calendar/picto-avion.png";
+import domicile from "@assets/images/elements/maison.png";
+import exterieur from "@assets/images/elements/avion.png";
 
 export default function CardCalendar({
   day,
@@ -19,31 +19,37 @@ export default function CardCalendar({
 
   return (
     <SCardCalendar club1={club1} club2={club2} hit={hit}>
-      <div className="day">
-        <h3>J{day}</h3>
-      </div>
-      <img
-        src={`../../src/assets/Pictures/cards/calendar/${hit}.png`}
-        alt="hit"
-        className="hit"
-      />
-      <div className="date">
+      <div className="firstPart">
+        <div className="day">
+          <h3>J{day}</h3>
+        </div>
         <img
-          src={`${place === "domicile" ? domicile : exterieur}
-            `}
-          alt="place"
-          className="place"
+          src={`../../src/assets/images/logos/${hit}.png`}
+          alt="hit"
+          className="hit"
         />
-        <p>{date}</p>
-        <p>{hour}</p>
+        <div className="date">
+          <img
+            src={`${place === "domicile" ? domicile : exterieur}
+            `}
+            alt="place"
+            className="place"
+          />
+          <p>{date}</p>
+          <p>{hour}</p>
+        </div>
       </div>
       <div className="result">
         <div className="meeting">
-          <h3>{club1}</h3>
-          <div className="club club1" />
+          <div className="firstClub">
+            <h3>{club1}</h3>
+            <div className="club club1" />
+          </div>
           <h3>{result}</h3>
-          <div className="club club2" />
-          <h3>{club2}</h3>
+          <div className="secondClub">
+            <div className="club club2" />
+            <h3>{club2}</h3>
+          </div>
         </div>
         <a
           href={`${result === "-" ? linkTicketOffice : linkActuality}`}

@@ -59,7 +59,6 @@ export default styled.nav`
   .burger1 {
     transform: ${(props) => (props.isOpen ? "rotate(45deg)" : "rotate(0)")};
   }
-
   .burger2 {
     transform: ${(props) =>
       props.isOpen ? "translateX(100%)" : "translateX(0)"};
@@ -69,7 +68,13 @@ export default styled.nav`
   .burger3 {
     transform: ${(props) => (props.isOpen ? "rotate(-45deg)" : "rotate(0)")};
   }
-
+  .linkColor {
+    color: var(--blue);
+    text-decoration: none;
+  }
+  .aColor {
+    color: var(--white);
+  }
   @media screen and (min-width: 700px) {
     .hamburger {
       display: none;
