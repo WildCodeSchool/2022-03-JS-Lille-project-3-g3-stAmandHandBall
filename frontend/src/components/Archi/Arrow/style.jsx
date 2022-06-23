@@ -27,4 +27,17 @@ export default styled.div`
     position: relative;
     margin: -1vw;
   }
+  @media screen and (max-width: 700px) {
+    .left {
+      width: 8vw;
+    }
+    .right {
+      width: 8vw;
+    }
+    .line {
+      position: relative;
+      margin: -3vw;
+      bottom: 1vh;
+    }
+  }
 `;
