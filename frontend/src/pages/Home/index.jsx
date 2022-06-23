@@ -6,7 +6,6 @@ import Partner from "@components/Partner";
 import Networks from "@components/Networks";
 import BanShop from "@components/BanShop";
 import Caroussel from "@components/Caroussel";
-import BlocCf from "@components/BlocCf";
 import BlocPhotos from "@components/BlocPhoto";
 import SHome from "./style";
 
@@ -30,7 +29,6 @@ export default function Home() {
       <div className="arrow">
         <Arrow />
       </div>
-      <BlocCf />
       <BanShop />
       <Networks />
       <Ambition />
