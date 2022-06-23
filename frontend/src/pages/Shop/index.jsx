@@ -57,7 +57,14 @@ export default function Shop() {
   ];
   return (
     <>
-      <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
+      <BigPicture
+        img="background-boutique"
+        date=""
+        hour=""
+        club1=""
+        club2=""
+        text=""
+      />
       <BigTitle title="LA BOUTIQUE DE LA MEUTE" />
       <SShop>
         {products.map((product) => {

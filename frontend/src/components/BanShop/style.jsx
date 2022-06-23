@@ -1,58 +1,45 @@
 import styled from "styled-components";
 
 export default styled.section`
+  background: ${(props) => {
+    return `url(../src/assets/images/backgrounds/${props.img}) no-repeat`;
+  }};
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80vw;
-  height: 60vh;
-  background-color: white;
+  aspect-ratio: 9/3.5;
   margin: auto;
-  overflow: hidden;
-  .imgPosition {
-    text-align: center;
-    img {
-      width: 38%;
-      height: 38%;
-      opacity: 0.5;
-    }
-  }
   a {
     text-decoration: none;
   }
   .title {
-    position: relative;
-    top: -75%;
     text-align: center;
-    height: 25vh;
     color: var(--yellow);
-    font-weight: 900;
-    text-transform: uppercase;
-    h1 {
-      font-size: 3.5vmax;
-      line-height: 150%;
-    }
+    text-shadow: var(--text-shadow);
     h2 {
-      font-size: 1.9vmax;
-      margin-top: 2%;
+      font-size: 3.5em;
+      line-height: 1.5em;
+    }
+    h3 {
+      font-size: 1.9em;
+      margin-top: 1vh;
     }
   }
-  .mainImages {
-    height: 75vh;
-    position: relative;
-    top: -133%;
-    img {
-      position: absolute;
-      width: 26%;
+
+  @media screen and (max-width: 700px) {
+    width: 100vw;
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    .title {
+      h2 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1em;
+      }
     }
-    .img2 {
-      margin-left: 80%;
-    }
-    .img1 {
-      margin-left: 66%;
-    }
-    .img3 {
-      width: 33%;
-      margin-top: -5%;
-    }
-  }
-  @media screen and (max-width: 640px) {
   }
 `;
