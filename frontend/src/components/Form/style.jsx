@@ -34,10 +34,8 @@ export default styled.section`
     textarea {
       border: none;
       width: 100%;
-      box-shadow: var(--box-shadow);
       margin-bottom: 2vh;
       padding-left: 8px;
-      /* text-shadow: var(--text-shadow); */
       color: var(--white);
       font-weight: bold;
       font-size: 1em;
@@ -53,7 +51,7 @@ export default styled.section`
     width: 90vw;
     display: flex;
     align-items: center;
-    margin-bottom: 10vh;
+    margin: 10vh;
     form {
       width: 95%;
       margin: auto;

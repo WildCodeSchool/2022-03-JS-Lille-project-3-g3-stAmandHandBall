@@ -42,6 +42,8 @@ export default styled.div`
     justify-content: center;
     p {
       color: blue;
+      text-shadow: none;
+      margin-left: 4%;
     }
   }
   .close-modal {
@@ -54,23 +56,18 @@ export default styled.div`
   }
   .close {
     position: relative;
-    align-items: flex-end;
     justify-content: center;
-    color: #000000;
-    background-color: #ff0f0f;
     font-family: var(--font-family);
-    border-radius: 7px;
     font-size: 1.2em;
-    padding: 5px;
-    margin-top: 80px;
     cursor: pointer;
-    display: flex;
-    border: 2px black solid;
-    left: -35%;
+    left: 15%;
+    margin-top: -15%;
+    border: none;
   }
   @media screen and (max-width: 700px) {
-    p {
-      color: #6d0606;
+    .close {
+      left: 0;
+      margin-top: -30%;
     }
   }
 `;
