@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export default styled.section`
-  background-color: var(--blue);
-
   height: 30vh;
   display: flex;
   align-items: center;
@@ -15,7 +13,7 @@ export default styled.section`
       width: 45vw;
       border: none;
       background-color: var(--yellow);
-      box-shadow: 0rem 0.3rem 0.3rem black;
+      box-shadow: var(--box-shadow);
       color: var(--blue);
       font-size: 3.5vmax;
       font-weight: 900;

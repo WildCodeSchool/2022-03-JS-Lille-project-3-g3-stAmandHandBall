@@ -1,11 +1,11 @@
 import Counter from "@components/Counter";
 import BigPicture from "@components/Archi/BigPicture";
+import Arrow from "@components/Archi/Arrow";
 import Ambition from "@components/Ambition";
 import Partner from "@components/Partner";
 import Networks from "@components/Networks";
 import BanShop from "@components/BanShop";
 import Caroussel from "@components/Caroussel";
-import BlocCf from "@components/BlocCf";
 import BlocPhotos from "@components/BlocPhoto";
 import SHome from "./style";
 
@@ -22,8 +22,13 @@ export default function Home() {
       />
       <Counter />
       <Caroussel />
+      <div className="arrow">
+        <Arrow />
+      </div>
       <BlocPhotos />
-      <BlocCf />
+      <div className="arrow">
+        <Arrow />
+      </div>
       <BanShop />
       <Networks />
       <Ambition />
