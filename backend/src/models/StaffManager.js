@@ -12,8 +12,8 @@ class StaffManager extends AbstractManager {
 
   update(staff) {
     return this.connection.query(
-      `update ${StaffManager.table} set where id = ?, lastname = ?, firstname = ?, img = ? `,
-      [staff.id, staff.lastname, staff.firstname, staff.img]
+      `update ${StaffManager.table} set lastname = ?, firstname = ?, img = ? where id = ?`,
+      [staff.lastname, staff.firstname, staff.img, staff.id]
     );
   }
 }
