@@ -36,7 +36,7 @@ class HistoryController {
 
     history.id = parseInt(req.params.id, 10);
 
-    models.player
+    models.history
       .update(history)
       .then(([result]) => {
         if (result.affectedRows === 0) {
@@ -56,7 +56,7 @@ class HistoryController {
 
     // TODO validations (length, format...)
 
-    models.player
+    models.history
       .insert(history)
       .then(([result]) => {
         res.status(201).send({ ...history, id: result.insertId });
@@ -68,7 +68,7 @@ class HistoryController {
   };
 
   static delete = (req, res) => {
-    models.player
+    models.history
       .delete(req.params.id)
       .then(() => {
         res.sendStatus(204);

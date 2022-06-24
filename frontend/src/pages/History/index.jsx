@@ -62,7 +62,7 @@ export default function History() {
               className={history.id % 2 === 0 ? "right" : "left"}
               key={history.id}
               id={history.id}
-              date={history.date}
+              date={history.title}
               text={history.text}
             />
           );
