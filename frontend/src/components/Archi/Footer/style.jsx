@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default styled.footer`
   background-color: var(--yellow);
-  height: 50vh;
+  height: 58vh;
   position: relative;
   bottom: 0;
   overflow: hidden;
@@ -44,7 +44,7 @@ export default styled.footer`
     text-align: center;
     width: 100vw;
     height: 28vh;
-    margin-top: 15vh;
+    margin-top: 17vh;
     display: flex;
     justify-content: space-around;
   }
@@ -52,14 +52,14 @@ export default styled.footer`
     position: absolute;
     width: 100vw;
     text-align: center;
-    bottom: 0;
+    bottom: 2vh;
     color: var(--white);
     text-transform: uppercase;
     font-size: 3.5vmax;
     font-weight: 900;
   }
-  @media screen and (max-width: 640px) {
-    height: 20vh;
+  @media screen and (max-width: 700px) {
+    height: 22vh;
     .imgPosition {
       width: 50vw;
       img {
@@ -73,16 +73,17 @@ export default styled.footer`
       button {
         margin-top: 0.5rem;
         p {
-          font-size: 2vmax;
+          font-size: 1em;
         }
       }
     }
     .logo {
-      margin-top: 3rem;
+      margin-top: 7vh;
       height: 11vh;
     }
     .reve {
       font-size: 2vmax;
+      bottom: 1vh;
     }
   }
 `;
