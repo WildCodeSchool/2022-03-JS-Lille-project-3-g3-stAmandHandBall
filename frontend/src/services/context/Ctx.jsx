@@ -6,8 +6,10 @@ const ctxProvider = createContext();
 export default ctxProvider;
 
 export function CtxProvider({ children }) {
+  
   const [players, setPlayers] = useState([]);
   const [staffs, setStaffs] = useState([]);
+
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)

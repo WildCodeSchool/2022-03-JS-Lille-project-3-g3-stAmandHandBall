@@ -6,4 +6,10 @@ export default styled.div`
   .month {
     margin-bottom: 10vh;
   }
+  @media screen and (max-width: 700px) {
+    width: 90vw;
+  }
+  .month {
+    margin-bottom: 12vh;
+  }
 `;

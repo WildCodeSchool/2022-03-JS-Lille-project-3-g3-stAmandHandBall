@@ -11,7 +11,7 @@ export default function Ambition() {
           <img src={logoambition} alt="logoambition" />
           <p> avec le territoire</p>
         </div>
-        <div className="secondtitle">Ambition 2024</div>
+        <div className="secondtitle">Ambitions 2024</div>
       </Link>
     </SAmbition>
   );

@@ -9,7 +9,6 @@ const {
 const router = express.Router();
 
 router.get("/players", PlayerController.browse);
-router.get("/players/:id", PlayerController.browse);
 router.get("/players/:id", PlayerController.read);
 router.put("/players/:id", PlayerController.edit);
 router.post("/players", PlayerController.add);
