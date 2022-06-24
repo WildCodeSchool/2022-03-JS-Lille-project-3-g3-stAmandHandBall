@@ -8,12 +8,21 @@ export default ctxProvider;
 export function CtxProvider({ children }) {
   const [test, setTest] = useState();
   const [players, setPlayers] = useState([]);
+  const [historys, setHistorys] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
       .then(({ data }) => {
         setPlayers(data).then(() => {});
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/historys"}`)
+      .then(({ data }) => {
+        setHistorys(data).then(() => {});
       });
   }, []);
 
@@ -24,6 +33,7 @@ export function CtxProvider({ children }) {
         test,
         setTest,
         players,
+        historys,
       }}
     >
       {children}
