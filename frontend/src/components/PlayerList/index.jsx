@@ -13,7 +13,7 @@ export default function PlayerList() {
           <CardPlayer
             key={player.id}
             name={`${player.firstname} ${player.lastname}`}
-            img={`./src/assets/images/cards/players/${player.img}`}
+            img={`./src/assets/images/cards/players/${player.img} `}
             number={player.number}
           />
         );
