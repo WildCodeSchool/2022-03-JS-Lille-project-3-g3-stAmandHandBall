@@ -6,7 +6,6 @@ const ctxProvider = createContext();
 export default ctxProvider;
 
 export function CtxProvider({ children }) {
-  
   const [players, setPlayers] = useState([]);
   const [staffs, setStaffs] = useState([]);
 
