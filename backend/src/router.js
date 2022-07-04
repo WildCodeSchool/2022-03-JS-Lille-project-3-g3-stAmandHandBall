@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { ItemController, PlayerController } = require("./controllers");
+const { PlayerController, StaffController } = require("./controllers");
 
 const router = express.Router();
 
@@ -10,10 +10,10 @@ router.put("/players/:id", PlayerController.edit);
 router.post("/players", PlayerController.add);
 router.delete("/players/:id", PlayerController.delete);
 
-router.get("/items", ItemController.browse);
-router.get("/items/:id", ItemController.read);
-router.put("/items/:id", ItemController.edit);
-router.post("/items", ItemController.add);
-router.delete("/items/:id", ItemController.delete);
+router.get("/staffs", StaffController.browse);
+router.get("/staffs/:id", StaffController.read);
+router.put("/staffs/:id", StaffController.edit);
+router.post("/staffs", StaffController.add);
+router.delete("/staffs/:id", StaffController.delete);
 
 module.exports = router;
