@@ -1,6 +1,10 @@
 const express = require("express");
 
-const { PlayerController, StaffController } = require("./controllers");
+const {
+  PlayerController,
+  StaffController,
+  NewsController,
+} = require("./controllers");
 
 const router = express.Router();
 
@@ -15,5 +19,11 @@ router.get("/staffs/:id", StaffController.read);
 router.put("/staffs/:id", StaffController.edit);
 router.post("/staffs", StaffController.add);
 router.delete("/staffs/:id", StaffController.delete);
+
+router.get("/news", NewsController.browse);
+router.get("/news/:id", NewsController.read);
+router.put("/news/:id", NewsController.edit);
+router.post("/news", NewsController.add);
+router.delete("/news/:id", NewsController.delete);
 
 module.exports = router;
