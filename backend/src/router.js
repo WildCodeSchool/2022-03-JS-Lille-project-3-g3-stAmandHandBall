@@ -1,6 +1,10 @@
 const express = require("express");
 
-const { PlayerController, StaffController } = require("./controllers");
+const {
+  PlayerController,
+  StaffController,
+  CalendarController,
+} = require("./controllers");
 
 const router = express.Router();
 
@@ -9,6 +13,12 @@ router.get("/players/:id", PlayerController.read);
 router.put("/players/:id", PlayerController.edit);
 router.post("/players", PlayerController.add);
 router.delete("/players/:id", PlayerController.delete);
+
+router.get("/calendar", CalendarController.browse);
+router.get("/calendar/:id", CalendarController.read);
+router.put("/calendar/:id", CalendarController.edit);
+router.post("/calendar", CalendarController.add);
+router.delete("/calendar/:id", CalendarController.delete);
 
 router.get("/staffs", StaffController.browse);
 router.get("/staffs/:id", StaffController.read);

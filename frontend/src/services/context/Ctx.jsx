@@ -6,31 +6,34 @@ const ctxProvider = createContext();
 export default ctxProvider;
 
 export function CtxProvider({ children }) {
+  const [test, setTest] = useState();
   const [players, setPlayers] = useState([]);
-  const [staffs, setStaffs] = useState([]);
+  const [calendar, setCalendar] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
       .then(({ data }) => {
-        setPlayers(data).then(() => {});
+        setPlayers(data);
       });
   }, []);
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staffs"}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/calendar"}`)
       .then(({ data }) => {
-        setStaffs(data).then(() => {});
+        setCalendar(data);
       });
   }, []);
+
   return (
     <ctxProvider.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
+        test,
+        setTest,
         players,
-        setPlayers,
-        staffs,
+        calendar,
       }}
     >
       {children}
