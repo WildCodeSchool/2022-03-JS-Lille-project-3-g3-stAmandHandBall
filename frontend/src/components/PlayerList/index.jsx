@@ -13,7 +13,9 @@ export default function PlayerList() {
           <CardPlayer
             key={player.id}
             name={`${player.firstname} ${player.lastname}`}
-            img={`./src/assets/images/cards/players/${player.img}`}
+            //  We need the image field in the db to be null for the test image
+            img={`./src/assets/images/cards/players/${player.img || "test.png"} 
+             `}
             number={player.number}
           />
         );
