@@ -5,7 +5,6 @@ import SNewsList from "./style";
 
 export default function NewsList() {
   const { news } = useContext(ctxProvider);
-
   return (
     <SNewsList>
       {news.map((article) => {
