@@ -4,6 +4,7 @@ const {
   PlayerController,
   StaffController,
   TeamController,
+  NewsController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -25,5 +26,11 @@ router.get("/team/:id", TeamController.read);
 router.put("/team/:id", TeamController.edit);
 router.post("/team", TeamController.add);
 router.delete("/team/:id", TeamController.delete);
+
+router.get("/news", NewsController.browse);
+router.get("/news/:id", NewsController.read);
+router.put("/news/:id", NewsController.edit);
+router.post("/news", NewsController.add);
+router.delete("/news/:id", NewsController.delete);
 
 module.exports = router;
