@@ -4,7 +4,6 @@ const {
   PlayerController,
   HistoryController,
   StaffController,
-  StaffController,
   NewsController,
 } = require("./controllers");
 
