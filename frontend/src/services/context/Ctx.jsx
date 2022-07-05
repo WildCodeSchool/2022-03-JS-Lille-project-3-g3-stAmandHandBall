@@ -6,9 +6,9 @@ const ctxProvider = createContext();
 export default ctxProvider;
 
 export function CtxProvider({ children }) {
-  const [test, setTest] = useState();
   const [players, setPlayers] = useState([]);
   const [historys, setHistorys] = useState([]);
+  const [staffs, setStaffs] = useState([]);
 
   useEffect(() => {
     axios
@@ -26,14 +26,21 @@ export function CtxProvider({ children }) {
       });
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staffs"}`)
+      .then(({ data }) => {
+        setStaffs(data).then(() => {});
+      });
+  }, []);
   return (
     <ctxProvider.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
-        test,
-        setTest,
         players,
         historys,
+        setPlayers,
+        staffs,
       }}
     >
       {children}

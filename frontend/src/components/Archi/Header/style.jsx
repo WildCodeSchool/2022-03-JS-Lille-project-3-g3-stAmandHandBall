@@ -22,9 +22,10 @@ export default styled.header`
       display: none;
     }
     .logoMobile {
+      padding-top: 3vw;
+      width: 20vw;
       display: block;
-      position: absolute;
-      width: 20%;
+      position: relative;
     }
     .logoDesktop {
       display: none;
