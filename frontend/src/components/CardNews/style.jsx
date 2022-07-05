@@ -12,15 +12,21 @@ export default styled.div`
     align-items: center;
   }
   .title {
-    color: white;
-    font-size: 2vmax;
     position: relative;
     top: 3%;
   }
+  h4 {
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+    font-size: 2em;
+  }
   img {
     width: 22vw;
+    box-shadow: var(--box-shadow);
   }
   .text {
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
     background-color: var(--yellow);
     width: 15vw;
     height: 20vh;

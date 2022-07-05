@@ -2,64 +2,94 @@ import styled from "styled-components";
 
 export default styled.div`
   background-color: var(--yellow);
-  color: var(--white);
-  text-shadow: 2px 2px 5px black;
-  box-shadow: 2px 2px 5px black;
+  text-shadow: var(--text-shadow);
+  box-shadow: var(--box-shadow);
   height: 20vh;
   width: 80vw;
   position: relative;
   bottom: 10vh;
   margin: auto;
   display: flex;
-  .nextMatch {
-    color: var(--blue);
-    width: 30%;
+  flex-wrap: nowrap;
+  color: var(--blue);
+
+  .informations {
+    width: 100%;
     display: flex;
-    align-items: center;
-    flex-direction: row;
     justify-content: center;
-    text-align: center;
-    li:nth-child(2n) {
-      font-size: 3em;
-    }
-    img {
-      height: 13vh;
-    }
+    align-items: center;
   }
 
   h3 {
     position: absolute;
-    font-size: var(--size-h3);
-    margin-top: -1rem;
+    margin-top: -1.7rem;
+    left: 1vw;
+    color: var(--white);
+    font-size: 3em;
   }
-  .dayTime {
-    width: 20%;
+
+  .nextMatch {
+    width: 35%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    p {
+      font-size: 3em;
+      text-align: center;
+      margin: 0 1vw;
+    }
+    .club {
+      height: 6vw;
+      aspect-ratio: 1/1;
+    }
+    .club1 {
+      background: ${(props) => {
+        return `url(../src/assets/images/logos/clubs/${props.club1}.png) no-repeat`;
+      }};
+      background-size: contain;
+      background-position: center;
+    }
+    .club2 {
+      background: ${(props) => {
+        return `url(../src/assets/images/logos/clubs/${props.club2}.png) no-repeat`;
+      }};
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  .dayTime {
+    width: 25%;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     text-align: center;
-
-    color: var(--blue);
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+    .day {
+      margin: 3vh 0;
+      font-size: 3em;
+    }
   }
   .timer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    ul {
-      padding: 1rem;
-    }
-    span {
-      font-size: 2.8rem;
-      color: var(--blue);
-      margin-top: -3%;
-    }
-  }
-  .numbersCount {
-    font-size: 2.8rem;
-    color: var(--blue);
+    width: 40%;
     text-align: center;
+    margin-right: 5vw;
+    span {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.3em;
+      margin: 0 1vw;
+    }
+    .numbersCount {
+      font-size: 3.5em;
+      margin-bottom: 1vh;
+    }
   }
   .billetDiv {
     display: flex;
@@ -71,52 +101,68 @@ export default styled.div`
     top: 1.2rem;
     width: auto;
     height: 15vh;
+    box-shadow: var(--box-shadow);
   }
   @media screen and (max-width: 700px) {
-    height: 20vh;
-    width: 100vw;
-    position: relative;
-    margin-top: 20%;
+    height: 28vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     h3 {
-      margin-top: -0.9rem;
-      font-size: 1.5rem;
+      margin-top: -1em;
+      font-size: 2em;
+    }
+    .informations {
+      flex-direction: column;
     }
     .nextMatch {
-      width: 30%;
-      margin-top: 2%;
-      display: block;
-      li:nth-child(2n) {
-        font-size: 1.2rem;
+      margin: 0.5vh 0;
+      width: 100%;
+      p {
+        font-size: 2em;
       }
-      img {
-        height: 8vh;
+      .club {
+        height: 20vw;
       }
     }
     .dayTime {
-      width: 30%;
+      text-shadow: none;
+      width: 90%;
+      flex-direction: row;
+      align-items: center;
       justify-content: center;
-      font-size: 1rem;
-      li {
-        font-size: 2.5rem;
+      text-align: center;
+      line-height: 1.5em;
+      margin: 0.5em 0 1em;
+      p {
+        margin: 0 1vh;
+        font-size: 1.2em;
+      }
+      .day {
+        display: none;
       }
     }
     .timer {
-      width: 50%;
-      font-size: 0.8rem;
-      display: flex;
-      justify-content: center;
-      .numbersCount {
-        font-size: 2rem;
+      width: 95%;
+      margin: auto;
+      text-shadow: none;
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       span {
-        font-size: 1.6rem;
-        margin-top: -8%;
+        font-size: 2em;
       }
-      ul {
-        padding: 0rem;
+      p {
+        font-size: 1em;
+        margin: 0 1vw;
+      }
+      .numbersCount {
+        font-size: 2em;
       }
     }
-    .boxOffice {
+    .billetDiv {
       display: none;
     }
   }
