@@ -4,6 +4,7 @@ import Footer from "@components/Archi/Footer";
 import Header from "@components/Archi/Header";
 import News from "@pages/News";
 import Rookies from "@pages/Rookies";
+import RookiesDetail from "@pages/RookiesDetail";
 import Shop from "@pages/Shop";
 import FirstTeam from "@pages/FirstTeam";
 import Contact from "@pages/Contact";
@@ -45,6 +46,7 @@ function App() {
           <Route path="/candidature" element={<Apply />} />
           {/* page Rookies */}
           <Route path="/amateurs" element={<Rookies />} />
+          <Route path="/amateurs/:id" element={<RookiesDetail />} />
           {/* page Shop */}
           <Route path="/boutique" element={<Shop />} />
           {/* page billeterie */}
