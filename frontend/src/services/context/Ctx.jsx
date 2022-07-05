@@ -7,7 +7,7 @@ export default ctxProvider;
 
 export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
-  const [staffs, setStaffs] = useState([]);
+  const [staff, setStaff] = useState([]);
 
   useEffect(() => {
     axios
@@ -19,9 +19,9 @@ export function CtxProvider({ children }) {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staffs"}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
       .then(({ data }) => {
-        setStaffs(data).then(() => {});
+        setStaff(data).then(() => {});
       });
   }, []);
   return (
@@ -30,7 +30,7 @@ export function CtxProvider({ children }) {
       value={{
         players,
         setPlayers,
-        staffs,
+        staff,
       }}
     >
       {children}
