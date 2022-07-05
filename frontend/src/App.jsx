@@ -19,6 +19,7 @@ import Training from "@pages/Training";
 import Apply from "@pages/Apply";
 import Ambitions from "@pages/Ambitions";
 import Partner from "@pages/Partner";
+import NewsDetail from "@pages/NewsDetail";
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path="/" element={<Home />} />
           {/* page actus */}
           <Route path="/actus" element={<News />} />
+          <Route path="/actus/:id" element={<NewsDetail />} />
+
           {/* menu club */}
           <Route path="/origineDeLaMeute" element={<History />} />
           <Route path="/ChefsDeMeute" element={<Staff />} />
