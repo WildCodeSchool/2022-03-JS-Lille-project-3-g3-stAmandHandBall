@@ -4,6 +4,8 @@ const {
   PlayerController,
   HistoryController,
   StaffController,
+  StaffController,
+  NewsController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -25,4 +27,11 @@ router.get("/historys/:id", HistoryController.read);
 router.put("/historys/:id", HistoryController.edit);
 router.post("/historys", HistoryController.add);
 router.delete("/historys/:id", HistoryController.delete);
+
+router.get("/news", NewsController.browse);
+router.get("/news/:id", NewsController.read);
+router.put("/news/:id", NewsController.edit);
+router.post("/news", NewsController.add);
+router.delete("/news/:id", NewsController.delete);
+
 module.exports = router;

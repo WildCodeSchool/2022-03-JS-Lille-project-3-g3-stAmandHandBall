@@ -4,7 +4,9 @@ import STitle from "./style";
 export default function Title({ title }) {
   return (
     <STitle>
-      <h1>{title}</h1>
+      <div className="little-title">
+        <h2>{title}</h2>
+      </div>
     </STitle>
   );
 }

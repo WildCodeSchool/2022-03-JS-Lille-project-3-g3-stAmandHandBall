@@ -9,6 +9,7 @@ export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
   const [historys, setHistorys] = useState([]);
   const [staffs, setStaffs] = useState([]);
+  const [news, setNews] = useState([]);
 
   useEffect(() => {
     axios
@@ -33,6 +34,15 @@ export function CtxProvider({ children }) {
         setStaffs(data).then(() => {});
       });
   }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/news"}`)
+      .then(({ data }) => {
+        setNews(data).then(() => {});
+      });
+  }, []);
+
   return (
     <ctxProvider.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
@@ -41,6 +51,7 @@ export function CtxProvider({ children }) {
         historys,
         setPlayers,
         staffs,
+        news,
       }}
     >
       {children}
