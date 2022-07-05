@@ -23,5 +23,29 @@ justify-content: flex-start;
 h1,h2,h3,h4,h5,h6, p, li{
   font-family: var(--font-family);
 }
+p, h5, h6{
+  font-size: 1em;
+  line-height:1.5em;
+}
+h1{
+  font-size: 1.5em;
+}
+h2{
+  font-size: 2em;
+}
+h3{
+  font-size: 1.5em;
+}
+h4{
+  font-size: 1.2em;
+  line-height:1.5em;
+}
+@media screen and (max-width: 700px) {
+    width: 90vw;
+    h1{
+  font-size: 1em;
+  line-height:1.2em;
+}
+  }
  `;
 export default GlobalStyle;
