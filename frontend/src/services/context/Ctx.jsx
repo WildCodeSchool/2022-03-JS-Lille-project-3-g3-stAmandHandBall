@@ -20,9 +20,9 @@ export function CtxProvider({ children }) {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staffs"}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
       .then(({ data }) => {
-        setStaffs(data).then(() => {});
+        setStaff(data).then(() => {});
       });
   }, []);
 
@@ -39,6 +39,7 @@ export function CtxProvider({ children }) {
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         players,
+        setPlayers,
         staffs,
         news,
       }}

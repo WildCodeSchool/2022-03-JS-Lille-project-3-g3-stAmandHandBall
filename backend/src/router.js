@@ -14,11 +14,11 @@ router.put("/players/:id", PlayerController.edit);
 router.post("/players", PlayerController.add);
 router.delete("/players/:id", PlayerController.delete);
 
-router.get("/staffs", StaffController.browse);
-router.get("/staffs/:id", StaffController.read);
-router.put("/staffs/:id", StaffController.edit);
-router.post("/staffs", StaffController.add);
-router.delete("/staffs/:id", StaffController.delete);
+router.get("/staff", StaffController.browse);
+router.get("/staff/:id", StaffController.read);
+router.put("/staff/:id", StaffController.edit);
+router.post("/staff", StaffController.add);
+router.delete("/staff/:id", StaffController.delete);
 
 router.get("/news", NewsController.browse);
 router.get("/news/:id", NewsController.read);
