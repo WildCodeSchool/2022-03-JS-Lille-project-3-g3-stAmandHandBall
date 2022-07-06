@@ -13,18 +13,6 @@ class RoleController {
       });
   };
 
-  static roleAndStaff = (req, res) => {
-    models.role
-      .findAllStaffAndRole()
-      .then(([rows]) => {
-        res.send(rows);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.sendStatus(500);
-      });
-  };
-
   static read = (req, res) => {
     models.role
       .find(req.params.id)
