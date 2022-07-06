@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export default styled.div`
-  margin: 1.2rem;
+  margin-bottom: 5vh;
   .mainCards {
     width: 22vw;
     position: relative;
-    margin-top: 20%;
+    margin-bottom: 10vh;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@ export default styled.div`
   }
   .title {
     position: relative;
-    top: 3%;
+    top: 3vh;
   }
   h4 {
     color: var(--white);
@@ -37,11 +37,23 @@ export default styled.div`
     line-height: 130%;
   }
   @media screen and (max-width: 700px) {
+    width: 90vw;
     .mainCards {
-      width: 17.68vw;
-      top: 13vw;
-      right: 3.9vw;
-      font-size: 1.95em;
+      width: 100%;
+      position: relative;
+      margin-bottom: 0vh;
+    }
+    .title {
+      position: relative;
+      top: 3vh;
+    }
+    img {
+      width: 100%;
+    }
+    .text {
+      width: 80%;
+      height: 18vh;
+      margin-top: -5%;
     }
   }
 `;

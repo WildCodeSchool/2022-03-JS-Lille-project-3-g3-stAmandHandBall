@@ -46,8 +46,8 @@ function NewsDetail() {
           />
           <h4>{newsDetail.content}</h4>
         </div>
+        <Title title="Précédentes actus" />
       </SNewsDetail>
-      <Title title="Précédentes actus" />
 
       <SNewsList>
         {news.slice(0, 3).map((article) => {
@@ -62,6 +62,7 @@ function NewsDetail() {
           );
         })}
       </SNewsList>
+
       <Counter />
     </>
   );
