@@ -32,8 +32,6 @@ export default styled.section`
     flex-direction: row-reverse;
   }
   .descriptionText {
-    width: 50vw;
-    height: 40vh;
     font-size: 1.5em;
   }
   .playerList {
@@ -50,6 +48,9 @@ export default styled.section`
     .left,
     .right {
       display: block;
+    }
+    .yellow {
+      text-align: center;
     }
     .presentationText {
       p {

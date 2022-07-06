@@ -52,11 +52,11 @@ export default function TextPhilosophy() {
         <div className="descriptionText">
           <h3 className="yellow"> PRESIDENTE DU CLUB</h3>
           <p>
-            « Nous souhaitons que notre centre de formation soit une source
+            " Nous souhaitons que notre centre de formation soit une source
             d’épanouissement individuel pour les jeunes joueuses à haut
             potentiel. Avec un accompagnement rigoureux tant sur l’aspect
             sportif que pédagogique. Tous deux nécessaires au développement de
-            nos jeunes athlètes et futures championnes de demain. »
+            nos jeunes athlètes et futures championnes de demain."
           </p>
         </div>
       </article>
@@ -81,11 +81,11 @@ export default function TextPhilosophy() {
         <div className="descriptifText">
           <h3 className="yellow"> RESPONSABLE DU CENTRE DE FORMATION</h3>
           <p>
-            « Le centre de formation du SAH-PH a pour objectif premier de réunir
+            "Le centre de formation du SAH-PH a pour objectif premier de réunir
             de véritables jeunes joueuses potentielles et de les préparer aux
             exigences du handball de haut niveau. Au-delà de la construction
             sportive de l’individu, son développement personnel et professionnel
-            est au cœur des préoccupations de la structure »
+            est au cœur des préoccupations de la structure."
           </p>
         </div>
       </article>
@@ -108,13 +108,14 @@ export default function TextPhilosophy() {
             })}
         </div>
         <div className="descriptifText">
-          <h3 className="yellow"> PRESIDENTE DU CLUB</h3>
+          <h3 className="yellow"> RESPONSABLE PEDAGOGIQUE</h3>
           <p>
-            « Nous souhaitons que notre centre de formation soit une source
-            d’épanouissement individuel pour les jeunes joueuses à haut
-            potentiel. Avec un accompagnement rigoureux tant sur l’aspect
-            sportif que pédagogique. Tous deux nécessaires au développement de
-            nos jeunes athlètes et futures championnes de demain. »
+            "Intégrer le centre de formation c’est accepter les exigences d’un
+            double projet qui doit conduire la joueuse à une carrière
+            professionnelle et à se construire un parcours post-hand. Tout en
+            les accompagnant, le centre a vocation à rendre les joueuses les
+            plus autonomes possible en faisant d’elles les principales actrices
+            de leur projet sportif, universitaire et personnel”
           </p>
         </div>
       </article>
@@ -137,13 +138,14 @@ export default function TextPhilosophy() {
             })}
         </div>
         <div className="descriptifText">
-          <h3 className="yellow"> RESPONSABLE DU CENTRE DE FORMATION</h3>
+          <h3 className="yellow"> ENTRAINEUR DE L'EQUIPE PRO </h3>
           <p>
-            « Le centre de formation du SAH-PH a pour objectif premier de réunir
-            de véritables jeunes joueuses potentielles et de les préparer aux
-            exigences du handball de haut niveau. Au-delà de la construction
-            sportive de l’individu, son développement personnel et professionnel
-            est au cœur des préoccupations de la structure »
+            "Le centre de formation est très important pour nous. Les joueuses
+            pensionnaires sont pleinement intégrées à l’équipe de travail du
+            groupe professionnel. Cela signifie qu’elles ont un niveau
+            d’entraînement de meilleure qualité mais également que nous pouvons
+            travailler avec un plus large groupe de joueuses. Elles sont
+            pleinement associées au projet et aux objectifs de l’équipe pro."
           </p>
         </div>
       </article>
