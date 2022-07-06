@@ -1,9 +1,78 @@
+import BigPicture from "@components/Archi/BigPicture";
+import BigTitle from "@components/Archi/BigTitle";
+import Title from "@components/Archi/Title";
+
 import SPartner from "./style";
 
 export default function Partner() {
+  const publicPartners = [
+    "region-hdf.png",
+    "departement-nord.png",
+    "la-porte-du-hainaut.png",
+    "st-amand-les-eaux.png",
+  ];
+  const privatePartners = [
+    "les-caves-de-l-abbaye.png",
+    "legrand-menuiserie.png",
+    "sarp-osis.png",
+    "nsa.png",
+    "swiss-life.png",
+    "transvilles.png",
+  ];
+
   return (
-    <SPartner>
-      <p>Partner</p>
-    </SPartner>
+    <>
+      <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
+      <BigTitle title="LES PARTENAIRES DE LA MEUTE" />
+      <SPartner>
+        <Title title="Nos partenaires publics" />
+        <div>
+          {publicPartners.map((partner) => {
+            return (
+              <img
+                src={`./src/assets/images/logos/partners/${partner} 
+             `}
+                alt="players"
+              />
+            );
+          })}
+        </div>
+        <Title title="Nos partenaires privés" />
+        <div>
+          {privatePartners.map((partner) => {
+            return (
+              <img
+                src={`./src/assets/images/logos/partners/${partner} 
+             `}
+                alt="players"
+              />
+            );
+          })}
+        </div>
+        <Title title="Rejoignez nous !" />
+        <p>
+          Le Saint Amand Handball - Porte du Hainaut est porteur d’un projet
+          sportif ambitieux !<br />
+          Il compte plus de 300 licenciés (filles et garçons) et 17 équipes,
+          toutes inscrites en championnat !<br />
+          Depuis 2 ans, le club est dans une dynamique de Responsabilité
+          Sociétale des Entreprises (RSE).
+          <br />
+          L’objectif est d’innover POUR et AVEC le Territoire : insertion,
+          inclusion, écologie, biodiversité, formation [….] c’est « Ambitions
+          2024 » du SAH-PH.
+        </p>
+        <h3>
+          Vous souhaitez rejoindre l’aventure ?<br />
+          Vous voulez accompagner le club et être acteur du projet ?
+        </h3>
+        <p>
+          Contactez Antoine :<br />
+          partenariat@sah-ph.fr
+          <br />
+          06 47 18 46 10
+        </p>
+      </SPartner>
+    </>
   );
 }
