@@ -17,7 +17,6 @@ export default function TextPhilosophy() {
           joueuses à potentiel de pouvoir être former au métier d’handballeuse
           professionnelle.
         </p>
-
         <p>
           Tout au long de ce cursus les joueuses et quel que soit l’issue de la
           formation sportive, le club s’engage à former des femmes équilibrées,
