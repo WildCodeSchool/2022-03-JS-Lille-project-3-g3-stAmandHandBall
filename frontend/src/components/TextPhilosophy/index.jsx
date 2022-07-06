@@ -49,7 +49,7 @@ export default function TextPhilosophy() {
               );
             })}
         </div>
-        <div className="descriptifText">
+        <div className="descriptionText">
           <h3 className="yellow"> PRESIDENTE DU CLUB</h3>
           <p>
             « Nous souhaitons que notre centre de formation soit une source

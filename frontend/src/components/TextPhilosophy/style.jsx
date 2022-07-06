@@ -31,7 +31,7 @@ export default styled.section`
   .right {
     flex-direction: row-reverse;
   }
-  .descriptifText {
+  .descriptionText {
     width: 50vw;
     height: 40vh;
     font-size: 1.5em;
@@ -64,7 +64,7 @@ export default styled.section`
     .image {
       justify-content: center;
     }
-    .descriptifText {
+    .descriptionText {
       display: flex;
       flex-direction: column;
       width: 100vw;
