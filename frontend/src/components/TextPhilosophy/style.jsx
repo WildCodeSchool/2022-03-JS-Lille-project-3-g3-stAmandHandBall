@@ -27,7 +27,6 @@ export default styled.section`
     align-items: center;
     text-align: justify;
   }
-
   .right {
     flex-direction: row-reverse;
   }
