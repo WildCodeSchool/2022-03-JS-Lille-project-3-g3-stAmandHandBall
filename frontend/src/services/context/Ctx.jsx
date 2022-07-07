@@ -24,7 +24,7 @@ export function CtxProvider({ children }) {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/historys"}`)
       .then(({ data }) => {
-        setHistorys(data).then(() => {});
+        setHistorys(data);
       });
   }, []);
 
