@@ -4,6 +4,7 @@ const {
   PlayerController,
   StaffController,
   NewsController,
+  TeamController,
   RoleController,
   StaffAndRoleController,
 } = require("./controllers");
@@ -34,5 +35,11 @@ router.get("/role/:id", RoleController.read);
 router.put("/role/:id", RoleController.edit);
 router.post("/role", RoleController.add);
 router.delete("/role/:id", RoleController.delete);
+
+router.get("/team", TeamController.browse);
+router.get("/team/:id", TeamController.read);
+router.put("/team/:id", TeamController.edit);
+router.post("/team", TeamController.add);
+router.delete("/team/:id", TeamController.delete);
 
 module.exports = router;

@@ -7,14 +7,15 @@ export default ctxProvider;
 
 export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
-  const [staffs, setStaffs] = useState([]);
+  const [staff, setStaff] = useState([]);
   const [news, setNews] = useState([]);
+  const [team, setTeam] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
       .then(({ data }) => {
-        setPlayers(data).then(() => {});
+        setPlayers(data);
       });
   }, []);
 
@@ -22,7 +23,7 @@ export function CtxProvider({ children }) {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
       .then(({ data }) => {
-        setStaff(data).then(() => {});
+        setStaff(data);
       });
   }, []);
 
@@ -30,7 +31,15 @@ export function CtxProvider({ children }) {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/news"}`)
       .then(({ data }) => {
-        setNews(data).then(() => {});
+        setNews(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/team"}`)
+      .then(({ data }) => {
+        setTeam(data);
       });
   }, []);
 
@@ -40,8 +49,9 @@ export function CtxProvider({ children }) {
       value={{
         players,
         setPlayers,
-        staffs,
+        staff,
         news,
+        team,
       }}
     >
       {children}
