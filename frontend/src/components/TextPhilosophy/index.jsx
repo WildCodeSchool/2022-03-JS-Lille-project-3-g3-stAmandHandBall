@@ -78,7 +78,7 @@ export default function TextPhilosophy() {
               );
             })}
         </div>
-        <div className="descriptifText">
+        <div className="descriptiveText">
           <h3 className="yellow"> RESPONSABLE DU CENTRE DE FORMATION</h3>
           <p>
             "Le centre de formation du SAH-PH a pour objectif premier de réunir
@@ -107,7 +107,7 @@ export default function TextPhilosophy() {
               );
             })}
         </div>
-        <div className="descriptifText">
+        <div className="descriptiveText">
           <h3 className="yellow"> RESPONSABLE PEDAGOGIQUE</h3>
           <p>
             "Intégrer le centre de formation c’est accepter les exigences d’un
@@ -137,7 +137,7 @@ export default function TextPhilosophy() {
               );
             })}
         </div>
-        <div className="descriptifText">
+        <div className="descriptiveText">
           <h3 className="yellow"> ENTRAINEUR DE L'EQUIPE PRO </h3>
           <p>
             "Le centre de formation est très important pour nous. Les joueuses
