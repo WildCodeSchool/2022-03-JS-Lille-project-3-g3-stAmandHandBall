@@ -7,6 +7,10 @@ export default styled.section`
       font-size: 1.5rem;
       margin-top: 2rem;
       text-align: justify;
+      padding: 0.6rem;
+    }
+    p:nth-child(3) {
+      margin: 1rem;
     }
   }
   p {

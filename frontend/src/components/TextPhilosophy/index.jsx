@@ -29,7 +29,6 @@ export default function TextPhilosophy() {
           parallèle de leur réussite sportive.
         </p>
       </article>
-      <br />
       <Title title="Editos" />
       <article className="left">
         <div className="image">
@@ -78,7 +77,7 @@ export default function TextPhilosophy() {
               );
             })}
         </div>
-        <div className="descriptiveText">
+        <div className="descriptionText">
           <h3 className="yellow"> RESPONSABLE DU CENTRE DE FORMATION</h3>
           <p>
             "Le centre de formation du SAH-PH a pour objectif premier de réunir
@@ -107,7 +106,7 @@ export default function TextPhilosophy() {
               );
             })}
         </div>
-        <div className="descriptiveText">
+        <div className="descriptionText">
           <h3 className="yellow"> RESPONSABLE PEDAGOGIQUE</h3>
           <p>
             "Intégrer le centre de formation c’est accepter les exigences d’un
@@ -137,7 +136,7 @@ export default function TextPhilosophy() {
               );
             })}
         </div>
-        <div className="descriptiveText">
+        <div className="descriptionText">
           <h3 className="yellow"> ENTRAINEUR DE L'EQUIPE PRO </h3>
           <p>
             "Le centre de formation est très important pour nous. Les joueuses
@@ -149,7 +148,6 @@ export default function TextPhilosophy() {
           </p>
         </div>
       </article>
-      <br />
       <article>
         <p>
           Pour tout complément d’information, on vous invite à nous solliciter
