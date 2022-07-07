@@ -8,14 +8,15 @@ export default ctxProvider;
 export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
   const [historys, setHistorys] = useState([]);
-  const [staffs, setStaffs] = useState([]);
+  const [calendar, setCalendar] = useState([]);
+  const [staff, setStaff] = useState([]);
   const [news, setNews] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
       .then(({ data }) => {
-        setPlayers(data).then(() => {});
+        setPlayers(data);
       });
   }, []);
 
@@ -28,18 +29,26 @@ export function CtxProvider({ children }) {
   }, []);
 
   useEffect(() => {
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/calendar"}`)
+      .then(({ data }) => {
+        setCalendar(data);
+      });
+  }, []);
+        
+useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
       .then(({ data }) => {
-        setStaff(data).then(() => {});
+        setStaff(data);
       });
   }, []);
+
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/news"}`)
       .then(({ data }) => {
-        setNews(data).then(() => {});
+        setNews(data);
       });
   }, []);
 
@@ -49,6 +58,7 @@ export function CtxProvider({ children }) {
       value={{
         players,
         historys,
+        calendar,
         setPlayers,
         staffs,
         news,
