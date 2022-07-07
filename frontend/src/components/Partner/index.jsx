@@ -6,7 +6,7 @@ export default function Partner() {
     <SPartner>
       <div className="buttonPosition">
         <Link to="partenaires">
-          <button type="button">Nos partenaires</button>
+          <button type="button">NOS PARTENAIRES</button>
         </Link>
       </div>
     </SPartner>

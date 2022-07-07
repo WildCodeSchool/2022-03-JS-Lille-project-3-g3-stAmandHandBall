@@ -16,11 +16,9 @@ export default styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    text-transform: uppercase;
     color: var(--white);
     font-size: 3.5vmax;
     font-weight: 900;
-
     img {
       width: 15%;
       margin: -3vh 1vw 0 1vw;
@@ -36,18 +34,33 @@ export default styled.div`
     justify-content: center;
     text-transform: uppercase;
   }
-  @media screen and (max-width: 640px) {
-    height: 14vh;
+  .mobile {
+    display: none;
+  }
+  @media screen and (max-width: 700px) {
+    margin-top: -26vh;
+    height: 16vh;
     .title {
       height: 8vh;
       font-size: 2vmax;
       img {
         width: 20%;
       }
+      .noMobile {
+        display: none;
+      }
+    }
+    .mobile {
+      display: flex;
+      justify-content: center;
+      font-size: 2.2vmax;
+      color: var(--white);
+      font-weight: 900;
+      text-align: center;
     }
     .secondtitle {
-      height: 8vh;
-      font-size: 2vmax;
+      height: 4vh;
+      font-size: 2.2vmax;
     }
   }
 `;

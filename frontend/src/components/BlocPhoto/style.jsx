@@ -79,6 +79,7 @@ export default styled.section`
     }
   }
   @media screen and (max-width: 700px) {
+    margin-top: -2vh;
     width: 100vw;
     height: 90vh;
     .photoDiv {

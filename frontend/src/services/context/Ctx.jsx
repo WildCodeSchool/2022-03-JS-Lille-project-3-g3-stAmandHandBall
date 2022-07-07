@@ -8,7 +8,7 @@ export default ctxProvider;
 export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
   const [calendar, setCalendar] = useState([]);
-  const [staffs, setStaffs] = useState([]);
+  const [staff, setStaff] = useState([]);
   const [news, setNews] = useState([]);
 
   useEffect(() => {
@@ -26,15 +26,14 @@ export function CtxProvider({ children }) {
         setCalendar(data);
       });
   }, []);
-        
-useEffect(() => {
+
+  useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
       .then(({ data }) => {
         setStaff(data);
       });
   }, []);
-
 
   useEffect(() => {
     axios
@@ -51,7 +50,7 @@ useEffect(() => {
         players,
         calendar,
         setPlayers,
-        staffs,
+        staff,
         news,
       }}
     >

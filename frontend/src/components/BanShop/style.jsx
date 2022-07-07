@@ -31,8 +31,10 @@ export default styled.section`
   @media screen and (max-width: 700px) {
     width: 100vw;
     height: 25vh;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    margin-top: -5vh;
+    margin-bottom: -21vh;
     .title {
       h2 {
         font-size: 1.5em;

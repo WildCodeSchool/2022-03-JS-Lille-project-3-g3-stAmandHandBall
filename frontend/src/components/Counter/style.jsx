@@ -104,16 +104,18 @@ export default styled.div`
     box-shadow: var(--box-shadow);
   }
   @media screen and (max-width: 700px) {
-    height: 28vh;
+    height: 34vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: -10vh;
     h3 {
-      margin-top: -1em;
+      margin-top: -0.3em;
       font-size: 2em;
     }
     .informations {
       flex-direction: column;
+      margin-top: 5vh;
     }
     .nextMatch {
       margin: 0.5vh 0;
