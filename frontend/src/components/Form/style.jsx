@@ -34,16 +34,17 @@ export default styled.section`
     textarea {
       border: none;
       width: 100%;
-      box-shadow: var(--box-shadow);
       margin-bottom: 2vh;
       padding-left: 8px;
-      text-shadow: var(--text-shadow);
       color: var(--white);
       font-weight: bold;
       font-size: 1em;
     }
     input[type="submit"] {
       width: 60%;
+    }
+    button {
+      border: 2px solid yellow;
     }
   }
   @media screen and (max-width: 700px) {

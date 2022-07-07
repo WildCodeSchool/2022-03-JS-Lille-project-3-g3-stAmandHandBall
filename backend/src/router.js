@@ -6,6 +6,7 @@ const {
   NewsController,
   RoleController,
   StaffAndRoleController,
+  ContactController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -34,5 +35,7 @@ router.get("/role/:id", RoleController.read);
 router.put("/role/:id", RoleController.edit);
 router.post("/role", RoleController.add);
 router.delete("/role/:id", RoleController.delete);
+
+router.post("/contact", ContactController.add);
 
 module.exports = router;
