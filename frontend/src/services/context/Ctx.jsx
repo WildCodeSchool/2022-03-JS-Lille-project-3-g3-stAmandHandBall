@@ -7,30 +7,40 @@ export default ctxProvider;
 
 export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
-  const [staffs, setStaff] = useState([]);
+  const [staff, setStaff] = useState([]);
+  const [calendar, setCalendar] = useState([]);
   const [news, setNews] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
       .then(({ data }) => {
-        setPlayers(data).then(() => {});
+        setPlayers(data);
       });
   }, []);
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/calendar"}`)
       .then(({ data }) => {
-        setStaff(data).then(() => {});
+        setCalendar(data);
       });
   }, []);
+        
+useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
+      .then(({ data }) => {
+        setStaff(data);
+      });
+  }, []);
+
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/news"}`)
       .then(({ data }) => {
-        setNews(data).then(() => {});
+        setNews(data);
       });
   }, []);
 
@@ -39,6 +49,7 @@ export function CtxProvider({ children }) {
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         players,
+        calendar,
         setPlayers,
         staffs,
         news,

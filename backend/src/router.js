@@ -3,6 +3,7 @@ const express = require("express");
 const {
   PlayerController,
   StaffController,
+  CalendarController,
   NewsController,
   RoleController,
   StaffAndRoleController,
@@ -16,6 +17,12 @@ router.get("/players/:id", PlayerController.read);
 router.put("/players/:id", PlayerController.edit);
 router.post("/players", PlayerController.add);
 router.delete("/players/:id", PlayerController.delete);
+
+router.get("/calendar", CalendarController.browse);
+router.get("/calendar/:id", CalendarController.read);
+router.put("/calendar/:id", CalendarController.edit);
+router.post("/calendar", CalendarController.add);
+router.delete("/calendar/:id", CalendarController.delete);
 
 router.get("/staff", StaffController.browse);
 router.get("/staff/:id", StaffController.read);
