@@ -2,7 +2,8 @@ const models = require("../models");
 
 class OpponentController {
   static browse = (req, res) => {
-    models.Opponent.findAll()
+    models.opponent
+      .findAll()
       .then(([rows]) => {
         res.send(rows);
       })
@@ -13,7 +14,8 @@ class OpponentController {
   };
 
   static read = (req, res) => {
-    models.Opponent.find(req.params.id)
+    models.opponent
+      .find(req.params.id)
       .then(([rows]) => {
         if (rows[0] == null) {
           res.sendStatus(404);
@@ -28,13 +30,14 @@ class OpponentController {
   };
 
   static edit = (req, res) => {
-    const Opponent = req.body;
+    const opponent = req.body;
 
     // TODO validations (length, format...)
 
-    Opponent.id = parseInt(req.params.id, 10);
+    opponent.id = parseInt(req.params.id, 10);
 
-    models.Opponent.update(Opponent)
+    models.opponent
+      .update(opponent)
       .then(([result]) => {
         if (result.affectedRows === 0) {
           res.sendStatus(404);
@@ -49,13 +52,14 @@ class OpponentController {
   };
 
   static add = (req, res) => {
-    const Opponent = req.body;
+    const opponent = req.body;
 
     // TODO validations (length, format...)
 
-    models.Opponent.insert(Opponent)
+    models.opponent
+      .insert(opponent)
       .then(([result]) => {
-        res.status(201).send({ ...Opponent, id: result.insertId });
+        res.status(201).send({ ...opponent, id: result.insertId });
       })
       .catch((err) => {
         console.error(err);
@@ -64,7 +68,8 @@ class OpponentController {
   };
 
   static delete = (req, res) => {
-    models.Opponent.delete(req.params.id)
+    models.opponent
+      .delete(req.params.id)
       .then(() => {
         res.sendStatus(204);
       })

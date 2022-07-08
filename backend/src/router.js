@@ -1,12 +1,15 @@
 const express = require("express");
 
 const {
-  PlayerController,
-  StaffController,
   CalendarController,
   NewsController,
+  OpponentController,
+  PlayerController,
+  RefereeController,
   RoleController,
   StaffAndRoleController,
+  StaffController,
+  TeamController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -41,5 +44,23 @@ router.get("/role/:id", RoleController.read);
 router.put("/role/:id", RoleController.edit);
 router.post("/role", RoleController.add);
 router.delete("/role/:id", RoleController.delete);
+
+router.get("/referee", RefereeController.browse);
+router.get("/referee/:id", RefereeController.read);
+router.put("/referee/:id", RefereeController.edit);
+router.post("/referee", RefereeController.add);
+router.delete("/referee/:id", RefereeController.delete);
+
+router.get("/team", TeamController.browse);
+router.get("/team/:id", TeamController.read);
+router.put("/team/:id", TeamController.edit);
+router.post("/team", TeamController.add);
+router.delete("/team/:id", TeamController.delete);
+
+router.get("/opponent", OpponentController.browse);
+router.get("/opponent/:id", OpponentController.read);
+router.put("/opponent/:id", OpponentController.edit);
+router.post("/opponent", OpponentController.add);
+router.delete("/opponent/:id", OpponentController.delete);
 
 module.exports = router;
