@@ -44,7 +44,6 @@ export default styled.section`
     background: var(--white);
     border: 2px solid var(--white);
     border-radius: 16px;
-    z-index: 1;
   }
   .container.right::after {
     left: -8px;
@@ -57,7 +56,6 @@ export default styled.section`
     top: calc(29px + 1.5em);
     right: 8px;
     background: var(--white);
-    z-index: 1;
   }
   .container.right::before {
     left: 8px;

@@ -10,6 +10,7 @@ export function CtxProvider({ children }) {
   const [calendar, setCalendar] = useState([]);
   const [staff, setStaff] = useState([]);
   const [role, setRole] = useState([]);
+  const [historys, setHistorys] = useState([]);
   const [news, setNews] = useState([]);
   const [referee, setReferee] = useState([]);
   const [team, setTeam] = useState([]);
@@ -20,6 +21,14 @@ export function CtxProvider({ children }) {
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
       .then(({ data }) => {
         setPlayers(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/historys"}`)
+      .then(({ data }) => {
+        setHistorys(data).then(() => {});
       });
   }, []);
 
@@ -90,6 +99,7 @@ export function CtxProvider({ children }) {
         opponent,
         role,
         staff,
+        historys,
         news,
       }}
     >
