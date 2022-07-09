@@ -9,7 +9,11 @@ export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
   const [calendar, setCalendar] = useState([]);
   const [staff, setStaff] = useState([]);
+  const [role, setRole] = useState([]);
   const [news, setNews] = useState([]);
+  const [referee, setReferee] = useState([]);
+  const [team, setTeam] = useState([]);
+  const [opponent, setOpponent] = useState([]);
 
   useEffect(() => {
     axios
@@ -43,13 +47,48 @@ export function CtxProvider({ children }) {
       });
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/role"}`)
+      .then(({ data }) => {
+        setRole(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/referee"}`)
+      .then(({ data }) => {
+        setReferee(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/team"}`)
+      .then(({ data }) => {
+        setTeam(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/opponent"}`)
+      .then(({ data }) => {
+        setOpponent(data);
+      });
+  }, []);
+
   return (
     <ctxProvider.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         players,
         calendar,
-        setPlayers,
+        referee,
+        team,
+        opponent,
+        role,
         staff,
         news,
       }}

@@ -12,6 +12,7 @@ const {
   StaffAndRoleController,
   StaffController,
   TeamController,
+  TeamAndStaffController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -55,6 +56,7 @@ router.post("/referee", RefereeController.add);
 router.delete("/referee/:id", RefereeController.delete);
 
 router.get("/team", TeamController.browse);
+router.get("/team/all", TeamAndStaffController.browse);
 router.get("/team/:id", TeamController.read);
 router.put("/team/:id", TeamController.edit);
 router.post("/team", TeamController.add);
