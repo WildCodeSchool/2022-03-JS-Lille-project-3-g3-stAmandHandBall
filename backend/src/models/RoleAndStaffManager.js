@@ -1,13 +1,13 @@
 const AbstractManager = require("./AbstractManager");
 
-class RefereeAndRoleManager extends AbstractManager {
-  static table = "refereeAndRole";
+class RoleAndStaffManager extends AbstractManager {
+  static table = "roleAndStaff";
 
   findAll() {
     return this.connection.query(
-      `SELECT r.lastname, r.firstname, r.division, r.img, ro.name, ro.group FROM referee AS r LEFT JOIN role AS ro ON ro.id=r.role_id;`
+      `SELECT * FROM staff_has_role AS shr JOIN staff AS s ON s.id=shr.staff_id JOIN role AS r ON r.id=shr.role_id;`
     );
   }
 }
 
-module.exports = RefereeAndRoleManager;
+module.exports = RoleAndStaffManager;

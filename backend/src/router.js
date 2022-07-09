@@ -4,12 +4,13 @@ const {
   AdminController,
   CalendarController,
   NewsController,
+  NewsAndTeamController,
   OpponentController,
   PlayerController,
   RefereeAndRoleController,
   RefereeController,
   RoleController,
-  StaffAndRoleController,
+  RoleAndStaffController,
   StaffController,
   TeamController,
   TeamAndStaffController,
@@ -36,27 +37,28 @@ router.post("/staff", StaffController.add);
 router.delete("/staff/:id", StaffController.delete);
 
 router.get("/news", NewsController.browse);
+router.get("/news/team", NewsAndTeamController.browse);
 router.get("/news/:id", NewsController.read);
 router.put("/news/:id", NewsController.edit);
 router.post("/news", NewsController.add);
 router.delete("/news/:id", NewsController.delete);
 
-router.get("/role/all/", StaffAndRoleController.browse);
 router.get("/role", RoleController.browse);
+router.get("/role/staff/", RoleAndStaffController.browse);
 router.get("/role/:id", RoleController.read);
 router.put("/role/:id", RoleController.edit);
 router.post("/role", RoleController.add);
 router.delete("/role/:id", RoleController.delete);
 
 router.get("/referee", RefereeController.browse);
-router.get("/referee/all", RefereeAndRoleController.browse);
+router.get("/referee/role", RefereeAndRoleController.browse);
 router.get("/referee/:id", RefereeController.read);
 router.put("/referee/:id", RefereeController.edit);
 router.post("/referee", RefereeController.add);
 router.delete("/referee/:id", RefereeController.delete);
 
 router.get("/team", TeamController.browse);
-router.get("/team/all", TeamAndStaffController.browse);
+router.get("/team/staff", TeamAndStaffController.browse);
 router.get("/team/:id", TeamController.read);
 router.put("/team/:id", TeamController.edit);
 router.post("/team", TeamController.add);

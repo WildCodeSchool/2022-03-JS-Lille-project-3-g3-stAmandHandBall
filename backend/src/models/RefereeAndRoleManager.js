@@ -5,7 +5,7 @@ class RefereeAndRoleManager extends AbstractManager {
 
   findAll() {
     return this.connection.query(
-      `SELECT r.lastname, r.firstname, r.division, r.img, ro.name AS role_name FROM referee AS r LEFT JOIN role AS ro ON ro.id=r.role_id;`
+      `SELECT r.lastname, r.firstname, r.division, r.img, ro.name, ro.group FROM referee AS r LEFT JOIN role AS ro ON ro.id=r.role_id;`
     );
   }
 }
