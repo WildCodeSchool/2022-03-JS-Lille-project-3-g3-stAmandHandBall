@@ -1,10 +1,12 @@
 const express = require("express");
 
 const {
+  AdminController,
   CalendarController,
   NewsController,
   OpponentController,
   PlayerController,
+  RefereeAndRoleController,
   RefereeController,
   RoleController,
   StaffAndRoleController,
@@ -46,6 +48,7 @@ router.post("/role", RoleController.add);
 router.delete("/role/:id", RoleController.delete);
 
 router.get("/referee", RefereeController.browse);
+router.get("/referee/all", RefereeAndRoleController.browse);
 router.get("/referee/:id", RefereeController.read);
 router.put("/referee/:id", RefereeController.edit);
 router.post("/referee", RefereeController.add);
@@ -62,5 +65,10 @@ router.get("/opponent/:id", OpponentController.read);
 router.put("/opponent/:id", OpponentController.edit);
 router.post("/opponent", OpponentController.add);
 router.delete("/opponent/:id", OpponentController.delete);
+
+router.get("/admin", AdminController.browse);
+router.get("/admin/:id", AdminController.read);
+router.post("/admin", AdminController.add);
+router.delete("/admin/:id", AdminController.delete);
 
 module.exports = router;
