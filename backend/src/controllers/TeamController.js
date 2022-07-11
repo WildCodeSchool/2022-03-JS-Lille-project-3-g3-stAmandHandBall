@@ -1,8 +1,8 @@
 const models = require("../models");
 
-class HistoryController {
+class TeamController {
   static browse = (req, res) => {
-    models.history
+    models.team
       .findAll()
       .then(([rows]) => {
         res.send(rows);
@@ -14,7 +14,7 @@ class HistoryController {
   };
 
   static read = (req, res) => {
-    models.history
+    models.team
       .find(req.params.id)
       .then(([rows]) => {
         if (rows[0] == null) {
@@ -30,14 +30,14 @@ class HistoryController {
   };
 
   static edit = (req, res) => {
-    const history = req.body;
+    const team = req.body;
 
     // TODO validations (length, format...)
 
-    history.id = parseInt(req.params.id, 10);
+    team.id = parseInt(req.params.id, 10);
 
-    models.history
-      .update(history)
+    models.team
+      .update(team)
       .then(([result]) => {
         if (result.affectedRows === 0) {
           res.sendStatus(404);
@@ -52,14 +52,14 @@ class HistoryController {
   };
 
   static add = (req, res) => {
-    const history = req.body;
+    const team = req.body;
 
     // TODO validations (length, format...)
 
-    models.history
-      .insert(history)
+    models.team
+      .insert(team)
       .then(([result]) => {
-        res.status(201).send({ ...history, id: result.insertId });
+        res.status(201).send({ ...team, id: result.insertId });
       })
       .catch((err) => {
         console.error(err);
@@ -68,7 +68,7 @@ class HistoryController {
   };
 
   static delete = (req, res) => {
-    models.history
+    models.team
       .delete(req.params.id)
       .then(() => {
         res.sendStatus(204);
@@ -80,4 +80,4 @@ class HistoryController {
   };
 }
 
-module.exports = HistoryController;
+module.exports = TeamController;
