@@ -10,6 +10,7 @@ export function CtxProvider({ children }) {
   const [calendar, setCalendar] = useState([]);
   const [staff, setStaff] = useState([]);
   const [news, setNews] = useState([]);
+  const [team, setTeam] = useState([]);
 
   useEffect(() => {
     axios
@@ -43,6 +44,14 @@ export function CtxProvider({ children }) {
       });
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/team"}`)
+      .then(({ data }) => {
+        setTeam(data);
+      });
+  }, []);
+
   return (
     <ctxProvider.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
@@ -52,6 +61,7 @@ export function CtxProvider({ children }) {
         setPlayers,
         staff,
         news,
+        team,
       }}
     >
       {children}

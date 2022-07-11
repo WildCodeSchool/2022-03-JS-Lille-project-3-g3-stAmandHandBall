@@ -3,7 +3,8 @@ import Home from "@pages/Home";
 import Footer from "@components/Archi/Footer";
 import Header from "@components/Archi/Header";
 import News from "@pages/News";
-import Rookies from "@pages/Rookies";
+import NonProfessional from "@pages/NonProfessional";
+import NonProfessionalDetail from "@pages/NonProfessionalDetail";
 import Shop from "@pages/Shop";
 import FirstTeam from "@pages/FirstTeam";
 import Contact from "@pages/Contact";
@@ -47,7 +48,8 @@ function App() {
           <Route path="/formation" element={<Training />} />
           <Route path="/candidature" element={<Apply />} />
           {/* page Rookies */}
-          <Route path="/amateurs" element={<Rookies />} />
+          <Route path="/amateurs" element={<NonProfessional />} />
+          <Route path="/amateurs/:id" element={<NonProfessionalDetail />} />
           {/* page Shop */}
           <Route path="/boutique" element={<Shop />} />
           {/* page billeterie */}
