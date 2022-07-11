@@ -26,7 +26,7 @@ export function CtxProvider({ children }) {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/historys"}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/history"}`)
       .then(({ data }) => {
         setHistory(data);
       });
