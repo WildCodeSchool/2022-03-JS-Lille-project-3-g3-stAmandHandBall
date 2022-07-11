@@ -7,6 +7,7 @@ export default ctxProvider;
 
 export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
+  const [historys, setHistorys] = useState([]);
   const [calendar, setCalendar] = useState([]);
   const [staff, setStaff] = useState([]);
   const [role, setRole] = useState([]);
@@ -28,7 +29,7 @@ export function CtxProvider({ children }) {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/historys"}`)
       .then(({ data }) => {
-        setHistorys(data).then(() => {});
+        setHistorys(data);
       });
   }, []);
 
@@ -93,6 +94,7 @@ export function CtxProvider({ children }) {
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         players,
+        historys,
         calendar,
         referee,
         team,
