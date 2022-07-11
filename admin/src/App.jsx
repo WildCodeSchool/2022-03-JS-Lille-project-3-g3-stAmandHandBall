@@ -1,8 +1,8 @@
 import { Admin, Resource } from "react-admin";
 import UserIcon from "@mui/icons-material/Group";
+import FeedIcon from "@mui/icons-material/Feed";
 import { PlayerList, PostEdit, PostCreate } from "./player";
 import dataProvider from "./dataProvider";
-import FeedIcon from "@mui/icons-material/Feed";
 import { NewList, NewEdit, NewCreate } from "./new";
 
 function App() {
@@ -16,12 +16,12 @@ function App() {
         icon={UserIcon}
       />
       <Resource
-         name="news"
-         list={NewList}
-         edit={NewEdit}
-         create={NewCreate}
-         icon={FeedIcon}
-       />
+        name="news"
+        list={NewList}
+        edit={NewEdit}
+        create={NewCreate}
+        icon={FeedIcon}
+      />
     </Admin>
   );
 }
