@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export default styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  margin: auto;
+  color: var(--white);
   li {
     font-size: 1em;
     list-style-image: ${(props) => {
@@ -8,14 +13,9 @@ export default styled.div`
     }};
   }
   a {
-    color: white;
+    color: var(--white);
     font-style: italic;
   }
-  display: flex;
-  flex-direction: column;
-  width: 75vw;
-  margin: auto;
-  color: var(--white);
   em {
     color: var(--yellow);
   }
@@ -26,6 +26,7 @@ export default styled.div`
   img {
     width: 100%;
     margin-bottom: 8vh;
+    margin-top: 8vh;
   }
   p {
     margin-bottom: 4vh;
@@ -33,19 +34,33 @@ export default styled.div`
   h4 {
     margin-bottom: 8vh;
   }
+  ul {
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+  }
   .operation,
   .formationList {
     width: 90%;
     margin: auto;
-    margin-bottom: 4vh;
+    margin-bottom: 12vh;
+    h4 {
+      margin-bottom: 0vh;
+    }
   }
   @media screen and (max-width: 700px) {
+    width: 85vw;
+    .introduction {
+      text-align: center;
+    }
     .yellow {
       margin: 1vh 0;
     }
-    h4 {
-      margin: -5vh 0 8vh 0;
-      text-align: center;
+    ul {
+      margin-bottom: 0vh;
+    }
+    img {
+      margin-bottom: 4vh;
+      margin-top: 4vh;
     }
   }
 `;

@@ -11,7 +11,7 @@ export default function Training() {
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
       <STraining picto={picto}>
         <BigTitle title="FORMATION" />
-        <h4>
+        <h4 className="introduction">
           Le suivi pédagogique des joueuses du Centre de Formation est assuré
           conjointement par le responsable du centre de formation et la
           responsable pédagogique. <br />
@@ -53,21 +53,25 @@ export default function Training() {
         <Title title="Listes des formations accessibles" />
         <div className="formationList">
           <img src={universityPicture} alt="university" />
+          <h4>
+            <em>Université de Valenciennes</em>
+          </h4>
+          <a
+            href="https://formations.uphf.fr/cdm/cursus/licence"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            https://formations.uphf.fr/cdm/cursus/licence
+          </a>
           <ul>
-            <em>Université de Valenciennes</em> <br />
-            <a
-              href="https://formations.uphf.fr/cdm/cursus/licence"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              https://formations.uphf.fr/cdm/cursus/licence
-            </a>
             <li> diverses Licences en Droit, Economie et Gestion</li>
             <li> diverses Licences en Arts, Lettres et Langues</li>
             <li> diverses Licences en Sciences, Technologies et Santé</li>
             <li> diverses Licences en Sciences humaines et sociales</li>
           </ul>
-          <em>IUT de Valenciennes</em> <br />
+          <h4>
+            <em>IUT de Valenciennes</em>
+          </h4>
           <a
             href="https://formations.uphf.fr/cdm/cursus/licence"
             target="_blank"
@@ -79,12 +83,16 @@ export default function Training() {
             <li>divers DUT en Droit, Economie et Gestion</li>
             <li>divers DUT en Sciences, Technologies et santé</li>
           </ul>
-          <ul>
+          <h4>
             <em>Lycée Ernest Couteaux de Saint-Amand-les-Eaux</em>
+          </h4>
+          <ul>
             <li>BTS comptabilité Gestion</li>
           </ul>
-          <ul>
+          <h4>
             <em>Lycée La Sagesse de Valenciennes</em>
+          </h4>
+          <ul>
             <li>BTS ESF</li>
           </ul>
           <p>Possibilité de cursus à distance</p>
