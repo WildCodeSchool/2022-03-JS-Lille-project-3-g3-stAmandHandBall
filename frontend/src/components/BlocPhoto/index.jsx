@@ -1,9 +1,21 @@
 import { Link } from "react-router-dom";
+import imgCoachs from "@assets/images/photos/coach.jpg";
+import imgNf1 from "@assets/images/photos/n1f.png";
+import imgNonProfessional from "@assets/images/photos/amateur.jpg";
+import imgFormation from "@assets/images/photos/formation.jpg";
+import imgTerritoriale from "@assets/images/photos/territoriale.jpg";
+
 import SBlocPhotos from "./style";
 
 export default function BlocPhotos() {
   return (
-    <SBlocPhotos>
+    <SBlocPhotos
+      imgCoachs={imgCoachs}
+      imgNf1={imgNf1}
+      imgNonProfessional={imgNonProfessional}
+      imgTerritoriale={imgTerritoriale}
+      imgFormation={imgFormation}
+    >
       <section>
         <div className="firstPart">
           <Link to="bergersDesLouveteaux">
