@@ -6,8 +6,6 @@ import SNewsList from "./style";
 
 export default function NewsList({ info }) {
   const { news } = useContext(ctxProvider);
-<<<<<<< HEAD
-=======
 
   function number() {
     if (info === "noLast") {
@@ -16,7 +14,6 @@ export default function NewsList({ info }) {
     return 0;
   }
 
->>>>>>> dev
   return (
     <SNewsList>
       {news.slice(number(), news.length).map((article) => {
