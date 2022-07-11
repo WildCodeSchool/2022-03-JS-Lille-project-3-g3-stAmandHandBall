@@ -7,22 +7,32 @@ export default ctxProvider;
 
 export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
-  const [staffs, setStaffs] = useState([]);
+  const [calendar, setCalendar] = useState([]);
+  const [staff, setStaff] = useState([]);
   const [news, setNews] = useState([]);
+  const [team, setTeam] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
       .then(({ data }) => {
-        setPlayers(data).then(() => {});
+        setPlayers(data);
       });
   }, []);
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staffs"}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/calendar"}`)
       .then(({ data }) => {
-        setStaffs(data).then(() => {});
+        setCalendar(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
+      .then(({ data }) => {
+        setStaff(data);
       });
   }, []);
 
@@ -30,7 +40,15 @@ export function CtxProvider({ children }) {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/news"}`)
       .then(({ data }) => {
-        setNews(data).then(() => {});
+        setNews(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/team"}`)
+      .then(({ data }) => {
+        setTeam(data);
       });
   }, []);
 
@@ -39,8 +57,11 @@ export function CtxProvider({ children }) {
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         players,
-        staffs,
+        calendar,
+        setPlayers,
+        staff,
         news,
+        team,
       }}
     >
       {children}

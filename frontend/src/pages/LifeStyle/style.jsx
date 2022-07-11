@@ -39,6 +39,7 @@ export default styled.div`
     margin-bottom: 4vh;
   }
   @media screen and (max-width: 700px) {
+    width: 90vw;
     .yellow {
       margin: 1vh 0;
     }

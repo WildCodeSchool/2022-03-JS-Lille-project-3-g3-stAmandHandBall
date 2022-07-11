@@ -1,14 +1,21 @@
+import PropTypes from "prop-types";
 import { useContext } from "react";
 import ctxProvider from "@services/context/Ctx";
 import CardNews from "@components/CardNews";
 import SNewsList from "./style";
 
-export default function NewsList() {
+export default function NewsList({ info }) {
   const { news } = useContext(ctxProvider);
+  function number() {
+    if (info === "noLast") {
+      return 1;
+    }
+    return 0;
+  }
 
   return (
     <SNewsList>
-      {news.map((article) => {
+      {news.slice(number(), news.length).map((article) => {
         return (
           <CardNews
             key={article.id}
@@ -22,3 +29,7 @@ export default function NewsList() {
     </SNewsList>
   );
 }
+
+NewsList.propTypes = {
+  info: PropTypes.string.isRequired,
+};
