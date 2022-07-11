@@ -37,12 +37,6 @@ router.put("/staff/:id", StaffController.edit);
 router.post("/staff", StaffController.add);
 router.delete("/staff/:id", StaffController.delete);
 
-router.get("/historys", HistoryController.browse);
-router.get("/historys/:id", HistoryController.read);
-router.put("/historys/:id", HistoryController.edit);
-router.post("/historys", HistoryController.add);
-router.delete("/historys/:id", HistoryController.delete);
-
 router.get("/news", NewsController.browse);
 router.get("/news/team", NewsAndTeamController.browse);
 router.get("/news/:id", NewsController.read);
@@ -81,5 +75,10 @@ router.get("/admin", AdminController.browse);
 router.get("/admin/:id", AdminController.read);
 router.post("/admin", AdminController.add);
 router.delete("/admin/:id", AdminController.delete);
+
+router.get("/history", HistoryController.browse);
+router.get("/history/:id", HistoryController.read);
+router.post("/history", HistoryController.add);
+router.delete("/history/:id", HistoryController.delete);
 
 module.exports = router;
