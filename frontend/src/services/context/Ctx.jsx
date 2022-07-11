@@ -30,6 +30,7 @@ export function CtxProvider({ children }) {
   }, []);
 
   useEffect(() => {
+    axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/calendar"}`)
       .then(({ data }) => {
         setCalendar(data);
