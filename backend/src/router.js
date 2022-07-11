@@ -2,7 +2,6 @@ const express = require("express");
 
 const {
   PlayerController,
-  HistoryController,
   StaffController,
   CalendarController,
   NewsController,
@@ -29,12 +28,6 @@ router.get("/staff/:id", StaffController.read);
 router.put("/staff/:id", StaffController.edit);
 router.post("/staff", StaffController.add);
 router.delete("/staff/:id", StaffController.delete);
-
-router.get("/historys", HistoryController.browse);
-router.get("/historys/:id", HistoryController.read);
-router.put("/historys/:id", HistoryController.edit);
-router.post("/historys", HistoryController.add);
-router.delete("/historys/:id", HistoryController.delete);
 
 router.get("/news", NewsController.browse);
 router.get("/news/:id", NewsController.read);
