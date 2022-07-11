@@ -10,11 +10,10 @@ export function CtxProvider({ children }) {
   const [historys, setHistorys] = useState([]);
   const [calendar, setCalendar] = useState([]);
   const [staff, setStaff] = useState([]);
-  const [role, setRole] = useState([]);
-  const [historys, setHistorys] = useState([]);
   const [news, setNews] = useState([]);
-  const [referee, setReferee] = useState([]);
   const [team, setTeam] = useState([]);
+  const [role, setRole] = useState([]);
+  const [referee, setReferee] = useState([]);
   const [opponent, setOpponent] = useState([]);
 
   useEffect(() => {
@@ -96,13 +95,13 @@ export function CtxProvider({ children }) {
         players,
         historys,
         calendar,
-        referee,
+        setPlayers,
+        staff,
+        news,
         team,
+        referee,
         opponent,
         role,
-        staff,
-        historys,
-        news,
       }}
     >
       {children}
