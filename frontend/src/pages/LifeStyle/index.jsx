@@ -2,7 +2,17 @@ import BigTitle from "@components/Archi/BigTitle";
 import BigPicture from "@components/Archi/BigPicture";
 import Title from "@components/Archi/Title";
 import map from "@assets/images/elements/plan.png";
-import image from "@assets/images/photos/life-style-1.png";
+import home1 from "@assets/images/photos/life-style-1.png";
+import home2 from "@assets/images/photos/life-style-2.jpg";
+import apartment1 from "@assets/images/photos/life-style-3.jpg";
+import apartment2 from "@assets/images/photos/life-style-4.jpg";
+import sport1 from "@assets/images/photos/sport-1.jpg";
+import sport2 from "@assets/images/photos/sport-2.jpg";
+import sport3 from "@assets/images/photos/sport-3.jpg";
+import sport4 from "@assets/images/photos/sport-4.jpg";
+import sport5 from "@assets/images/photos/sport-5.jpg";
+import sport6 from "@assets/images/photos/sport-6.jpg";
+
 import SLifeStyle from "./style";
 
 export default function LifeStyle() {
@@ -39,8 +49,8 @@ export default function LifeStyle() {
             sportives.
           </p>
           <div className="photos">
-            <img src={image} alt="home-image1" className="map" />
-            <img src={image} alt="home-image2" className="map" />
+            <img src={home1} alt="home-image1" className="map" />
+            <img src={home2} alt="home-image2" className="map" />
           </div>
           <h3 className="yellow">Appartement</h3>
           <p>
@@ -49,8 +59,8 @@ export default function LifeStyle() {
             sportives et proche du centre-ville.
           </p>
           <div className="photos">
-            <img src={image} alt="apartment-image1" className="map" />
-            <img src={image} alt="apartment-image2" className="map" />
+            <img src={apartment1} alt="apartment-image1" className="map" />
+            <img src={apartment2} alt="apartment-image2" className="map" />
           </div>
         </div>
         <Title title="Installations sportives" />
@@ -63,8 +73,8 @@ export default function LifeStyle() {
             d’une salle d’entrainement.
           </p>
           <div className="photos">
-            <img src={image} alt="installation1" className="map" />
-            <img src={image} alt="installation2" className="map" />
+            <img src={sport1} alt="installation1" className="map" />
+            <img src={sport2} alt="installation2" className="map" />
           </div>
           <p>
             Les matchs à domicile de l’équipe première se jouent à la{" "}
@@ -72,8 +82,8 @@ export default function LifeStyle() {
             dans cette salle.
           </p>
           <div className="photos">
-            <img src={image} alt="installation3" className="map" />
-            <img src={image} alt="installation4" className="map" />
+            <img src={sport3} alt="installation3" className="map" />
+            <img src={sport4} alt="installation4" className="map" />
           </div>
           <p>
             Dans le cadre de leur préparation physique, les joueuses effectuent
@@ -81,8 +91,8 @@ export default function LifeStyle() {
             notre partenaire, <em>L’Orange Bleue.</em>
           </p>
           <div className="photos">
-            <img src={image} alt="installation5" className="map" />
-            <img src={image} alt="installation6" className="map" />
+            <img src={sport5} alt="installation5" className="map" />
+            <img src={sport6} alt="installation6" className="map" />
           </div>
         </div>
         <Title title="Plan des lieux de vie" />

@@ -6,6 +6,9 @@ export default styled.div`
   align-items: center;
   text-shadow: 2px 2px 5px black;
   margin-bottom: 2vw;
+  .none {
+    display: none;
+  }
   .firstPart {
     width: 35%;
     display: flex;
@@ -17,7 +20,8 @@ export default styled.div`
     aspect-ratio: 1/1;
     background-color: var(--yellow);
     box-shadow: 2px 2px 5px black;
-    display: flex;
+    display: none;
+    display: ${(props) => props.day && "flex"};
     justify-content: center;
     align-items: center;
   }
@@ -25,10 +29,13 @@ export default styled.div`
     color: var(--white);
     font-size: 2em;
   }
-  .hit {
+  .cup {
     width: 4vw;
     background-size: contain;
     background-position: center;
+  }
+  .noDayJ {
+    width: 14vw;
   }
   .date {
     display: flex;
@@ -113,8 +120,12 @@ export default styled.div`
     .day {
       width: 12vw;
     }
-    .hit {
+    .cup {
       width: 12vw;
+    }
+    .noDayJ {
+      width: 45vw;
+      margin-left: 6vw;
     }
     .place {
       width: 12vw;
