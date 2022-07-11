@@ -6,7 +6,7 @@ import exterieur from "@assets/images/elements/avion.png";
 
 export default function CardCalendar({
   day,
-  hit,
+  cup,
   date,
   hour,
   place,
@@ -18,20 +18,20 @@ export default function CardCalendar({
   const linkActuality = "http://localhost:3000/actus";
 
   return (
-    <SCardCalendar club1={club1} club2={club2} hit={hit}>
+    <SCardCalendar club1={club1} club2={club2} day={day}>
       <div className="firstPart">
-        <div className="day">
+        <div className={`${day > 0 ? "day" : "none"}`}>
           <h3>J{day}</h3>
         </div>
         <img
-          src={`../../src/assets/images/logos/${hit}.png`}
-          alt="hit"
-          className="hit"
+          src={`../../src/assets/images/logos/${cup}`}
+          alt="cup"
+          className={`${day > 0 ? "cup dayJ" : "cup noDayJ"}`}
         />
         <div className="date">
           <img
             src={`${place === "domicile" ? domicile : exterieur}
-            `}
+             `}
             alt="place"
             className="place"
           />
@@ -52,12 +52,14 @@ export default function CardCalendar({
           </div>
         </div>
         <a
-          href={`${result === "-" ? linkTicketOffice : linkActuality}`}
+          href={`${result.length < 5 ? linkTicketOffice : linkActuality}`}
           target="_blank"
           rel="noreferrer noopener"
         >
           <div className="link">
-            <Title title={result === "-" ? "BILLETTERIE" : "RECAP DU MATCH"} />
+            <Title
+              title={result.length < 5 ? "BILLETTERIE" : "RECAP DU MATCH"}
+            />
           </div>
         </a>
       </div>
@@ -67,7 +69,7 @@ export default function CardCalendar({
 
 CardCalendar.propTypes = {
   day: PropTypes.number.isRequired,
-  hit: PropTypes.string.isRequired,
+  cup: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   hour: PropTypes.string.isRequired,
   place: PropTypes.string.isRequired,

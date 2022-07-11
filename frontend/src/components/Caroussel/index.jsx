@@ -24,13 +24,16 @@ export default function Caroussel() {
           &lsaquo;
         </button>
         {players
-          .filter((data, img) => img >= position && img < position + 4)
+          .filter((player, img) => img >= position && img < position + 4)
           .map((player) => {
             return (
               <CardPlayer
-                key={player.name}
-                name={player.name}
-                img={player.img}
+                key={player.id}
+                name={`${player.firstname} ${player.lastname}`}
+                img={`./src/assets/images/cards/players/${
+                  player.img || "test.png"
+                } 
+               `}
                 number={player.number}
               />
             );

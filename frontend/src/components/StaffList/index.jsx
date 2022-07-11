@@ -4,16 +4,16 @@ import { useContext } from "react";
 import SStaffList from "./style";
 
 export default function StaffList() {
-  const { staffs } = useContext(ctxProvider);
+  const { staff } = useContext(ctxProvider);
   return (
     <SStaffList>
-      {staffs.map((staff) => {
+      {staff.map((person) => {
         return (
           <CardStaff
-            key={staff.id}
-            name={`${staff.firstname} ${staff.lastname}`}
-            img={`./src/assets/images/cards/staff/${staff.img}`}
-            function={staff.function}
+            key={person.id}
+            name={`${person.firstname} ${person.lastname}`}
+            img={`./src/assets/images/cards/staff/${person.img}`}
+            function={person.function}
           />
         );
       })}
