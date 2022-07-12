@@ -1,12 +1,18 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
+const passport = require("passport");
 const router = require("./router");
+require("./passport-strategies");
 
 const app = express();
 
 // use some application-level middlewares
-const corsWhitelist = [process.env.FRONTEND_URL, process.env.ADMIN_URL];
+const corsWhitelist = [
+  process.env.FRONTEND_URL,
+  process.env.ADMIN_URL,
+  undefined,
+];
 app.use(
   cors({
     origin: (origin, callback) => {
@@ -28,6 +34,9 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 // Serve REACT APP
 app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
+
+// Initialuze passport
+app.use(passport.initialize());
 
 // API routes
 app.use(router);

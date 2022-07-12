@@ -3,11 +3,12 @@ import UserIcon from "@mui/icons-material/Group";
 import FeedIcon from "@mui/icons-material/Feed";
 import { PlayerList, PostEdit, PostCreate } from "./player";
 import dataProvider from "./dataProvider";
+import authProvider from "./authProvider";
 import { NewList, NewEdit, NewCreate } from "./new";
 
 function App() {
   return (
-    <Admin dataProvider={dataProvider}>
+    <Admin dataProvider={dataProvider} authProvider={authProvider}>
       <Resource
         name="players"
         list={PlayerList}
