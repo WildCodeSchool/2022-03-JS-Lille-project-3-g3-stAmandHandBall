@@ -43,7 +43,10 @@ export default function Calendar() {
     for (let i = 0; i < calendar.length; i += 1) {
       const date = DateTime.fromISO(calendar[i].happenedAt);
       const diffInMinutes = date.diff(today, "minutes").toObject();
-      while (diffInMinutes.minutes < shortestTime) {
+      while (
+        diffInMinutes.minutes < shortestTime &&
+        diffInMinutes.minutes > 0
+      ) {
         shortestTime = diffInMinutes.minutes;
         index = i;
       }
@@ -59,7 +62,6 @@ export default function Calendar() {
   }
   return (
     <>
-      coucou
       <BigPicture
         img="test"
         date={`${dayMonth(calendar[indexOfNextMatch].happenedAt)}`}
