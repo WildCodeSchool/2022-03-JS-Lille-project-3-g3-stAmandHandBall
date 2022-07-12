@@ -5,6 +5,7 @@ import { PlayerList, PostEdit, PostCreate } from "./player";
 import dataProvider from "./dataProvider";
 import authProvider from "./authProvider";
 import { NewList, NewEdit, NewCreate } from "./new";
+import { NewListAdmin, NewCreateAdmin } from "./admin";
 
 function App() {
   return (
@@ -21,6 +22,12 @@ function App() {
         list={NewList}
         edit={NewEdit}
         create={NewCreate}
+        icon={FeedIcon}
+      />
+      <Resource
+        name="admin"
+        list={NewListAdmin}
+        create={NewCreateAdmin}
         icon={FeedIcon}
       />
     </Admin>

@@ -3,6 +3,18 @@ const jwt = require("jsonwebtoken");
 const models = require("../models");
 
 class AuthController {
+  static browse = (req, res) => {
+    models.admin
+      .findAll()
+      .then(([rows]) => {
+        res.send(rows);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
   static signup = (req, res) => {
     const admin = req.body;
 

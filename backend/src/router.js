@@ -14,7 +14,11 @@ const {
 
 const router = express.Router();
 
-router.post("/auth/signup", AuthController.signup);
+router.post(
+  "/auth/signup",
+  passport.authenticate("local", { session: false }),
+  AuthController.login
+);
 router.post(
   "/auth/login",
   passport.authenticate("local", { session: false }),
@@ -25,6 +29,7 @@ router.post(
   passport.authenticate("local", { session: false }),
   AuthController.loginAdmin
 );
+router.get("/admin", AuthController.browse);
 
 router.get("/players", PlayerController.browse);
 router.get("/players/:id", PlayerController.read);
