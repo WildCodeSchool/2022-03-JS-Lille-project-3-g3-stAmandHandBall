@@ -35,13 +35,7 @@ export function CtxProvider({ children }) {
         setStaff(data);
       });
   }, []);
-  useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/role/all"}`)
-      .then(({ data }) => {
-        setStaff(data);
-      });
-  }, []);
+
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/news"}`)

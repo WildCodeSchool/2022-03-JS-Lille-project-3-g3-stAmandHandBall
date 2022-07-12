@@ -45,6 +45,15 @@ export default styled.div`
     bottom: 3vw;
     left: 13.5vw;
   }
+  h4 {
+    color: var(--blue);
+    width: 100%;
+    background: var(--yellow);
+    text-align: center;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 5px 5px 3px var(--blue-opacity);
+  }
   @media screen and (max-width: 700px) {
     .name {
       width: 16.12vw;
@@ -58,6 +67,9 @@ export default styled.div`
       width: 10.4vw;
       bottom: 7.8vw;
       left: 35.1vw;
+    }
+    h4 {
+      font-size: 0.9em;
     }
   }
 `;

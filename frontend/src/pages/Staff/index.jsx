@@ -24,7 +24,7 @@ export default function Staff() {
                   key={person.id}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  function={person.function}
+                  role={person.name}
                 />
               );
             })}
@@ -40,7 +40,7 @@ export default function Staff() {
                   key={person.id}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  function={person.function}
+                  role={person.name}
                 />
               );
             })}
@@ -56,7 +56,7 @@ export default function Staff() {
                   key={person.id}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  function={person.function}
+                  role={person.name}
                 />
               );
             })}
@@ -72,7 +72,7 @@ export default function Staff() {
                   key={person.id}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  function={person.function}
+                  role={person.name}
                 />
               );
             })}
