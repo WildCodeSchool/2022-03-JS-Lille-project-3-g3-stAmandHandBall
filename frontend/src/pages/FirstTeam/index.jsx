@@ -2,7 +2,7 @@ import BigTitle from "@components/Archi/BigTitle";
 import BigPicture from "@components/Archi/BigPicture";
 import Title from "@components/Archi/Title";
 import PlayerList from "@components/PlayerList";
-import StaffList from "@components/StaffList";
+import StaffFilter from "@components/StaffFilter";
 import SFirstTeam from "./style";
 
 export default function FirstTeam() {
@@ -14,7 +14,7 @@ export default function FirstTeam() {
         <Title title="JOUEUSES" />
         <PlayerList />
         <Title title="STAFF" />
-        <StaffList />
+        <StaffFilter />
       </SFirstTeam>
     </>
   );
