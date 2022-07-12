@@ -5,7 +5,7 @@ class CalendarManager extends AbstractManager {
 
   insert(calendar) {
     return this.connection.query(
-      `insert into ${CalendarManager.table} (id, day, isHome, happenedAt, result, opponent, opponent_id, place) values (?,?,?,?,?,?,?,?)`,
+      `insert into ${CalendarManager.table} (id, day, isHome, happenedAt, result, opponent, opponent_id, place, news_id) values (?,?,?,?,?,?,?,?,?)`,
       [
         calendar.day,
         calendar.isHome,
@@ -14,13 +14,14 @@ class CalendarManager extends AbstractManager {
         calendar.opponent,
         calendar.opponent_id,
         calendar.place,
+        calendar.news_id,
       ]
     );
   }
 
   update(calendar) {
     return this.connection.query(
-      `update ${CalendarManager.table} set day = ?, isHome = ?, happenedAt = ?, result = ?, opponent = ?, opponent_id = ?, place = ? where id = ?`,
+      `update ${CalendarManager.table} set day = ?, isHome = ?, happenedAt = ?, result = ?, opponent = ?, opponent_id = ?, place = ?, news_id where id = ?`,
       [
         calendar.day,
         calendar.isHome,
@@ -29,6 +30,7 @@ class CalendarManager extends AbstractManager {
         calendar.opponent,
         calendar.opponent_id,
         calendar.place,
+        calendar.news_id,
         calendar.id,
       ]
     );
@@ -36,7 +38,7 @@ class CalendarManager extends AbstractManager {
 
   findAll() {
     return this.connection.query(
-      `SELECT * FROM calendar INNER JOIN opponent ON opponent.id=calendar.opponent_id ORDER BY happenedAt ASC;`
+      `SELECT * FROM calendar INNER JOIN opponent ON opponent.id=calendar.opponent_id INNER JOIN news ON news.id=calendar.news_id ORDER BY happenedAt DESC;`
     );
   }
 }

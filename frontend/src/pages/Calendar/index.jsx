@@ -105,6 +105,7 @@ export default function Calendar() {
                         club1Img={`${match.isHome ? "sah-ph.png" : match.logo}`}
                         club2Img={`${match.isHome ? match.logo : "sah-ph.png"}`}
                         result={`${match.result === null ? "-" : match.result}`}
+                        news={match.news_id}
                       />
                     </div>
                   );

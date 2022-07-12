@@ -93,7 +93,7 @@ export default styled.div`
       margin: 0 10px 0 10px;
     }
   }
-  .link {
+  a {
     background-color: var(--yellow);
     margin: 1vw;
     color: var(--white);
@@ -156,7 +156,7 @@ export default styled.div`
     .meeting > h3 {
       margin-bottom: 6vh;
     }
-    .link {
+    a {
       margin-bottom: 5vh;
     }
   }

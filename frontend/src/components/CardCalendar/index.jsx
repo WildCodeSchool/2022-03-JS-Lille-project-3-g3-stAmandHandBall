@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import SCardCalendar from "@components/CardCalendar/style";
 import Title from "@components/Archi/Title";
 import domicile from "@assets/images/elements/maison.png";
@@ -15,9 +16,9 @@ export default function CardCalendar({
   club1Img,
   club2Img,
   result,
+  news,
 }) {
   const linkTicketOffice = "https://pba.lille.fr/Agenda/La-Foret-Magique2";
-  const linkActuality = "http://localhost:3000/actus";
 
   return (
     <SCardCalendar club1Img={club1Img} club2Img={club2Img} day={day}>
@@ -53,17 +54,11 @@ export default function CardCalendar({
             <h3>{club2}</h3>
           </div>
         </div>
-        <a
-          href={`${result.length < 5 ? linkTicketOffice : linkActuality}`}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <div className="link">
-            <Title
-              title={result.length < 5 ? "BILLETTERIE" : "RECAP DU MATCH"}
-            />
-          </div>
-        </a>
+        <Link to={`${result.length < 3 ? linkTicketOffice : `/actus/${news}`}`}>
+          <Title
+            title={`${result.length < 3 ? "BILLETTERIE" : "RECAP DU MATCH"}`}
+          />
+        </Link>
       </div>
     </SCardCalendar>
   );
@@ -80,4 +75,5 @@ CardCalendar.propTypes = {
   club1Img: PropTypes.string.isRequired,
   club2Img: PropTypes.string.isRequired,
   result: PropTypes.string.isRequired,
+  news: PropTypes.number.isRequired,
 };
