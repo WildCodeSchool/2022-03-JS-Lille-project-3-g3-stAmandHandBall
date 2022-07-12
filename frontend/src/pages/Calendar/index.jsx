@@ -66,15 +66,15 @@ export default function Calendar() {
         img="test"
         date={`${dayMonth(calendar[indexOfNextMatch].happenedAt)}`}
         hour={`${hourMinute(calendar[indexOfNextMatch].happenedAt)}`}
-        club1={`${
+        club1Img={`${
           calendar[indexOfNextMatch].isHome
-            ? "SAH-PH"
-            : calendar[indexOfNextMatch].opponent
+            ? "sah.png"
+            : calendar[indexOfNextMatch].logo
         }`}
-        club2={`${
+        club2Img={`${
           calendar[indexOfNextMatch].isHome
-            ? calendar[indexOfNextMatch].opponent
-            : "SAH-PH"
+            ? calendar[indexOfNextMatch].logo
+            : "sah.png"
         }`}
         text=""
       />
@@ -102,6 +102,8 @@ export default function Calendar() {
                         place={`${match.isHome ? "domicile" : "exterieur"}`}
                         club1={`${match.isHome ? "SAH-PH" : match.opponent}`}
                         club2={`${match.isHome ? match.opponent : "SAH-PH"}`}
+                        club1Img={`${match.isHome ? "sah-ph.png" : match.logo}`}
+                        club2Img={`${match.isHome ? match.logo : "sah-ph.png"}`}
                         result={`${match.result === null ? "-" : match.result}`}
                       />
                     </div>

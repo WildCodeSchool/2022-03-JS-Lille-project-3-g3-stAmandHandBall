@@ -62,14 +62,14 @@ export default styled.div`
   }
   .club1 {
     background: ${(props) => {
-      return `url(../src/assets/images/logos/clubs/${props.club1}.png) no-repeat`;
+      return `url(../src/assets/images/logos/clubs/${props.club1Img}) no-repeat`;
     }};
     background-size: contain;
     background-position: center;
   }
   .club2 {
     background: ${(props) => {
-      return `url(../src/assets/images/logos/clubs/${props.club2}.png) no-repeat`;
+      return `url(../src/assets/images/logos/clubs/${props.club2Img}) no-repeat`;
     }};
     background-size: contain;
     background-position: center;

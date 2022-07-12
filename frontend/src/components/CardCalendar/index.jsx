@@ -12,13 +12,15 @@ export default function CardCalendar({
   place,
   club1,
   club2,
+  club1Img,
+  club2Img,
   result,
 }) {
   const linkTicketOffice = "https://pba.lille.fr/Agenda/La-Foret-Magique2";
   const linkActuality = "http://localhost:3000/actus";
 
   return (
-    <SCardCalendar club1={club1} club2={club2} day={day}>
+    <SCardCalendar club1Img={club1Img} club2Img={club2Img} day={day}>
       <div className="firstPart">
         <div className={`${day > 0 ? "day" : "none"}`}>
           <h3>J{day}</h3>
@@ -75,5 +77,7 @@ CardCalendar.propTypes = {
   place: PropTypes.string.isRequired,
   club1: PropTypes.string.isRequired,
   club2: PropTypes.string.isRequired,
+  club1Img: PropTypes.string.isRequired,
+  club2Img: PropTypes.string.isRequired,
   result: PropTypes.string.isRequired,
 };

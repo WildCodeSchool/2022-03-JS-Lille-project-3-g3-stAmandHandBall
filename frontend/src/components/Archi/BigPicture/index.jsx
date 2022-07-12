@@ -1,9 +1,22 @@
 import PropTypes from "prop-types";
 import SBigPicture from "./style";
 
-export default function BigPicture({ img, date, hour, club1, club2, text }) {
+export default function BigPicture({
+  img,
+  date,
+  hour,
+  club1Img,
+  club2Img,
+  text,
+}) {
   return (
-    <SBigPicture img={img} date={date} hour={hour} club1={club1} club2={club2}>
+    <SBigPicture
+      img={img}
+      date={date}
+      hour={hour}
+      club1Img={club1Img}
+      club2Img={club2Img}
+    >
       <div className={`${text === "" ? "none" : "blocInfo"}`}>
         <h3>FIL INFOS</h3>
         <p>{text}</p>
@@ -35,7 +48,7 @@ BigPicture.propTypes = {
   img: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   hour: PropTypes.string.isRequired,
-  club1: PropTypes.string.isRequired,
-  club2: PropTypes.string.isRequired,
+  club1Img: PropTypes.string.isRequired,
+  club2Img: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };
