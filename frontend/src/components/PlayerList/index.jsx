@@ -9,6 +9,16 @@ export default function PlayerList() {
   return (
     <SPlayerList>
       {players.map((player) => {
+        players.sort((plA, plB) => {
+          if (plA.captain === 1) return -1;
+          if (plB.captain === 1) return 1;
+
+          if (plA.position.indexOf("Gardienne") === 0) return -1;
+          if (plB.position.indexOf("Gardienne") === 0) return 1;
+
+          if (plA.number < plB.number) return -1;
+          return 1;
+        });
         return (
           <CardPlayer
             key={player.id}

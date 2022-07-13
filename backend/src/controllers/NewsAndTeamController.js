@@ -1,8 +1,8 @@
 const models = require("../models");
 
-class StaffAndRoleController {
+class NewsAndTeamController {
   static browse = (req, res) => {
-    models.staffAndRole
+    models.newsAndTeam
       .findAll()
       .then(([rows]) => {
         res.send(rows);
@@ -13,4 +13,4 @@ class StaffAndRoleController {
       });
   };
 }
-module.exports = StaffAndRoleController;
+module.exports = NewsAndTeamController;
