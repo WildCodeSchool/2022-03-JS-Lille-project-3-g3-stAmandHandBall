@@ -11,6 +11,7 @@ const {
   RefereeAndRoleController,
   RefereeController,
   RoleController,
+  ContactController,
   RoleAndStaffController,
   StaffController,
   TeamController,
@@ -50,6 +51,8 @@ router.get("/role/:id", RoleController.read);
 router.put("/role/:id", RoleController.edit);
 router.post("/role", RoleController.add);
 router.delete("/role/:id", RoleController.delete);
+
+router.post("/contact", ContactController.add);
 
 router.get("/referee", RefereeController.browse);
 router.get("/referee/role", RefereeAndRoleController.browse);
