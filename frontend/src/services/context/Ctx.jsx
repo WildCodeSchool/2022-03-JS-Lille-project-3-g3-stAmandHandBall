@@ -7,14 +7,36 @@ export default ctxProvider;
 
 export function CtxProvider({ children }) {
   const [players, setPlayers] = useState([]);
-  const [staffs, setStaff] = useState([]);
+  const [calendar, setCalendar] = useState([]);
+  const [staff, setStaff] = useState([]);
   const [news, setNews] = useState([]);
+  const [team, setTeam] = useState([]);
+  const [role, setRole] = useState([]);
+  const [referee, setReferee] = useState([]);
+  const [opponent, setOpponent] = useState([]);
+  const [history, setHistory] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
       .then(({ data }) => {
-        setPlayers(data).then(() => {});
+        setPlayers(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/history"}`)
+      .then(({ data }) => {
+        setHistory(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/calendar"}`)
+      .then(({ data }) => {
+        setCalendar(data);
       });
   }, []);
 
@@ -22,7 +44,7 @@ export function CtxProvider({ children }) {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
       .then(({ data }) => {
-        setStaff(data).then(() => {});
+        setStaff(data);
       });
   }, []);
 
@@ -30,7 +52,39 @@ export function CtxProvider({ children }) {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/news"}`)
       .then(({ data }) => {
-        setNews(data).then(() => {});
+        setNews(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/role"}`)
+      .then(({ data }) => {
+        setRole(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/referee"}`)
+      .then(({ data }) => {
+        setReferee(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/team"}`)
+      .then(({ data }) => {
+        setTeam(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/opponent"}`)
+      .then(({ data }) => {
+        setOpponent(data);
       });
   }, []);
 
@@ -39,9 +93,15 @@ export function CtxProvider({ children }) {
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         players,
+        calendar,
+        history,
         setPlayers,
-        staffs,
+        staff,
         news,
+        team,
+        referee,
+        opponent,
+        role,
       }}
     >
       {children}

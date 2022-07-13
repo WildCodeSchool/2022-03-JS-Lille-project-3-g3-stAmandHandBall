@@ -1,7 +1,7 @@
 const AbstractManager = require("./AbstractManager");
 
-class StaffAndRoleManager extends AbstractManager {
-  static table = "staffAndRole";
+class RoleAndStaffManager extends AbstractManager {
+  static table = "roleAndStaff";
 
   findAll() {
     return this.connection.query(
@@ -10,4 +10,4 @@ class StaffAndRoleManager extends AbstractManager {
   }
 }
 
-module.exports = StaffAndRoleManager;
+module.exports = RoleAndStaffManager;
