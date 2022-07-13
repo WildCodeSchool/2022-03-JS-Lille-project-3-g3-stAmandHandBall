@@ -5,15 +5,15 @@ class TeamManager extends AbstractManager {
 
   insert(team) {
     return this.connection.query(
-      `insert into ${TeamManager.table} (title, division, staff_id) values (?,?,?)`,
-      [team.title, team.division, team.staff_id]
+      `insert into ${TeamManager.table} (title, division,) values (?,?)`,
+      [team.title, team.division]
     );
   }
 
   update(team) {
     return this.connection.query(
-      `update ${TeamManager.table} set title = ?, division = ?, staff_id = ? where id = ?`,
-      [team.title, team.division, team.staff_id, team.id]
+      `update ${TeamManager.table} set title = ?,  = ?, number = ? where id = ?`,
+      [team.title, team.division, team.id]
     );
   }
 }
