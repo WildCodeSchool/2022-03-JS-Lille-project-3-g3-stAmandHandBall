@@ -30,6 +30,8 @@ router.post(
   AuthController.loginAdmin
 );
 router.get("/admin", AuthController.browse);
+router.post("/admin", AuthController.signup);
+router.delete("/admin", AuthController.delete);
 
 router.get("/players", PlayerController.browse);
 router.get("/players/:id", PlayerController.read);

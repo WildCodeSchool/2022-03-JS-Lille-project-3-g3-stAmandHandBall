@@ -15,6 +15,18 @@ class AuthController {
       });
   };
 
+  static delete = (req, res) => {
+    models.admin
+      .delete(req.params.id)
+      .then(() => {
+        res.sendStatus(204);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
   static signup = (req, res) => {
     const admin = req.body;
 
