@@ -1,11 +1,11 @@
-import CardPlayer from "@components/CardPlayer";
+import CardStaff from "@components/CardStaff";
 import Title from "@components/Archi/Title";
 import { useContext } from "react";
 import ctxProvider from "@services/context/Ctx";
 import STextPhilosophy from "./style";
 
 export default function TextPhilosophy() {
-  const { players } = useContext(ctxProvider);
+  const { staff } = useContext(ctxProvider);
 
   return (
     <STextPhilosophy>
@@ -32,18 +32,15 @@ export default function TextPhilosophy() {
       <Title title="Editos" />
       <article className="left">
         <div className="image">
-          {players
-            .filter((player) => player.id === 5)
-            .map((player) => {
+          {staff
+            .filter((person) => [21].includes(person.role_id))
+            .map((person) => {
               return (
-                <CardPlayer
-                  key={player.id}
-                  name={`${player.firstname} ${player.lastname}`}
-                  img={`./src/assets/images/cards/players/${
-                    player.img || "test.png"
-                  } 
-             `}
-                  number={player.number}
+                <CardStaff
+                  key={person.id}
+                  name={`${person.firstname} ${person.lastname}`}
+                  img={`./src/assets/images/cards/staff/${person.img}`}
+                  role={person.name}
                 />
               );
             })}
@@ -61,18 +58,15 @@ export default function TextPhilosophy() {
       </article>
       <article className="right">
         <div className="image">
-          {players
-            .filter((player) => player.id === 5)
-            .map((player) => {
+          {staff
+            .filter((person) => [35].includes(person.role_id))
+            .map((person) => {
               return (
-                <CardPlayer
-                  key={player.id}
-                  name={`${player.firstname} ${player.lastname}`}
-                  img={`./src/assets/images/cards/players/${
-                    player.img || "test.png"
-                  } 
-                `}
-                  number={player.number}
+                <CardStaff
+                  key={person.id}
+                  name={`${person.firstname} ${person.lastname}`}
+                  img={`./src/assets/images/cards/staff/${person.img}`}
+                  role={person.name}
                 />
               );
             })}
@@ -90,18 +84,15 @@ export default function TextPhilosophy() {
       </article>
       <article className="left">
         <div className="image">
-          {players
-            .filter((player) => player.id === 5)
-            .map((player) => {
+          {staff
+            .filter((person) => [35].includes(person.role_id))
+            .map((person) => {
               return (
-                <CardPlayer
-                  key={player.id}
-                  name={`${player.firstname} ${player.lastname}`}
-                  img={`./src/assets/images/cards/players/${
-                    player.img || "test.png"
-                  } 
-             `}
-                  number={player.number}
+                <CardStaff
+                  key={person.id}
+                  name={`${person.firstname} ${person.lastname}`}
+                  img={`./src/assets/images/cards/staff/${person.img}`}
+                  role={person.name}
                 />
               );
             })}
@@ -120,18 +111,15 @@ export default function TextPhilosophy() {
       </article>
       <article className="right">
         <div className="image">
-          {players
-            .filter((player) => player.id === 5)
-            .map((player) => {
+          {staff
+            .filter((person) => [17].includes(person.role_id))
+            .map((person) => {
               return (
-                <CardPlayer
-                  key={player.id}
-                  name={`${player.firstname} ${player.lastname}`}
-                  img={`./src/assets/images/cards/players/${
-                    player.img || "test.png"
-                  } 
-                `}
-                  number={player.number}
+                <CardStaff
+                  key={person.id}
+                  name={`${person.firstname} ${person.lastname}`}
+                  img={`./src/assets/images/cards/staff/${person.img}`}
+                  role={person.name}
                 />
               );
             })}
