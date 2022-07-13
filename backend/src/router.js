@@ -26,11 +26,6 @@ router.post(
   passport.authenticate("local", { session: false }),
   AuthController.login
 );
-router.post(
-  "/auth/admin",
-  passport.authenticate("local", { session: false }),
-  AuthController.loginAdmin
-);
 router.get(
   "/admin",
   passport.authenticate("jwt", { session: false }),
