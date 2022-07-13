@@ -12,7 +12,6 @@ export default function CardStaff({ name, img, role }) {
         <img src={img} alt="staff" />
       </div>
       <h4>{role}</h4>
-
       <div className="picto" />
     </SCardStaff>
   );
