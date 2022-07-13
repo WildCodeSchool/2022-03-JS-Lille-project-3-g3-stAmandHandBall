@@ -5,7 +5,7 @@ import { PlayerList, PostEdit, PostCreate } from "./player";
 import dataProvider from "./dataProvider";
 import authProvider from "./authProvider";
 import { NewList, NewEdit, NewCreate } from "./new";
-import { NewListAdmin, NewCreateAdmin } from "./admin";
+import { NewListAdmin, NewCreateAdmin, ListAdminDelete } from "./admin";
 
 function App() {
   return (
