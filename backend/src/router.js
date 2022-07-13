@@ -18,7 +18,7 @@ const router = express.Router();
 
 router.post(
   "/auth/signup",
-  passport.authenticate("local", { session: false }),
+  passport.authenticate("jwt", { session: false }),
   AuthController.login
 );
 router.post(
