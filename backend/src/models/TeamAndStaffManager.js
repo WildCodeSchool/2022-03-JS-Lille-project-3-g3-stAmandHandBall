@@ -5,10 +5,10 @@ class TeamAndStaffManager extends AbstractManager {
 
   findAll() {
     return this.connection.query(
-      `select *
+      `SELECT *
       FROM 
         team 
-          inner join staff on staff.id=team.staff_id;`
+          INNER JOIN staff ON staff.id=team.staff_id;`
     );
   }
 }
