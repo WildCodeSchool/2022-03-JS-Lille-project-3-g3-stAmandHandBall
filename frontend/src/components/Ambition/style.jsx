@@ -36,8 +36,12 @@ export default styled.div`
     justify-content: center;
     text-transform: uppercase;
   }
+  .mobile {
+    display: none;
+  }
   @media screen and (max-width: 640px) {
-    height: 14vh;
+    margin-top: -26vh;
+    height: 16vh;
     .title {
       height: 8vh;
       font-size: 2vmax;
@@ -45,9 +49,20 @@ export default styled.div`
         width: 20%;
       }
     }
+    .noMobile {
+      display: none;
+    }
+    .mobile {
+      display: flex;
+      justify-content: center;
+      font-size: 2.2vmax;
+      color: var(--white);
+      font-weight: 900;
+      text-align: center;
+    }
     .secondtitle {
-      height: 8vh;
-      font-size: 2vmax;
+      height: 4vh;
+      font-size: 2.2vmax;
     }
   }
 `;

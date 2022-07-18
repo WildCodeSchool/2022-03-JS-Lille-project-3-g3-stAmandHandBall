@@ -7,11 +7,12 @@ export default function Ambition() {
     <SAmbition>
       <Link to="ambition">
         <div className="title">
-          <p>Des projets pour et </p>
+          <p className="noMobile">DES PROJETS POUR ET </p>
           <img src={logoambition} alt="logoambition" />
-          <p> avec le territoire</p>
+          <p className="noMobile"> AVEC LE TERRITOIRE</p>
         </div>
-        <div className="secondtitle">Ambitions 2024</div>
+        <p className="mobile">DES PROJETS POUR ET AVEC LE TERRITOIRE</p>
+        <div className="secondtitle">AMBITIONS 2024</div>
       </Link>
     </SAmbition>
   );

@@ -26,7 +26,7 @@ export default function Partner() {
       <BigTitle title="LES PARTENAIRES DE LA MEUTE" />
       <SPartner>
         <Title title="Nos partenaires publics" />
-        <div>
+        <div className="logo">
           {publicPartners.map((partner) => {
             return (
               <img
@@ -38,7 +38,7 @@ export default function Partner() {
           })}
         </div>
         <Title title="Nos partenaires privés" />
-        <div>
+        <div className="logo">
           {privatePartners.map((partner) => {
             return (
               <img
@@ -52,23 +52,30 @@ export default function Partner() {
         <Title title="Rejoignez nous !" />
         <p>
           Le Saint Amand Handball - Porte du Hainaut est porteur d’un projet
-          sportif ambitieux !<br />
+          sportif ambitieux !
+        </p>
+
+        <p>
           Il compte plus de 300 licenciés (filles et garçons) et 17 équipes,
-          toutes inscrites en championnat !<br />
+          toutes inscrites en championnat !
+        </p>
+
+        <p>
           Depuis 2 ans, le club est dans une dynamique de Responsabilité
           Sociétale des Entreprises (RSE).
-          <br />
+        </p>
+        <p>
           L’objectif est d’innover POUR et AVEC le Territoire : insertion,
           inclusion, écologie, biodiversité, formation [….] c’est « Ambitions
           2024 » du SAH-PH.
         </p>
-        <h3>
+        <p>
           Vous souhaitez rejoindre l’aventure ?<br />
           Vous voulez accompagner le club et être acteur du projet ?
-        </h3>
+        </p>
         <p>
           Contactez Antoine :<br />
-          partenariat@sah-ph.fr
+          <a href="mailto:partenariat@sah-ph.fr"> partenariat@sah-ph.fr</a>
           <br />
           06 47 18 46 10
         </p>
