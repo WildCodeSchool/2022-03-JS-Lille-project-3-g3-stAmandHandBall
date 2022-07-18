@@ -1,13 +1,15 @@
-import { Admin, Resource } from "react-admin";
+import { Admin, Resource, EditGuesser } from "react-admin";
 import UserIcon from "@mui/icons-material/Group";
 import FeedIcon from "@mui/icons-material/Feed";
 import { PlayerList, PostEdit, PostCreate } from "./player";
 import dataProvider from "./dataProvider";
+import authProvider from "./authProvider";
 import { NewList, NewEdit, NewCreate } from "./new";
+import { NewListAdmin, NewCreateAdmin } from "./admin";
 
 function App() {
   return (
-    <Admin dataProvider={dataProvider}>
+    <Admin dataProvider={dataProvider} authProvider={authProvider}>
       <Resource
         name="players"
         list={PlayerList}
@@ -20,6 +22,13 @@ function App() {
         list={NewList}
         edit={NewEdit}
         create={NewCreate}
+        icon={FeedIcon}
+      />
+      <Resource
+        name="admin"
+        list={NewListAdmin}
+        edit={EditGuesser}
+        create={NewCreateAdmin}
         icon={FeedIcon}
       />
     </Admin>

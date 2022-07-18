@@ -88,6 +88,38 @@ export function CtxProvider({ children }) {
       });
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/role/staff/"}`)
+      .then(({ data }) => {
+        setStaff(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/news/team"}`)
+      .then(({ data }) => {
+        setNews(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/referee/role"}`)
+      .then(({ data }) => {
+        setReferee(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/team/staff"}`)
+      .then(({ data }) => {
+        setTeam(data);
+      });
+  }, []);
+
   return (
     <ctxProvider.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values

@@ -75,7 +75,7 @@ export default styled.section`
       width: 45vw;
       height: 25vh;
       bottom: 3vh;
-      right: 19vw;
+      right: 20vw;
       padding-top: 1vh;
       .title {
         font-size: 1.5em;

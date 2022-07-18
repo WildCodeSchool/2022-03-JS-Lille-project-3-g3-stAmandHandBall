@@ -16,11 +16,6 @@ export default styled.div`
     background-color: transparent;
   }
   @media screen and (max-width: 700px) {
-    .carouselContainer {
-      margin-top: 10%;
-    }
-    button {
-      font-size: 2rem;
-    }
+    display: none;
   }
 `;

@@ -10,6 +10,7 @@ export default styled.section`
   align-items: center;
   a {
     text-decoration: none;
+    text-shadow: var(--text-shadow);
   }
   .titlePhoto {
     color: var(--white);
@@ -17,19 +18,33 @@ export default styled.section`
     text-align: center;
   }
   .firstPhoto {
-    background-image: url("https://cdn.pixabay.com/photo/2022/03/08/07/08/water-7055153_960_720.jpg");
+    background: ${(props) => {
+      return `url(${props.imgCoachs}) no-repeat`;
+    }};
   }
   .secondPhoto {
-    background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg");
+    background: ${(props) => {
+      return `url(${props.imgNf1}) no-repeat`;
+    }};
   }
   .thirdPhoto {
-    background-image: url("https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_960_720.jpg");
+    background: ${(props) => {
+      return `url(${props.imgNonProfessional}) no-repeat`;
+    }};
   }
   .fourthPhoto {
-    background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_960_720.jpg");
+    background: ${(props) => {
+      return `url(${props.imgTerritoriale}) no-repeat`;
+    }};
   }
   .fifthPhoto {
-    background-image: url("https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_960_720.jpg");
+    background: ${(props) => {
+      return `url(${props.imgFormation}) no-repeat`;
+    }};
+  }
+  .photoDiv {
+    background-size: cover;
+    background-position: center;
   }
   @media screen and (min-width: 700px) {
     .photoDiv {
@@ -79,6 +94,7 @@ export default styled.section`
     }
   }
   @media screen and (max-width: 700px) {
+    margin-top: -2vh;
     width: 100vw;
     height: 90vh;
     .photoDiv {

@@ -11,6 +11,7 @@ export default styled.section`
   display: flex;
   justify-content: right;
   text-shadow: var(--text-shadow);
+  background-position: center;
 
   .blocInfo {
     text-shadow: none;

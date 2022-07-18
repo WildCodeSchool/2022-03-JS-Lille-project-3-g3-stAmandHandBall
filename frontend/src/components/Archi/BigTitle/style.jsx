@@ -15,7 +15,13 @@ export default styled.div`
   align-items: center;
   font-size: 3.2em;
   text-align: center;
+
   h1 {
     text-transform: uppercase;
+
+  @media screen and (max-width: 700px) {
+    h1 {
+      line-height: 1.1em;
+    }
   }
 `;
