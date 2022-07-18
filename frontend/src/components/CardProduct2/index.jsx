@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Title from "@components/Archi/Title";
+import Subtitle from "@components/Archi/Subtile";
 
 import SCardProduct2 from "@components/CardProduct2/style";
 
@@ -19,7 +19,7 @@ export default function CardProduct2({
     <SCardProduct2>
       <div className="image">
         <img src={img1} alt="product" />
-        <Title title={title1} />
+        <Subtitle title={title1} />
       </div>
       <div className="details">
         <img className="detail" src={img2} alt="product-detail1" />
