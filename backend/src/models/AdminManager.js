@@ -1,19 +1,12 @@
 const AbstractManager = require("./AbstractManager");
 
 class AdminManager extends AbstractManager {
-  static table = "news";
+  static table = "admin";
 
   insert(admin) {
     return this.connection.query(
-      `insert into ${AdminManager.table} (email, admin) values (?,?)`,
+      `insert into ${AdminManager.table} (email, password) values (?,?)`,
       [admin.email, admin.password]
-    );
-  }
-
-  update(admin) {
-    return this.connection.query(
-      `update ${AdminManager.table} set email = ?, password = ? where id = ?`,
-      [admin.email, admin.password, admin.id]
     );
   }
 }
