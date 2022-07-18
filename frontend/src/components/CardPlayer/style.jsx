@@ -16,11 +16,12 @@ export default styled.div`
     right: 1.5vw;
     color: var(--blue);
     font-size: 1.8em;
+    p {
+      position: relative;
+      top: 0.3vw;
+    }
   }
-  .number p {
-    position: relative;
-    top: 0.3vw;
-  }
+
   .image {
     background: url("../src/assets/images/elements/claw-blue.svg") no-repeat;
     background-size: contain;
@@ -61,6 +62,9 @@ export default styled.div`
       top: 13vw;
       right: 3.9vw;
       font-size: 1.95em;
+      p {
+        font-size: 0.6em;
+      }
     }
     .number p {
       top: 0.78vw;
