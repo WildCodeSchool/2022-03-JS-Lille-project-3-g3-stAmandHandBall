@@ -35,6 +35,7 @@ export default styled.div`
     position: relative;
     top: 40vh;
   }
+
   @media screen and (max-width: 700px) {
     width: 100%;
     position: static;

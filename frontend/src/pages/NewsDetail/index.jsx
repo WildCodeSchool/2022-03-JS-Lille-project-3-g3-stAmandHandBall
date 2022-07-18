@@ -20,7 +20,7 @@ function NewsDetail() {
   function date(dm) {
     return `${DateTime.fromISO(dm)
       .setLocale("fr")
-      .toFormat("dd MMM")
+      .toFormat("dd MMMM yyyy")
       .toUpperCase()}`;
   }
 
@@ -37,14 +37,42 @@ function NewsDetail() {
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
       <BigTitle title={newsDetail.title} />
       <SNewsDetail src={newsDetail} className="container">
-        <p className="date">{`${date(newsDetail.happenedAt)}`}</p>
+        <p className="date">{`${date(newsDetail.publishedAt)}`}</p>
         <h3>{newsDetail.subTitle}</h3>
         <div className="bloc">
           <img
-            src={`../../src/assets/images/photos/${newsDetail.img}`}
+            className="firstImg"
+            src={`../../src/assets/images/photos/${newsDetail.img1}`}
             alt="detail of article"
           />
           <h4>{newsDetail.content}</h4>
+          <div className="photos">
+            <img
+              className={`${!newsDetail.img2 ? "none" : ""}`}
+              src={`../../src/assets/images/photos/${newsDetail.img2}`}
+              alt="detail of article 2"
+            />
+            <img
+              className={`${!newsDetail.img3 ? "none" : ""}`}
+              src={`../../src/assets/images/photos/${newsDetail.img3}`}
+              alt="detail of article 3"
+            />
+            <img
+              className={`${!newsDetail.img4 ? "none" : ""}`}
+              src={`../../src/assets/images/photos/${newsDetail.img4}`}
+              alt="detail of article 4"
+            />
+            <img
+              className={`${!newsDetail.img5 ? "none" : ""}`}
+              src={`../../src/assets/images/photos/${newsDetail.img5}`}
+              alt="detail of article 5"
+            />
+            <img
+              className={`${!newsDetail.img6 ? "none" : ""}`}
+              src={`../../src/assets/images/photos/${newsDetail.img6}`}
+              alt="detail of article 6"
+            />
+          </div>
         </div>
         <Title title="Précédentes actus" />
       </SNewsDetail>
@@ -56,7 +84,7 @@ function NewsDetail() {
               key={article.id}
               id={article.id}
               title={article.title}
-              img={article.img}
+              img1={article.img1}
               content={article.content}
             />
           );
