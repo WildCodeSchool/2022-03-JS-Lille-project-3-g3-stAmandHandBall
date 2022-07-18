@@ -2,14 +2,21 @@ const express = require("express");
 const passport = require("passport");
 
 const {
-  PlayerController,
-  StaffController,
   CalendarController,
+  HistoryController,
   NewsController,
-  TeamController,
+  NewsAndTeamController,
+  OpponentController,
+  PlayerController,
+  RefereeAndRoleController,
+  RefereeController,
   RoleController,
-  StaffAndRoleController,
   AuthController,
+  ContactController,
+  RoleAndStaffController,
+  StaffController,
+  TeamController,
+  TeamAndStaffController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -74,6 +81,7 @@ router.delete("/staff/:id", StaffController.delete);
 // news route  //
 
 router.get("/news", NewsController.browse);
+router.get("/news/team", NewsAndTeamController.browse);
 router.get("/news/:id", NewsController.read);
 router.put("/news/:id", NewsController.edit);
 router.post("/news", NewsController.add);
@@ -81,19 +89,48 @@ router.delete("/news/:id", NewsController.delete);
 
 // role route  //
 
-router.get("/role/all/", StaffAndRoleController.browse);
 router.get("/role", RoleController.browse);
+router.get("/role/staff/", RoleAndStaffController.browse);
 router.get("/role/:id", RoleController.read);
 router.put("/role/:id", RoleController.edit);
 router.post("/role", RoleController.add);
 router.delete("/role/:id", RoleController.delete);
 
+// contact route  //
+
+router.post("/contact", ContactController.add);
+
+// referee route  //
+
+router.get("/referee", RefereeController.browse);
+router.get("/referee/role", RefereeAndRoleController.browse);
+router.get("/referee/:id", RefereeController.read);
+router.put("/referee/:id", RefereeController.edit);
+router.post("/referee", RefereeController.add);
+router.delete("/referee/:id", RefereeController.delete);
+
 // team route  //
 
 router.get("/team", TeamController.browse);
+router.get("/team/staff", TeamAndStaffController.browse);
 router.get("/team/:id", TeamController.read);
 router.put("/team/:id", TeamController.edit);
 router.post("/team", TeamController.add);
 router.delete("/team/:id", TeamController.delete);
+
+// opponent route  //
+
+router.get("/opponent", OpponentController.browse);
+router.get("/opponent/:id", OpponentController.read);
+router.put("/opponent/:id", OpponentController.edit);
+router.post("/opponent", OpponentController.add);
+router.delete("/opponent/:id", OpponentController.delete);
+
+// history route  //
+
+router.get("/history", HistoryController.browse);
+router.get("/history/:id", HistoryController.read);
+router.post("/history", HistoryController.add);
+router.delete("/history/:id", HistoryController.delete);
 
 module.exports = router;

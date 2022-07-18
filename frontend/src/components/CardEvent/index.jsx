@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import SCardEvent from "@components/CardEvent/style";
 
-export default function CardEvent({ id, date, text }) {
+export default function CardEvent({ id, title, text }) {
   return (
     <SCardEvent>
       <div className="timeline">
         <div className={id % 2 === 0 ? "container right" : "container left"}>
           <div className="content">
-            <h2>{date}</h2>
+            <h2>{title}</h2>
             <p>{text}</p>
           </div>
         </div>
@@ -17,6 +17,6 @@ export default function CardEvent({ id, date, text }) {
 }
 CardEvent.propTypes = {
   id: PropTypes.number.isRequired,
-  date: PropTypes.number.isRequired,
+  title: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired,
 };

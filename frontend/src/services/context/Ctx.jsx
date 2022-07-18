@@ -11,12 +11,24 @@ export function CtxProvider({ children }) {
   const [staff, setStaff] = useState([]);
   const [news, setNews] = useState([]);
   const [team, setTeam] = useState([]);
+  const [role, setRole] = useState([]);
+  const [referee, setReferee] = useState([]);
+  const [opponent, setOpponent] = useState([]);
+  const [history, setHistory] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/players"}`)
       .then(({ data }) => {
         setPlayers(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/history"}`)
+      .then(({ data }) => {
+        setHistory(data);
       });
   }, []);
 
@@ -46,9 +58,33 @@ export function CtxProvider({ children }) {
 
   useEffect(() => {
     axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/role"}`)
+      .then(({ data }) => {
+        setRole(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/referee"}`)
+      .then(({ data }) => {
+        setReferee(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/team"}`)
       .then(({ data }) => {
         setTeam(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/opponent"}`)
+      .then(({ data }) => {
+        setOpponent(data);
       });
   }, []);
 
@@ -58,10 +94,14 @@ export function CtxProvider({ children }) {
       value={{
         players,
         calendar,
+        history,
         setPlayers,
         staff,
         news,
         team,
+        referee,
+        opponent,
+        role,
       }}
     >
       {children}

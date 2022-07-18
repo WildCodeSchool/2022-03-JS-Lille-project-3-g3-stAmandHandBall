@@ -26,7 +26,6 @@ app.use(
     optionsSuccessStatus: 200,
   })
 );
-
 app.use(express.json());
 
 // Serve the public folder for public resources
