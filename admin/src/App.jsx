@@ -6,6 +6,7 @@ import dataProvider from "./dataProvider";
 import authProvider from "./authProvider";
 import { NewList, NewEdit, NewCreate } from "./new";
 import { NewListAdmin, NewCreateAdmin } from "./admin";
+import { NewListCalendar, NewEditCalendar } from "./calendar";
 
 function App() {
   return (
@@ -29,6 +30,13 @@ function App() {
         list={NewListAdmin}
         edit={EditGuesser}
         create={NewCreateAdmin}
+        icon={FeedIcon}
+      />
+      <Resource
+        name="calendar"
+        list={NewListCalendar}
+        edit={NewEditCalendar}
+        // create={NewCreateAdmin}
         icon={FeedIcon}
       />
     </Admin>
