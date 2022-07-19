@@ -25,7 +25,12 @@ export default function NonProfessional() {
                   <h3>{division}</h3>
                 </div>
                 {team
-                  .filter((element) => element.division === division)
+                  .filter((element) => {
+                    if (element.id === 2) {
+                      return false;
+                    }
+                    return element.division === division;
+                  })
                   .map((element) => {
                     return (
                       <Link to={`/amateurs/${element.id}`}>
