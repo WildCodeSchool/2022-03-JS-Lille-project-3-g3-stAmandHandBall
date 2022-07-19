@@ -12,6 +12,7 @@ import {
   NewCreateCalendar,
 } from "./calendar";
 import { NewListStaff, NewEditStaff, NewCreateStaff } from "./staff";
+import { NewListRole, NewEditRole, NewCreateRole } from "./role";
 
 function App() {
   return (
@@ -49,6 +50,13 @@ function App() {
         list={NewListStaff}
         edit={NewEditStaff}
         create={NewCreateStaff}
+        icon={FeedIcon}
+      />
+      <Resource
+        name="role"
+        list={NewListRole}
+        edit={NewEditRole}
+        create={NewCreateRole}
         icon={FeedIcon}
       />
     </Admin>
