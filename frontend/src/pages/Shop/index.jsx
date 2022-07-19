@@ -1,6 +1,7 @@
 import BigTitle from "@components/Archi/BigTitle";
 import BigPicture from "@components/Archi/BigPicture";
 import Title from "@components/Archi/Title";
+import Subtitle from "@components/Archi/Subtile";
 import Arrow from "@components/Archi/Arrow";
 import CardProduct from "@components/CardProduct";
 import CardProduct2 from "@components/CardProduct2";
@@ -100,58 +101,63 @@ export default function Shop() {
       <BigTitle title="LA BOUTIQUE DE LA MEUTE" />
       <SShop>
         <Title title="MAILLOT OFFICIEL" />
-        {jerseys.map((jersey) => {
-          return (
-            <CardProduct2
-              key={jersey.id}
-              name={jersey.name}
-              img1={jersey.img1}
-              title1={jersey.title1}
-              img2={jersey.img2}
-              img3={jersey.img3}
-              img4={jersey.img4}
-              size1={jersey.size1}
-              size2={jersey.size2}
-              size3={jersey.size3}
-              size4={jersey.size4}
-              size5={jersey.size5}
-            />
-          );
-        })}
+        <article className="card1">
+          {jerseys.map((jersey) => {
+            return (
+              <CardProduct2
+                key={jersey.id}
+                name={jersey.name}
+                img1={jersey.img1}
+                title1={jersey.title1}
+                img2={jersey.img2}
+                img3={jersey.img3}
+                img4={jersey.img4}
+                size1={jersey.size1}
+                size2={jersey.size2}
+                size3={jersey.size3}
+                size4={jersey.size4}
+                size5={jersey.size5}
+              />
+            );
+          })}
+        </article>
         <Arrow />
         <Title title="KIT SUPPORTER" />
-
-        {products.map((product) => {
-          return (
-            <CardProduct
-              key={product.id}
-              name={product.name}
-              img1={product.img1}
-              img2={product.img2}
-              img3={product.img3}
-              price={product.price}
-            />
-          );
-        })}
+        <article className="cards2and3">
+          {products.map((product) => {
+            return (
+              <CardProduct
+                key={product.id}
+                name={product.name}
+                img1={product.img1}
+                img2={product.img2}
+                img3={product.img3}
+                price={product.price}
+              />
+            );
+          })}
+        </article>
+        <article className="packPrice">
+          <Subtitle title="LE PACK ENTIER:" />
+          <Subtitle title="..€ au lieu de ..€" />
+        </article>
         <Arrow />
-        <Title title="KIT SUPPORTER" />
-
-        {products.map((product) => {
-          return (
-            <CardProduct
-              key={product.id}
-              name={product.name}
-              img1={product.img1}
-              img2={product.img2}
-              img3={product.img3}
-              price={product.price}
-            />
-          );
-        })}
-        <Arrow />
-
         <Title title="EQUIPEMENTS SPORTIFS" />
-        <Title title="COMMANDEZ ICI" />
+        <article className="cards2and3">
+          {products.map((product) => {
+            return (
+              <CardProduct
+                key={product.id}
+                name={product.name}
+                img1={product.img1}
+                img2={product.img2}
+                img3={product.img3}
+                price={product.price}
+              />
+            );
+          })}
+        </article>
+        <Title title="COMMANDEZ ICI :" />
       </SShop>
     </>
   );

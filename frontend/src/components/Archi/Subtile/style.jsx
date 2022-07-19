@@ -6,7 +6,7 @@ export default styled.div`
   text-shadow: 2px 2px 5px black;
   box-shadow: 2px 2px 5px black;
   height: auto;
-  width: 10vw;
+  width: 11vw;
   position: relative;
   left: 2.5rem;
   margin: auto;
@@ -16,9 +16,9 @@ export default styled.div`
   font-size: 1em;
   text-align: center;
   @media screen and (max-width: 700px) {
-    width: 30vw;
+    width: 50vw;
     height: 3vh;
     margin: 0.7rem;
-    left: 7rem;
+    left: 5rem;
   }
 `;

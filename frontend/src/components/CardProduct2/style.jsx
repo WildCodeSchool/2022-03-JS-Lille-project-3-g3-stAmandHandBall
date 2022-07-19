@@ -4,7 +4,8 @@ export default styled.div`
   display: flex;
   justify-content: space-between;
   width: 22vw;
-  margin-bottom: 4vw;
+  margin: 2rem;
+
   .image {
   }
   img {
