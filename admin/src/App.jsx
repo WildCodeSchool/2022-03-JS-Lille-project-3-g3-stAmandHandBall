@@ -15,6 +15,11 @@ import { NewListStaff, NewEditStaff, NewCreateStaff } from "./staff";
 import { NewListRole, NewEditRole, NewCreateRole } from "./role";
 import { NewListReferee, NewEditReferee, NewCreateReferee } from "./referee";
 import { NewListTeam, NewEditTeam, NewCreateTeam } from "./team";
+import {
+  NewListOpponent,
+  NewEditOpponent,
+  NewCreateOpponent,
+} from "./opponent";
 
 function App() {
   return (
@@ -73,6 +78,13 @@ function App() {
         list={NewListTeam}
         edit={NewEditTeam}
         create={NewCreateTeam}
+        icon={FeedIcon}
+      />
+      <Resource
+        name="opponent"
+        list={NewListOpponent}
+        edit={NewEditOpponent}
+        create={NewCreateOpponent}
         icon={FeedIcon}
       />
     </Admin>
