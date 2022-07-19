@@ -13,6 +13,7 @@ import {
 } from "./calendar";
 import { NewListStaff, NewEditStaff, NewCreateStaff } from "./staff";
 import { NewListRole, NewEditRole, NewCreateRole } from "./role";
+import { NewListReferee, NewEditReferee, NewCreateReferee } from "./referee";
 
 function App() {
   return (
@@ -57,6 +58,13 @@ function App() {
         list={NewListRole}
         edit={NewEditRole}
         create={NewCreateRole}
+        icon={FeedIcon}
+      />
+      <Resource
+        name="referee"
+        list={NewListReferee}
+        edit={NewEditReferee}
+        create={NewCreateReferee}
         icon={FeedIcon}
       />
     </Admin>
