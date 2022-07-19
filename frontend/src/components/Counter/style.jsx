@@ -66,7 +66,7 @@ export default styled.div`
     justify-content: center;
     text-align: center;
     line-height: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 2rem;
     .day {
       margin: 3vh 0;
       font-size: 3em;
@@ -108,6 +108,7 @@ export default styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     h3 {
       margin-top: -1em;
       font-size: 2em;
@@ -115,13 +116,11 @@ export default styled.div`
     }
     .informations {
       flex-direction: column;
+      font-size: 0.8em;
     }
     .nextMatch {
       margin: 0.5vh 0;
       width: 100%;
-      p {
-        font-size: 2em;
-      }
       .club {
         height: 20vw;
       }
