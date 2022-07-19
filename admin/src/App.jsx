@@ -20,6 +20,7 @@ import {
   NewEditOpponent,
   NewCreateOpponent,
 } from "./opponent";
+import { NewListHistory, NewEditHistory, NewCreateHistory } from "./history";
 
 function App() {
   return (
@@ -85,6 +86,13 @@ function App() {
         list={NewListOpponent}
         edit={NewEditOpponent}
         create={NewCreateOpponent}
+        icon={FeedIcon}
+      />
+      <Resource
+        name="history"
+        list={NewListHistory}
+        edit={NewEditHistory}
+        create={NewCreateHistory}
         icon={FeedIcon}
       />
     </Admin>
