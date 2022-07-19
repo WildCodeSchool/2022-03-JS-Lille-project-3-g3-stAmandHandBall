@@ -41,9 +41,9 @@ export function NewCreateStaff() {
   return (
     <Create>
       <SimpleForm>
-        <TextInput source="result" />
-        <TextInput source="opponent" />
-        <TextInput source="place" />
+        <TextInput source="lastname" />
+        <TextInput source="firstname" />
+        <TextInput source="img" />
       </SimpleForm>
     </Create>
   );
