@@ -106,7 +106,7 @@ export default function Burger({ ...props }) {
           </li>
           <li>
             <Link className="linkColor" to="ambitions">
-              Ambition 2024
+              Ambitions 2024
             </Link>
           </li>
           <li>

@@ -85,7 +85,7 @@ export default function Navbar() {
       <div className="underNav">
         <ul className="visible">
           <li>
-            <Link to="ambitions">Ambition 2024</Link>
+            <Link to="ambitions">Ambitions 2024</Link>
           </li>
           <li>
             <Link to="partenaires">Partenaires</Link>
