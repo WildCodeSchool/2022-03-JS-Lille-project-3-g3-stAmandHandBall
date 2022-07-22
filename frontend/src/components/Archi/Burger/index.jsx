@@ -67,7 +67,7 @@ export default function Burger({ ...props }) {
                 <li>
                   <a
                     className="aColor"
-                    href="https://www.wordreference.com/fren/effectif"
+                    href="https://www.ffhandball.fr/fr/competition/17700#poule-89807"
                   >
                     classement
                   </a>

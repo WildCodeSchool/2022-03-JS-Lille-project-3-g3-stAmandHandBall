@@ -55,7 +55,7 @@ export default function Navbar() {
                 </li>
               ))}
               <li>
-                <a href="https://www.wordreference.com/fren/effectif">
+                <a href="https://www.ffhandball.fr/fr/competition/17700#poule-89807">
                   classement
                 </a>
               </li>

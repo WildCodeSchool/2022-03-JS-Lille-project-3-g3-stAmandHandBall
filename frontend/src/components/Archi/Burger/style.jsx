@@ -5,21 +5,19 @@ export default styled.nav`
 
   ul {
     display: ${(props) => (props.isOpen ? "block" : "none")};
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
     position: fixed;
     right: 0rem;
-    top: 3rem;
+    top: 6rem;
     background-color: var(--white);
     color: var(--blue);
     opacity: 0.9;
     border-radius: 10px;
     text-align: left;
+    width: 100%;
   }
 
   li {
     height: auto;
-    width: 45vw;
     margin: 0;
     padding: 0.5rem;
   }
