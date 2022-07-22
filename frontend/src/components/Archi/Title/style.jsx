@@ -15,6 +15,7 @@ export default styled.div`
       margin-right: 10px;
       position: relative;
       bottom: 2vh;
+      text-transform: uppercase;
     }
   }
 `;
