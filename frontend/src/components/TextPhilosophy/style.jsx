@@ -66,39 +66,5 @@ export default styled.section`
         text-align: start;
       }
     }
-    /*
-    .yellow {
-      text-align: center;
-    }
-    .presentationText {
-      p {
-        font-size: 1rem;
-        margin-top: 2rem;
-      }
-    }
-    p {
-      font-size: 1rem;
-      text-align: justify;
-    }
-    .image {
-      justify-content: center;
-    }
-    .descriptionText {
-      display: flex;
-      flex-direction: column;
-      width: 100vw;
-      height: 20vh;
-      margin: 0;
-      h3 {
-        text-align: center;
-      }
-    }
-    article {
-      margin-top: 1rem;
-    }
-    .playerList {
-      font-size: 1rem;
-    }
-    */
   }
 `;
