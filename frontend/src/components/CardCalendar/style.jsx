@@ -62,14 +62,14 @@ export default styled.div`
   }
   .club1 {
     background: ${(props) => {
-      return `url(../src/assets/images/logos/clubs/${props.club1}.png) no-repeat`;
+      return `url(../src/assets/images/logos/clubs/${props.club1Img}) no-repeat`;
     }};
     background-size: contain;
     background-position: center;
   }
   .club2 {
     background: ${(props) => {
-      return `url(../src/assets/images/logos/clubs/${props.club2}.png) no-repeat`;
+      return `url(../src/assets/images/logos/clubs/${props.club2Img}) no-repeat`;
     }};
     background-size: contain;
     background-position: center;
@@ -93,7 +93,7 @@ export default styled.div`
       margin: 0 10px 0 10px;
     }
   }
-  .link {
+  a {
     background-color: var(--yellow);
     margin: 1vw;
     color: var(--white);
@@ -156,7 +156,7 @@ export default styled.div`
     .meeting > h3 {
       margin-bottom: 6vh;
     }
-    .link {
+    a {
       margin-bottom: 5vh;
     }
   }

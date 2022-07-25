@@ -1,18 +1,63 @@
-import React from "react";
-import { useTimer } from "react-timer-hook";
+import React, { useContext, useState, useEffect } from "react";
+import { DateTime } from "luxon";
+import ctxProvider from "@services/context/Ctx";
 import boxOffice from "@assets/images/elements/boxOffice.png";
+import CounterDetail from "@components/CounterDetail";
 import SCounter from "./style";
 
 export default function Counter() {
-  const expiryTimestamp = new Date();
-  expiryTimestamp.setSeconds(expiryTimestamp.getSeconds() + 691200); //  the counter is set hard for the moment by mandatory conversion to seconds to program the timer
+  const { calendar } = useContext(ctxProvider);
+  const [indexOfNextMatch, setIndexOfNextMatch] = useState(-1);
 
-  const { minutes, hours, days } = useTimer({
-    expiryTimestamp,
-  });
+  function hourMinute(hm) {
+    return `${DateTime.fromISO(hm)
+      .setLocale("fr")
+      .toFormat("HH")}H${DateTime.fromISO(hm).setLocale("fr").toFormat("mm")}`;
+  }
 
+  function day(dm) {
+    return `${DateTime.fromISO(dm)
+      .setLocale("fr")
+      .toFormat("dd MMMM yyyy")
+      .toUpperCase()}`;
+  }
+
+  function searchIndexOfNextMatch() {
+    const today = DateTime.now();
+    let shortestTime = 1000000000;
+    let index = 0;
+    for (let i = 0; i < calendar.length; i += 1) {
+      const date = DateTime.fromISO(calendar[i].happenedAt);
+      const diffInMinutes = date.diff(today, "minutes").toObject();
+      while (
+        diffInMinutes.minutes < shortestTime &&
+        diffInMinutes.minutes > 0
+      ) {
+        shortestTime = diffInMinutes.minutes;
+        index = i;
+      }
+    }
+    setIndexOfNextMatch(index);
+  }
+
+  useEffect(searchIndexOfNextMatch, [calendar]);
+
+  if (!calendar.length) {
+    return <>*</>;
+  }
   return (
-    <SCounter club1="TOULON" club2="SAH-PH">
+    <SCounter
+      club1={`${
+        calendar[indexOfNextMatch].isHome
+          ? "SAH-PH"
+          : calendar[indexOfNextMatch].opponent
+      }`}
+      club2={`${
+        calendar[indexOfNextMatch].isHome
+          ? calendar[indexOfNextMatch].opponent
+          : "SAH-PH"
+      }`}
+    >
       <div>
         <h3>PROCHAIN MATCH</h3>
       </div>
@@ -22,32 +67,16 @@ export default function Counter() {
           <p>VS</p>
           <div className="club club2" />
         </div>
-
         <div className="dayTime">
-          <p className="day">J1 </p>
-          <p>SAMEDI 3 SEPTEMBRE</p>
-          <p>19H30</p>
-          <p>SALLE MAURICE HUGOT</p>
+          <p>{`${day(calendar[indexOfNextMatch].happenedAt)}`}</p>
+          <p>{`${hourMinute(calendar[indexOfNextMatch].happenedAt)}`}</p>
+          <p>{`${calendar[indexOfNextMatch].place}`}</p>
         </div>
 
-        <div className="timer">
-          <div className="row">
-            <p className="numbersCount"> {days} </p>
-            <p>JOURS</p>
-          </div>
-          <span>-</span>
-          <div className="row">
-            <p className="numbersCount"> {hours} </p>
-            <p>HEURES</p>
-          </div>
-          <span>-</span>
-          <div className="row">
-            <p className="numbersCount"> {minutes} </p>
-            <p>MINUTES</p>
-          </div>
-        </div>
+        <CounterDetail
+          dateOfNextMatch={calendar[indexOfNextMatch].happenedAt}
+        />
       </div>
-
       <div className="billetDiv">
         <a href="https://www.sah-ph.fr/billetterie/">
           <img className="boxOffice" src={boxOffice} alt="billeterie" />

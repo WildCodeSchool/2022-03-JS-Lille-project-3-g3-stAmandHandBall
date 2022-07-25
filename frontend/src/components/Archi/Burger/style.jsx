@@ -21,7 +21,10 @@ export default styled.nav`
     margin: 0;
     padding: 0.5rem;
   }
-
+  .boxOffice {
+    text-decoration: none;
+    color: var(--blue);
+  }
   .subMenu {
     position: sticky;
     margin: 0;
