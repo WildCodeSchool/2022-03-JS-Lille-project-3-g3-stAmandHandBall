@@ -8,10 +8,14 @@ import { useContext, useEffect } from "react";
 import SCoachs from "./style";
 
 export default function Coachs() {
+
   const { team } = useContext(ctxProvider);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const { staff } = useContext(ctxProvider);
+
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
@@ -19,12 +23,12 @@ export default function Coachs() {
       <SCoachs>
         <Title title="FILIERE PRO" />
         <section className="rowCard">
-          {team
-            .filter((person) => ["LBE"].includes(person.title))
+          {staff
+            .filter((person) => ["CF Filière PRO"].includes(person.groupName))
             .map((person) => {
               return (
                 <CardStaff
-                  key={person.id}
+                  key={`${person.id}${person.roleName}${person.groupName}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.title}
@@ -35,23 +39,14 @@ export default function Coachs() {
         <Arrow />
         <Title title="FILIERE FILLES" />
         <section className="rowCard">
-          {team
+          {staff
             .filter((person) =>
-              [
-                "N1F",
-                "U18F",
-                "N3F",
-                "U17F",
-                "U15F1",
-                "U15F2",
-                "U13F",
-                "U11F",
-              ].includes(person.title)
+              ["CF Filière filles"].includes(person.groupName)
             )
             .map((person) => {
               return (
                 <CardStaff
-                  key={person.id}
+                  key={`${person.id}${person.roleName}${person.groupName}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.title}
@@ -62,14 +57,14 @@ export default function Coachs() {
         <Arrow />
         <Title title="FILIERE GARCONS" />
         <section className="rowCard">
-          {team
+          {staff
             .filter((person) =>
-              ["U15G", "U13G", "U11G", "SG"].includes(person.title)
+              ["CF Filière garçons"].includes(person.groupName)
             )
             .map((person) => {
               return (
                 <CardStaff
-                  key={person.id}
+                  key={`${person.id}${person.roleName}${person.groupName}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.title}
@@ -80,12 +75,14 @@ export default function Coachs() {
         <Arrow />
         <Title title="FILIERE ENFANTS" />
         <section className="rowCard">
-          {team
-            .filter((person) => ["Mini", "Baby"].includes(person.title))
+          {staff
+            .filter((person) =>
+              ["CF Filière enfants"].includes(person.groupName)
+            )
             .map((person) => {
               return (
                 <CardStaff
-                  key={person.id}
+                  key={`${person.id}${person.roleName}${person.groupName}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.title}
