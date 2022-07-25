@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-// import uuid from "react-uuid";
 import ctxProvider from "@services/context/Ctx";
 import BigTitle from "@components/Archi/BigTitle";
 import BigPicture from "@components/Archi/BigPicture";
