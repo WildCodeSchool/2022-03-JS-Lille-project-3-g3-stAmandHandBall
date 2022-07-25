@@ -40,7 +40,7 @@ export default function Navbar() {
             Club
             <ul className="submenu">
               {clubMenus.map((clubMenu) => (
-                <li>
+                <li key={clubMenu.title}>
                   <Link to={clubMenu.target}>{clubMenu.title}</Link>
                 </li>
               ))}
@@ -50,7 +50,7 @@ export default function Navbar() {
             D1f
             <ul className="submenu">
               {lbeMenus.map((lbeMenu) => (
-                <li>
+                <li key={lbeMenu.title}>
                   <Link to={lbeMenu.target}>{lbeMenu.title}</Link>
                 </li>
               ))}
@@ -65,7 +65,7 @@ export default function Navbar() {
             CF
             <ul className="submenu">
               {cfMenus.map((cfMenu) => (
-                <li>
+                <li key={cfMenu.title}>
                   <Link to={cfMenu.target}>{cfMenu.title}</Link>
                 </li>
               ))}
