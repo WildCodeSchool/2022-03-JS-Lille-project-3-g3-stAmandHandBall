@@ -71,9 +71,11 @@ export default styled.footer`
     .buttonPosition {
       height: 8vh;
       button {
+        height: auto;
+        width: auto;
         margin-top: 0.5rem;
         p {
-          font-size: 1em;
+          font-size: 1.5em;
         }
       }
     }
