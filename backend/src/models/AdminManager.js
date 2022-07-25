@@ -9,6 +9,13 @@ class AdminManager extends AbstractManager {
       [admin.email, admin.password]
     );
   }
+
+  findOneByMail(email) {
+    return this.connection.query(
+      `select * from ${AdminManager.table} where email=?`,
+      [email]
+    );
+  }
 }
 
 module.exports = AdminManager;
