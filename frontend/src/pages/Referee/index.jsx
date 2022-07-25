@@ -21,7 +21,7 @@ export default function Referee() {
             .map((person) => {
               return (
                 <CardReferee
-                  key={person.id}
+                  key={`${person.id} ${person.firstname} ${person.lastname}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.name}
@@ -37,7 +37,7 @@ export default function Referee() {
             .map((person) => {
               return (
                 <CardReferee
-                  key={person.id}
+                  key={`${person.id} ${person.firstname} ${person.lastname}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.name}

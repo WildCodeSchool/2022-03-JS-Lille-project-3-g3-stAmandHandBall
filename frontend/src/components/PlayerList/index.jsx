@@ -8,8 +8,8 @@ export default function PlayerList() {
 
   return (
     <SPlayerList>
-      {players.map((player) => {
-        players.sort((plA, plB) => {
+      {players
+        .sort((plA, plB) => {
           if (plA.captain === 1) return -1;
           if (plB.captain === 1) return 1;
 
@@ -18,18 +18,21 @@ export default function PlayerList() {
 
           if (plA.number < plB.number) return -1;
           return 1;
-        });
-        return (
-          <CardPlayer
-            key={player.id}
-            name={`${player.firstname} ${player.lastname}`}
-            //  We need the image field in the db to be null for the test image
-            img={`./src/assets/images/cards/players/${player.img || "test.png"} 
-             `}
-            number={player.number}
-          />
-        );
-      })}
+        })
+        .map((player) => {
+          return (
+            <CardPlayer
+              key={player.id}
+              name={`${player.firstname} ${player.lastname}`}
+              //  We need the image field in the db to be null for the test image
+              img={`./src/assets/images/cards/players/${
+                player.img || "test.png"
+              }
+           `}
+              number={player.number}
+            />
+          );
+        })}
     </SPlayerList>
   );
 }
