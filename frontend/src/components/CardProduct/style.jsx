@@ -5,6 +5,8 @@ export default styled.div`
   justify-content: space-between;
   width: 22vw;
   margin-bottom: 4vw;
+  margin: 2rem;
+
   .image {
     background-color: var(--white);
     box-shadow: 5px 5px 3px var(--blue-opacity);
@@ -24,6 +26,7 @@ export default styled.div`
     aspect-ratio: 1/1.15;
     background-color: var(--white);
     box-shadow: 5px 5px 3px var(--blue-opacity);
+    align-items: flex-start;
   }
   .price {
     background-color: var(--yellow);

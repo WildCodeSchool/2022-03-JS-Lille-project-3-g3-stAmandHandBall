@@ -19,13 +19,20 @@ class TeamManager extends AbstractManager {
 
   findAll() {
     return this.connection.query(
-      `SELECT t.id, t.title, t.division, t.img, s.firstname, s.lastname, s.img AS staffImg FROM team AS t INNER JOIN staff AS s ON s.id=t.staff_id;`
+      `SELECT t.id, t.title, t.division, t.img, s.firstname, s.lastname, s.img AS staffImg 
+      FROM ${this.table} AS t  
+      INNER JOIN staff_has_team AS sht ON sht.team_id=t.id
+      INNER JOIN staff AS s ON s.id=sht.staff_id;`
     );
   }
 
   find(id) {
     return this.connection.query(
-      `SELECT t.id, t.title, t.division, t.img, s.firstname, s.lastname, s.img AS staffImg FROM ${this.table} AS t INNER JOIN staff AS s ON s.id=t.staff_id where t.id = ?`,
+      `SELECT t.id, t.title, t.division, t.img, s.firstname, s.lastname, s.img AS staffImg 
+      FROM ${this.table} AS t 
+      INNER JOIN staff_has_team AS sht ON sht.team_id=t.id
+      INNER JOIN staff AS s ON s.id=sht.staff_id 
+      WHERE t.id = ?`,
       [id]
     );
   }

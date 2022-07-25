@@ -5,7 +5,7 @@ class TeamAndStaffManager extends AbstractManager {
 
   findAll() {
     return this.connection.query(
-      `SELECT * FROM team INNER JOIN staff ON staff.id=team.staff_id;`
+      `SELECT team.id, team.title, team.division FROM team;`
     );
   }
 }

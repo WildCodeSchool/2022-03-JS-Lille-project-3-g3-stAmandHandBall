@@ -44,7 +44,7 @@ export default function Burger({ ...props }) {
               <summary onClick={stopPropa}>Club</summary>
               <ul className="subMenu">
                 {clubMenus.map((clubMenu) => (
-                  <li>
+                  <li key={clubMenu.title}>
                     <Link className="aColor" to={clubMenu.target}>
                       {clubMenu.title}
                     </Link>
@@ -58,7 +58,7 @@ export default function Burger({ ...props }) {
               <summary onClick={stopPropa}>LBE</summary>
               <ul className="subMenu">
                 {lbeMenus.map((lbeMenu) => (
-                  <li>
+                  <li key={lbeMenu.title}>
                     <Link className="aColor" to={lbeMenu.target}>
                       {lbeMenu.title}
                     </Link>
@@ -67,7 +67,7 @@ export default function Burger({ ...props }) {
                 <li>
                   <a
                     className="aColor"
-                    href="https://www.ffhandball.fr/fr/competition/17700#poule-89807"
+                    href="https://www.ffhandball.fr/fr/competition/19868#poule-107982"
                   >
                     classement
                   </a>
@@ -80,7 +80,7 @@ export default function Burger({ ...props }) {
               <summary onClick={stopPropa}>CF</summary>
               <ul className="subMenu">
                 {cfMenus.map((cfMenu) => (
-                  <li>
+                  <li key={cfMenu.title}>
                     <Link className="aColor" to={cfMenu.target}>
                       {cfMenu.title}
                     </Link>
@@ -100,13 +100,13 @@ export default function Burger({ ...props }) {
             </Link>
           </li>
           <li>
-            <Link className="linkColor" to="billetterie">
+            <a href="https://www.sah-ph.fr/billetterie/" className="boxOffice">
               Billetterie
-            </Link>
+            </a>
           </li>
           <li>
             <Link className="linkColor" to="ambitions">
-              Ambition 2024
+              Ambitions 2024
             </Link>
           </li>
           <li>
