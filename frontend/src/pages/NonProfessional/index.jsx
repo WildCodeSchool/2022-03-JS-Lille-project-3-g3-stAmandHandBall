@@ -32,7 +32,6 @@ export default function NonProfessional() {
                     return element.division === division;
                   })
                   .map((element) => {
-                    console.log(element);
                     return (
                       <Link to={`/amateurs/${element.id}`}>
                         <div
