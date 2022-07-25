@@ -27,6 +27,13 @@ export default function PlayerList() {
             img={`./src/assets/images/cards/players/${player.img || "test.png"} 
              `}
             number={player.number}
+            position={player.position}
+            captain={player.captain}
+            matchPlayed={player.matchPlayed}
+            goal={player.goal}
+            goalAverage={player.goalAverage}
+            stop={player.stop}
+            penalty={player.penalty}
           />
         );
       })}
