@@ -37,6 +37,7 @@ export default styled.div`
       font-size: 3em;
       text-align: center;
       margin: 0 1vw;
+      line-height: 0.8em;
     }
     .club {
       height: 6vw;
@@ -66,29 +67,12 @@ export default styled.div`
     justify-content: center;
     text-align: center;
     line-height: 1.5em;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+
     .day {
       margin: 3vh 0;
       font-size: 3em;
-    }
-  }
-  .timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    text-align: center;
-    margin-right: 5vw;
-    span {
-      font-size: 3em;
-    }
-    p {
-      font-size: 1.3em;
-      margin: 0 1vw;
-    }
-    .numbersCount {
-      font-size: 3.5em;
-      margin-bottom: 1vh;
     }
   }
   .billetDiv {
@@ -130,32 +114,13 @@ export default styled.div`
       width: 90%;
       line-height: 1.5em;
       margin: 0.5em 0 1em;
+      font-size: 1.2em;
+
       p {
         margin: 0 1vh;
-        font-size: 1.2em;
       }
       .day {
         display: none;
-      }
-    }
-    .timer {
-      width: 95%;
-      margin: auto;
-      text-shadow: none;
-      .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      span {
-        font-size: 2em;
-      }
-      p {
-        font-size: 1em;
-        margin: 0 1vw;
-      }
-      .numbersCount {
-        font-size: 2em;
       }
     }
     .billetDiv {
