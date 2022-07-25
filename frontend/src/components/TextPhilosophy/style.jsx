@@ -39,37 +39,6 @@ export default styled.section`
     display: flex;
   }
 
-  /* 
-    p:nth-child(3) {
-      margin: 1rezm;
-    }
-  }
-  h3 {
-    margin-left: 1rem;
-  }
-  p {
-    margin: 1rem;
-    font-size: 1.5rem;
-  }
-  .yellow {
-    color: var(--yellow);
-    font-size: 2rem;
-  }
- 
-  .descriptionText {
-    font-size: 1.5em;
-  }
-  .playerList {
-    font-size: 2rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-  } 
-    .image,
-  .descriptifText {
-    margin: 0.5rem;
-  }*/
-
   @media screen and (max-width: 700px) {
     .left,
     .right {
