@@ -40,7 +40,7 @@ export default function Navbar() {
             Club
             <ul className="submenu">
               {clubMenus.map((clubMenu) => (
-                <li>
+                <li key={clubMenu.title}>
                   <Link to={clubMenu.target}>{clubMenu.title}</Link>
                 </li>
               ))}
@@ -50,12 +50,12 @@ export default function Navbar() {
             D1f
             <ul className="submenu">
               {lbeMenus.map((lbeMenu) => (
-                <li>
+                <li key={lbeMenu.title}>
                   <Link to={lbeMenu.target}>{lbeMenu.title}</Link>
                 </li>
               ))}
               <li>
-                <a href="https://www.ffhandball.fr/fr/competition/17700#poule-89807">
+                <a href="https://www.ffhandball.fr/fr/competition/19868#poule-107982">
                   classement
                 </a>
               </li>
@@ -65,7 +65,7 @@ export default function Navbar() {
             CF
             <ul className="submenu">
               {cfMenus.map((cfMenu) => (
-                <li>
+                <li key={cfMenu.title}>
                   <Link to={cfMenu.target}>{cfMenu.title}</Link>
                 </li>
               ))}
@@ -78,14 +78,14 @@ export default function Navbar() {
             <Link to="boutique">Boutique</Link>
           </li>
           <li>
-            <Link to="billetterie">Billetterie</Link>
+            <a href="https://www.sah-ph.fr/billetterie/">Billetterie</a>
           </li>
         </ul>
       </div>
       <div className="underNav">
         <ul className="visible">
           <li>
-            <Link to="ambitions">Ambition 2024</Link>
+            <Link to="ambitions">Ambitions 2024</Link>
           </li>
           <li>
             <Link to="partenaires">Partenaires</Link>
