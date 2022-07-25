@@ -55,7 +55,7 @@ export default function Navbar() {
                 </li>
               ))}
               <li>
-                <a href="https://www.ffhandball.fr/fr/competition/17700#poule-89807">
+                <a href="https://www.ffhandball.fr/fr/competition/19868#poule-107982">
                   classement
                 </a>
               </li>
@@ -78,14 +78,14 @@ export default function Navbar() {
             <Link to="boutique">Boutique</Link>
           </li>
           <li>
-            <Link to="billetterie">Billetterie</Link>
+            <a href="https://www.sah-ph.fr/billetterie/">Billetterie</a>
           </li>
         </ul>
       </div>
       <div className="underNav">
         <ul className="visible">
           <li>
-            <Link to="ambitions">Ambition 2024</Link>
+            <Link to="ambitions">Ambitions 2024</Link>
           </li>
           <li>
             <Link to="partenaires">Partenaires</Link>
