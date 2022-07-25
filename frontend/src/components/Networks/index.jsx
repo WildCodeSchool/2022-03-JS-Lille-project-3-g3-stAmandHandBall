@@ -12,12 +12,24 @@ export default function Networks() {
       <div className="cube">
         <div className="title">REJOIGNEZ LA MEUTE</div>
         <div className="logo">
-          <img src={imgfacebook} alt="imgfacebook" />
-          <img src={imginstagram} alt="imginstagram" />
-          <img src={imgtwitter} alt="imgtwitter" />
-          <img src={imgyoutube} alt="imgyoutube" />
-          <img src={imglinkedin} alt="imglinkedin" />
-          <img src={imgtwitch} alt="imgmail" />
+          <a href="https://www.facebook.com/SaintAmandHandball">
+            <img src={imgfacebook} alt="imgfacebook" />
+          </a>
+          <a href="https://www.instagram.com/saintamandhandball/">
+            <img src={imginstagram} alt="imginstagram" />
+          </a>
+          <a href="https://twitter.com/SaintAmandHand">
+            <img src={imgtwitter} alt="imgtwitter" />
+          </a>
+          <a href="https://www.youtube.com/channel/UCm-vdLQoYHfuhhPmn4k7txQ">
+            <img src={imgyoutube} alt="imgyoutube" />
+          </a>
+          <a href="https://www.linkedin.com/company/sahph/">
+            <img src={imglinkedin} alt="imglinkedin" />
+          </a>
+          <a href="https://www.twitch.tv/saintamandhand">
+            <img src={imgtwitch} alt="imgmail" />
+          </a>
         </div>
         <div className="hash">
           <p>#louves</p>

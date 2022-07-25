@@ -21,7 +21,12 @@ export default function NewsList({ info }) {
             key={article.id}
             id={article.id}
             title={article.title}
-            img={article.img}
+            img1={article.img1}
+            img2={article.img2}
+            img3={article.img3}
+            img4={article.img4}
+            img5={article.img5}
+            img6={article.img6}
             content={article.content}
           />
         );

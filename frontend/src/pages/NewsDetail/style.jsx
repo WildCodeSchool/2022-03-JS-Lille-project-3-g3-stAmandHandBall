@@ -24,11 +24,28 @@ export default styled.div`
     display: block;
     margin: 5vh 0 10vh 0;
   }
-  img {
+  .firstImg {
     width: 40%;
     margin-left: 3vw;
+    margin-bottom: 3vh;
     float: right;
   }
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vh 0 5vh 0;
+    img {
+      width: 30%;
+      margin: 0;
+      margin-top: 5vh;
+    }
+    .none {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: 700px) {
     width: 90%;
     display: flex;

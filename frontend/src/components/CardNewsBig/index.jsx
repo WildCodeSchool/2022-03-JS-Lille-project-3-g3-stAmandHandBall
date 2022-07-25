@@ -11,7 +11,8 @@ export default function CardNewsBig() {
       <div className="mainCards">
         <Link to={`/actus/${news[0].id}`}>
           <img
-            src={`../../src/assets/images/photos/${news[0].img}`}
+            className="image"
+            src={`../../src/assets/images/photos/${news[0].img1}`}
             alt="imgNews"
           />
         </Link>
