@@ -20,5 +20,9 @@ export default function CardStaff({ name, img, role }) {
 CardStaff.propTypes = {
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
+  role: PropTypes.string,
+};
+
+CardStaff.defaultProps = {
+  role: "",
 };

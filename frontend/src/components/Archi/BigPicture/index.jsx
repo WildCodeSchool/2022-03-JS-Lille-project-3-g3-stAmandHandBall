@@ -48,7 +48,12 @@ BigPicture.propTypes = {
   img: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   hour: PropTypes.string.isRequired,
-  club1Img: PropTypes.string.isRequired,
-  club2Img: PropTypes.string.isRequired,
+  club1Img: PropTypes.string,
+  club2Img: PropTypes.string,
   text: PropTypes.string.isRequired,
+};
+
+BigPicture.defaultProps = {
+  club1Img: "",
+  club2Img: "",
 };
