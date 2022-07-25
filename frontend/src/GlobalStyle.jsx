@@ -43,7 +43,7 @@ h4{
 @media screen and (max-width: 700px) {
     width: 90vw;
     h1{
-  font-size: 1em;
+  font-size: 0.8em;
   line-height:1.2em;
 }
   }

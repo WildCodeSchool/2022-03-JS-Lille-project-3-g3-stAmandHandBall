@@ -44,6 +44,9 @@ export default styled.div`
     .text {
       height: 20vh;
     }
+    h2 {
+      font-size: 2em;
+    }
     .textContainer {
       width: 80%;
       height: 90%;
