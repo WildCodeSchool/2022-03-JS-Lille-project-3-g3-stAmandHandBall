@@ -87,6 +87,7 @@ export default function Calendar() {
               {calendar
                 .filter((match) => monthYear(match.happenedAt) === period)
                 .map((match) => {
+                  console.log(match);
                   return (
                     <div>
                       <CardCalendar
