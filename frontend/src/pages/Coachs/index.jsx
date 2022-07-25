@@ -4,11 +4,14 @@ import BigTitle from "@components/Archi/BigTitle";
 import Title from "@components/Archi/Title";
 import CardStaff from "@components/CardStaff";
 import ctxProvider from "@services/context/Ctx";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import SCoachs from "./style";
 
 export default function Coachs() {
   const { team } = useContext(ctxProvider);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />

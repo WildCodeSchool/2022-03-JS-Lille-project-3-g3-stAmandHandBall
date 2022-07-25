@@ -1,7 +1,7 @@
 import BigTitle from "@components/Archi/BigTitle";
 import BigPicture from "@components/Archi/BigPicture";
 import CardProduct from "@components/CardProduct";
-
+import { useEffect } from "react";
 import SShop from "./style";
 
 export default function Shop() {
@@ -55,6 +55,9 @@ export default function Shop() {
       price: 15,
     },
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture

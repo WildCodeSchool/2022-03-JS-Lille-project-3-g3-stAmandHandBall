@@ -11,6 +11,9 @@ export default function Calendar() {
   const { calendar } = useContext(ctxProvider);
   const [indexOfNextMatch, setIndexOfNextMatch] = useState(0);
   const [uniquePeriod, setUniquePeriod] = useState([]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   function hourMinute(hm) {
     return `${DateTime.fromISO(hm)
