@@ -1,5 +1,5 @@
 import ctxProvider from "@services/context/Ctx";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import BigTitle from "@components/Archi/BigTitle";
 import BigPicture from "@components/Archi/BigPicture";
 import CardEvent from "@components/CardEvent";
@@ -9,6 +9,9 @@ import SHistory from "./style";
 
 export default function History() {
   const { history } = useContext(ctxProvider);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />

@@ -12,10 +12,14 @@ import sport3 from "@assets/images/photos/sport-3.jpg";
 import sport4 from "@assets/images/photos/sport-4.jpg";
 import sport5 from "@assets/images/photos/sport-5.jpg";
 import sport6 from "@assets/images/photos/sport-6.jpg";
+import { useEffect } from "react";
 
 import SLifeStyle from "./style";
 
 export default function LifeStyle() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />

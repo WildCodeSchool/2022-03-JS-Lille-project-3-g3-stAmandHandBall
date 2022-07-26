@@ -4,6 +4,7 @@ import Title from "@components/Archi/Title";
 import Subtitle from "@components/Archi/Subtile";
 import Arrow from "@components/Archi/Arrow";
 import CardProduct from "@components/CardProduct";
+import { useEffect } from "react";
 import CardProduct2 from "@components/CardProduct2";
 import SShop from "./style";
 
@@ -58,6 +59,11 @@ export default function Shop() {
       price: 15,
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const jerseys = [
     {
       id: 1,
@@ -88,6 +94,7 @@ export default function Shop() {
       size5: "16A",
     },
   ];
+
   return (
     <>
       <BigPicture

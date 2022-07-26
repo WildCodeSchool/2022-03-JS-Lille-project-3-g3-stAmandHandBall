@@ -3,9 +3,13 @@ import BigPicture from "@components/Archi/BigPicture";
 import Title from "@components/Archi/Title";
 import universityPicture from "@assets/images/photos/universite.png";
 import picto from "@assets/images/logos/sah-icon-li.png";
+import { useEffect } from "react";
 import STraining from "./style";
 
 export default function Training() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />
