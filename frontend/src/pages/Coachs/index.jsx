@@ -8,8 +8,6 @@ import { useContext, useEffect } from "react";
 import SCoachs from "./style";
 
 export default function Coachs() {
-
-  const { team } = useContext(ctxProvider);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
