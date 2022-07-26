@@ -9,6 +9,7 @@ import {
   EditButton,
   DeleteButton,
   Create,
+  BooleanInput,
 } from "react-admin";
 
 export function NewListStaff() {
@@ -18,6 +19,7 @@ export function NewListStaff() {
         <TextField source="lastname" />
         <TextField source="firstname" />
         <TextField source="img" />
+        <TextField source="cf" />
         <DeleteButton />
         <EditButton />
       </Datagrid>
@@ -32,6 +34,7 @@ export function NewEditStaff() {
         <TextInput source="lastname" />
         <TextInput source="firstname" />
         <TextInput source="img" />
+        <BooleanInput label="cf" source="cf" />
       </SimpleForm>
     </Edit>
   );
@@ -44,6 +47,7 @@ export function NewCreateStaff() {
         <TextInput source="lastname" />
         <TextInput source="firstname" />
         <TextInput source="img" />
+        <BooleanInput label="cf" source="cf" />
       </SimpleForm>
     </Create>
   );

@@ -22,6 +22,7 @@ export function PlayerList() {
         <TextField source="number" />
         <TextField source="position" />
         <TextField source="captain" />
+        <TextField source="cf" />
         <TextField source="matchPlayed" />
         <TextField source="goal" />
         <TextField source="goalAverage" />
@@ -43,16 +44,18 @@ export function PostEdit() {
         <RadioButtonGroupInput
           source="position"
           choices={[
-            { id: "AilierDroit", name: "Ailier droit" },
-            { id: "ArriereDroit", name: "Arriere droit" },
+            { id: "AiliereDroite", name: "Ailière droite" },
+            { id: "ArriereDroite", name: "Arrière droite" },
             { id: "Pivot", name: "Pivot" },
-            { id: "DemiCentre", name: "Demi centre" },
-            { id: "AilierGauche", name: "Ailier gauche" },
-            { id: "ArriereDroit", name: "Arriere droit" },
+            { id: "DemieCentre", name: "Demie centre" },
+            { id: "AiliereGauche", name: "Ailière gauche" },
+            { id: "ArriereDroite", name: "Arriàre droite" },
+            { id: "Gardienne", name: "Gardienne" },
             { id: "non", name: "non" },
           ]}
         />
         <BooleanInput label="captain" source="captain" />
+        <BooleanInput label="cf" source="cf" />
         <NumberInput source="matchPlayed" />
         <NumberInput source="goal" />
         <NumberInput source="goalAverage" />
@@ -73,16 +76,18 @@ export function PostCreate() {
         <RadioButtonGroupInput
           source="position"
           choices={[
-            { id: "AilierDroit", name: "Ailier droit" },
-            { id: "ArriereDroit", name: "Arriere droit" },
+            { id: "AiliereDroite", name: "Ailière droite" },
+            { id: "ArriereDroite", name: "Arrière droite" },
             { id: "Pivot", name: "Pivot" },
-            { id: "DemiCentre", name: "Demi centre" },
-            { id: "AilierGauche", name: "Ailier gauche" },
-            { id: "ArriereDroit", name: "Arriere droit" },
+            { id: "DemieCentre", name: "Demie centre" },
+            { id: "AiliereGauche", name: "Ailière gauche" },
+            { id: "ArriereDroite", name: "Arriàre droite" },
+            { id: "Gardienne", name: "Gardienne" },
             { id: "non", name: "non" },
           ]}
         />
         <BooleanInput label="captain" source="captain" />
+        <BooleanInput label="cf" source="cf" />
         <NumberInput source="matchPlayed" />
         <NumberInput source="goal" />
         <NumberInput source="goalAverage" />
