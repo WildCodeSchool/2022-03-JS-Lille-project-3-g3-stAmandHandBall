@@ -98,7 +98,10 @@ router.delete("/role/:id", RoleController.delete);
 
 // contact route  //
 
+router.get("/contact", ContactController.browse);
+router.get("/contact/:id", ContactController.read);
 router.post("/contact", ContactController.add);
+router.delete("/contact/:id", ContactController.delete);
 
 // referee route  //
 
