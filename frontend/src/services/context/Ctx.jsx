@@ -42,14 +42,6 @@ export function CtxProvider({ children }) {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
-      .then(({ data }) => {
-        setStaff(data);
-      });
-  }, []);
-
-  useEffect(() => {
-    axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/news"}`)
       .then(({ data }) => {
         setNews(data);

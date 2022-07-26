@@ -6,6 +6,7 @@ import SCardNewsBig from "./style";
 export default function CardNewsBig() {
   const { news } = useContext(ctxProvider);
 
+  if (!news.length) return null;
   return (
     <SCardNewsBig>
       <div className="mainCards">
