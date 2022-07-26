@@ -2,87 +2,69 @@ import styled from "styled-components";
 
 export default styled.section`
   color: var(--white);
+  article {
+    height: 100%;
+  }
   .presentationText {
     p {
-      font-size: 1.5rem;
+      font-size: 1.5em;
       margin-top: 2rem;
       text-align: justify;
       padding: 0.6rem;
     }
-    p:nth-child(3) {
-      margin: 1rem;
-    }
-  }
-  p {
-    margin: 1rem;
-    font-size: 1.5rem;
-  }
-  .yellow {
-    color: var(--yellow);
-    font-size: 2rem;
-  }
-  .image {
-    display: flex;
   }
   .left,
   .right {
     display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: justify;
   }
   .right {
     flex-direction: row-reverse;
+    display: flex;
+  }
+  .yellow {
+    color: var(--yellow);
+    font-size: 2rem;
+    text-align: center;
   }
   .descriptionText {
-    font-size: 1.5em;
+    width: 50%;
+    height: 20%;
+    margin-top: 4rem;
+    p {
+      padding: 2.2em;
+    }
   }
-  .playerList {
-    font-size: 2rem;
-    margin: 1rem;
+  .image {
     display: flex;
-    flex-direction: column;
   }
-  .image,
-  .descriptifText {
-    margin: 0.5rem;
-  }
+
   @media screen and (max-width: 700px) {
     .left,
     .right {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .yellow {
-      text-align: center;
+      padding: 0.3rem;
     }
     .presentationText {
       p {
-        font-size: 1rem;
-        margin-top: 2rem;
+        text-align: start;
       }
-    }
-    p {
-      font-size: 1rem;
-      text-align: justify;
     }
     .image {
-      justify-content: center;
+      display: block;
     }
+
     .descriptionText {
-      display: flex;
-      flex-direction: column;
-      width: 100vw;
-      height: 20vh;
-      margin: 0;
-      h3 {
-        text-align: center;
+      width: 100%;
+      p {
+        padding: 0.3em;
+        text-align: start;
       }
-    }
-    article {
-      margin-top: 1rem;
-    }
-    .playerList {
-      font-size: 1rem;
     }
   }
 `;

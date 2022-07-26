@@ -56,12 +56,11 @@ export default styled.section`
     }
     .club1 {
       background: ${(props) => {
-        return `url(../src/assets/images/logos/clubs/${props.club1Img}) no-repeat`;
+        return `url(../src/assets/images/logos/clubs/${props.club1}.png) no-repeat`;
       }};
       background-size: contain;
-      background-position: right;
+      background-position: center;
       height: 22vh;
-      min-width: 2vw;
       aspect-ratio: 1/1;
     }
     .dash {
@@ -73,10 +72,10 @@ export default styled.section`
     }
     .club2 {
       background: ${(props) => {
-        return `url(../src/assets/images/logos/clubs/${props.club2Img}) no-repeat`;
+        return `url(../src/assets/images/logos/clubs/${props.club2}.png) no-repeat`;
       }};
       background-size: contain;
-      background-position: left;
+      background-position: center;
       height: 22vh;
       aspect-ratio: 1/1;
     }
@@ -94,19 +93,12 @@ export default styled.section`
       justify-content: center;
       align-items: center;
       width: 15vw;
-      height: 10vh;
       aspect-ratio: 3/1;
       background-color: var(--yellow);
       color: var(--blue);
       font-size: 1.5rem;
       line-height: 1.8rem;
       box-shadow: var(--box-shadow);
-    }
-    .date,
-    .info {
-      h3 {
-        font-size: 1.5rem;
-      }
     }
   }
 
@@ -143,15 +135,8 @@ export default styled.section`
       .date,
       .info {
         width: 45%;
-        height: 8vh;
         aspect-ratio: 3/1;
-      }
-
-      .date,
-      .info {
-        h3 {
-          font-size: 1.2rem;
-        }
+        font-size: 1.2rem;
       }
     }
     .blocInfo {
