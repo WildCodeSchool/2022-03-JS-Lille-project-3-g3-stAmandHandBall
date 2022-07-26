@@ -5,15 +5,15 @@ class StaffManager extends AbstractManager {
 
   insert(staff) {
     return this.connection.query(
-      `insert into ${StaffManager.table} (lastname, firstname, img) values (?,?,?)`,
-      [staff.lastname, staff.firstname, staff.img]
+      `insert into ${StaffManager.table} (lastname, firstname, img, cf) values (?,?,?,?)`,
+      [staff.lastname, staff.firstname, staff.img, staff.cf]
     );
   }
 
   update(staff) {
     return this.connection.query(
-      `update ${StaffManager.table} set lastname = ?, firstname = ?, img = ? where id = ?`,
-      [staff.lastname, staff.firstname, staff.img, staff.id]
+      `update ${StaffManager.table} set lastname = ?, firstname = ?, img = ?, cf = ? where id = ?`,
+      [staff.lastname, staff.firstname, staff.img, staff.id, staff.cf]
     );
   }
 }
