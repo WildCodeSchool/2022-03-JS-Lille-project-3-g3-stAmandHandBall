@@ -9,6 +9,8 @@ import {
   EditButton,
   DeleteButton,
   Create,
+  ReferenceInput,
+  SelectInput,
 } from "react-admin";
 
 export function NewListStaff() {

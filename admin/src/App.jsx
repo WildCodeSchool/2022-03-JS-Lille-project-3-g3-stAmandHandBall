@@ -31,6 +31,11 @@ import {
 } from "./opponent";
 import { NewListHistory, NewEditHistory, NewCreateHistory } from "./history";
 import ContactList from "./contact";
+import {
+  StaffHasRoleList,
+  StaffHasRoleEdit,
+  StaffHasRoleCreate,
+} from "./staffHasRole";
 
 function App() {
   return (
@@ -104,6 +109,13 @@ function App() {
         edit={NewEditHistory}
         create={NewCreateHistory}
         icon={HistoryIcon}
+      />
+      <Resource
+        name="role/staff"
+        list={StaffHasRoleList}
+        edit={StaffHasRoleEdit}
+        create={StaffHasRoleCreate}
+        icon={ManageAccountsIcon}
       />
       <Resource name="contact" list={ContactList} icon={ChatBubbleIcon} />
     </Admin>

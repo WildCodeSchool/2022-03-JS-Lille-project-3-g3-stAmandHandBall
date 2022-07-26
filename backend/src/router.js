@@ -90,9 +90,10 @@ router.delete("/news/:id", NewsController.delete);
 // role route  //
 
 router.get("/role", RoleController.browse);
-router.get("/role/staff/", RoleAndStaffController.browse);
-router.get("/role/:id", RoleController.read);
+router.get("/role/staff", RoleAndStaffController.browse);
 router.put("/role/:id", RoleController.edit);
+router.get("/role/:id", RoleController.read);
+router.get("/role/staff/:id", RoleAndStaffController.read);
 router.post("/role", RoleController.add);
 router.delete("/role/:id", RoleController.delete);
 
