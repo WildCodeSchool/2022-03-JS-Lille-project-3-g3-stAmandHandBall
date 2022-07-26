@@ -59,7 +59,7 @@ export default function headCount() {
             .map((person) => {
               return (
                 <CardStaff
-                  key={person.id}
+                  key={`${person.id}${person.role_id}${person.staff_id}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.roleName}

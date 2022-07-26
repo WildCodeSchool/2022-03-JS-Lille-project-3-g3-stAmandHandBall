@@ -137,7 +137,7 @@ export default function TextPhilosophy() {
         </div>
       </article>
       <article>
-        <p>
+        <p className="complementary">
           Pour tout complément d’information, on vous invite à nous solliciter
           aux coordonnées suivantes : centredeformation@sah-ph.fr
         </p>

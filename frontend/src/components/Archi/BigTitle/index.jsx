@@ -10,5 +10,9 @@ export default function BigTitle({ title }) {
 }
 
 BigTitle.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+};
+
+BigTitle.defaultProps = {
+  title: "",
 };

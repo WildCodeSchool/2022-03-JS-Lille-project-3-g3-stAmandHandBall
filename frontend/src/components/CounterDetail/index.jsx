@@ -45,5 +45,5 @@ export default function CounterDetail({ dateOfNextMatch }) {
 }
 
 CounterDetail.propTypes = {
-  dateOfNextMatch: PropTypes.instanceOf(Date).isRequired,
+  dateOfNextMatch: PropTypes.string.isRequired,
 };

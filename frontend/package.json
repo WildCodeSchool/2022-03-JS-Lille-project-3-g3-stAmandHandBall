@@ -18,6 +18,7 @@
     "react-router-dom": "^6.3.0",
     "react-timer-hook": "^3.0.5",
     "react-toastify": "^9.0.5",
+    "react-uuid": "^1.0.2",
     "styled-components": "^5.3.5",
     "styled-reset": "^4.4.1",
     "template-fullstack": "file:.."
