@@ -50,4 +50,25 @@ export default styled.div`
   a {
     text-decoration: none;
   }
+  @media screen and (max-width: 700px) {
+    display: block;
+    h3 {
+      width: 90vw;
+      margin-left: 0;
+      bottom: 20vh;
+      text-align: center;
+    }
+    .arrow {
+      width: 90vw;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .arrow2 {
+      clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 99%, 0 0);
+      width: 90vw;
+      display: none;
+    }
+    p {
+      display: none;
+    }
+  }
 `;

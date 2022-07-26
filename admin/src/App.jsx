@@ -5,6 +5,7 @@ import AdjustIcon from "@mui/icons-material/Adjust";
 import HistoryIcon from "@mui/icons-material/History";
 import GroupsIcon from "@mui/icons-material/Groups";
 import SportsIcon from "@mui/icons-material/Sports";
+import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import FeedIcon from "@mui/icons-material/Feed";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
@@ -29,6 +30,7 @@ import {
   NewCreateOpponent,
 } from "./opponent";
 import { NewListHistory, NewEditHistory, NewCreateHistory } from "./history";
+import ContactList from "./contact";
 
 function App() {
   return (
@@ -103,6 +105,7 @@ function App() {
         create={NewCreateHistory}
         icon={HistoryIcon}
       />
+      <Resource name="contact" list={ContactList} icon={ChatBubbleIcon} />
     </Admin>
   );
 }

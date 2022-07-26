@@ -13,6 +13,8 @@ import {
   BooleanInput,
   Create,
   DeleteButton,
+  ReferenceInput,
+  SelectInput,
 } from "react-admin";
 
 export function NewListCalendar() {
@@ -42,7 +44,13 @@ export function NewEditCalendar() {
         <BooleanInput source="isHome" />
         <DateInput source="happenedAt" />
         <TextInput source="result" />
-        <TextInput source="opponent" />
+        <ReferenceInput
+          label="Opponent"
+          reference="opponent"
+          source="opponent_id"
+        >
+          <SelectInput optionText="name" />
+        </ReferenceInput>
         <NumberInput source="opponent_id" />
         <TextInput source="place" />
         <NumberInput source="new_id" />

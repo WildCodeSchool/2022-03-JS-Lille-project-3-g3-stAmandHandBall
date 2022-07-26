@@ -5,13 +5,15 @@ export default function TitleLink({ title, link }) {
   return (
     <STitleLink>
       <div className="title">
-        <div className="arrow" />
-        <h3>{title}</h3>
+        <a href={link} target="_blank" rel="noreferrer noopener">
+          <div className="arrow" />
+          <h3>{title}</h3>
+        </a>
       </div>
       <div className="link">
         <div className="arrow2" />
         <a href={link} target="_blank" rel="noreferrer noopener">
-          <p>{link}</p>
+          <p>Lien vers le classement</p>
         </a>
       </div>
     </STitleLink>
