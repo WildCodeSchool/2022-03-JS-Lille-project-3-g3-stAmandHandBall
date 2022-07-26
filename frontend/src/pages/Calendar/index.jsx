@@ -91,9 +91,8 @@ export default function Calendar() {
                 .filter((match) => monthYear(match.happenedAt) === period)
                 .map((match) => {
                   return (
-                    <div>
+                    <div key={match.id}>
                       <CardCalendar
-                        key={match.id}
                         day={match.day}
                         cup={`${
                           match.day > 0

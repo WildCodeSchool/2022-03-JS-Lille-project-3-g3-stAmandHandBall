@@ -22,7 +22,7 @@ export default function NonProfessional() {
         <div className="allDivisions">
           {divisions.map((division) => {
             return (
-              <div className="division">
+              <div key={division} className="division">
                 <div className="subtitle">
                   <h3>{division}</h3>
                 </div>
@@ -35,9 +35,8 @@ export default function NonProfessional() {
                   })
                   .map((element) => {
                     return (
-                      <Link to={`/amateurs/${element.id}`}>
+                      <Link key={element.id} to={`/amateurs/${element.id}`}>
                         <div
-                          key={element.id}
                           id={element.id}
                           title={element.title}
                           division={element.division}

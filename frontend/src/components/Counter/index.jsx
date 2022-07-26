@@ -49,13 +49,13 @@ export default function Counter() {
     <SCounter
       club1={`${
         calendar[indexOfNextMatch].isHome
-          ? "SAH-PH"
+          ? "sah-ph"
           : calendar[indexOfNextMatch].opponent
       }`}
       club2={`${
         calendar[indexOfNextMatch].isHome
           ? calendar[indexOfNextMatch].opponent
-          : "SAH-PH"
+          : "sah-ph"
       }`}
     >
       <div>

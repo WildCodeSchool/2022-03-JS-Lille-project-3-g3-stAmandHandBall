@@ -1,7 +1,9 @@
 import BigPicture from "@components/Archi/BigPicture";
 import BigTitle from "@components/Archi/BigTitle";
 import Title from "@components/Archi/Title";
+import uuid from "react-uuid";
 import { useEffect } from "react";
+
 
 import SPartner from "./style";
 
@@ -33,6 +35,7 @@ export default function Partner() {
           {publicPartners.map((partner) => {
             return (
               <img
+                key={uuid()}
                 src={`./src/assets/images/logos/partners/${partner} 
              `}
                 alt="players"
@@ -45,6 +48,7 @@ export default function Partner() {
           {privatePartners.map((partner) => {
             return (
               <img
+                key={uuid()}
                 src={`./src/assets/images/logos/partners/${partner} 
              `}
                 alt="players"
