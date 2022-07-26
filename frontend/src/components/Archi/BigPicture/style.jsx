@@ -22,15 +22,21 @@ export default styled.section`
     background-color: #f2f6fa85;
     width: 25vw;
     color: var(--blue);
-    padding-top: 7vh;
+    padding-top: 4vh;
     text-align: center;
+
     h3 {
       font-size: 2rem;
+      padding-bottom: 3vh;
+    }
+    h6 {
+      font-size: 1.5rem;
+      padding: 0 2vw 0 2vw;
     }
     p {
-      font-size: 1rem;
-      line-height: 1.2rem;
-      padding: 4vw;
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+      padding: 0 2vw 3vh 2vw;
     }
   }
   .none {
