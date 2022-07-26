@@ -66,14 +66,6 @@ export function CtxProvider({ children }) {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/team"}`)
-      .then(({ data }) => {
-        setTeam(data);
-      });
-  }, []);
-
-  useEffect(() => {
-    axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/opponent"}`)
       .then(({ data }) => {
         setOpponent(data);
