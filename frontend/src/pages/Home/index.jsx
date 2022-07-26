@@ -7,9 +7,13 @@ import Networks from "@components/Networks";
 import BanShop from "@components/BanShop";
 import Caroussel from "@components/Caroussel";
 import BlocPhotos from "@components/BlocPhoto";
+import { useEffect } from "react";
 import SHome from "./style";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SHome>
       <BigPicture

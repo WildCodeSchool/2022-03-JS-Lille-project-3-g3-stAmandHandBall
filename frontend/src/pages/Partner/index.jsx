@@ -2,6 +2,8 @@ import BigPicture from "@components/Archi/BigPicture";
 import BigTitle from "@components/Archi/BigTitle";
 import Title from "@components/Archi/Title";
 import uuid from "react-uuid";
+import { useEffect } from "react";
+
 
 import SPartner from "./style";
 
@@ -20,7 +22,9 @@ export default function Partner() {
     "swiss-life.png",
     "transvilles.png",
   ];
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />

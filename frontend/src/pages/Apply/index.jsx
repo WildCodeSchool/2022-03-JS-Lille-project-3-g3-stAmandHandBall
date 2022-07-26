@@ -1,9 +1,13 @@
 import BigTitle from "@components/Archi/BigTitle";
 import BigPicture from "@components/Archi/BigPicture";
 import universityPicture from "@assets/images/photos/universite.png";
+import { useEffect } from "react";
 import SApply from "./style";
 
 export default function Apply() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />

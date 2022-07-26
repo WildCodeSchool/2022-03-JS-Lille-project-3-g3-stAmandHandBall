@@ -3,13 +3,15 @@ import BigPicture from "@components/Archi/BigPicture";
 import Title from "@components/Archi/Title";
 import PlayerList from "@components/PlayerList";
 import CardStaff from "@components/CardStaff";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import ctxProvider from "@services/context/Ctx";
 import SHeadCount from "./style";
 
 export default function headCount() {
   const { staff } = useContext(ctxProvider);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />

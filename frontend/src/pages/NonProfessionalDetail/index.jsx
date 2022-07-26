@@ -12,6 +12,9 @@ import SNewsList from "@components/NewsList/style";
 import SNonProfessionalDetail from "./style";
 
 function NonProfessionalDetail() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { news } = useContext(ctxProvider);
   const [teamDetail, setTeamDetail] = useState([]);
   const { id } = useParams();

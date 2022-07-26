@@ -3,12 +3,15 @@ import BigPicture from "@components/Archi/BigPicture";
 import Title from "@components/Archi/Title";
 import Arrow from "@components/Archi/Arrow";
 import ctxProvider from "@services/context/Ctx";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import CardStaff from "@components/CardStaff";
 import SStaff from "./style";
 
 export default function Staff() {
   const { staff } = useContext(ctxProvider);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />

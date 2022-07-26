@@ -3,11 +3,14 @@ import BigPicture from "@components/Archi/BigPicture";
 import Title from "@components/Archi/Title";
 import PlayerList from "@components/PlayerList";
 import CardStaff from "@components/CardStaff";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import ctxProvider from "@services/context/Ctx";
 import SFirstTeam from "./style";
 
 export default function FirstTeam() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { staff } = useContext(ctxProvider);
   return (
     <>

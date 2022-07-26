@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ctxProvider from "@services/context/Ctx";
 import BigTitle from "@components/Archi/BigTitle";
@@ -8,7 +8,9 @@ import SNonProfessional from "./style";
 export default function NonProfessional() {
   const { team } = useContext(ctxProvider);
   const divisions = ["NATIONALE", "TERRITORIALE", "FORMATION"];
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />

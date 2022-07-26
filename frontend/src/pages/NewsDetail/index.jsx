@@ -16,7 +16,9 @@ function NewsDetail() {
 
   const [newsDetail, setNewsDetail] = useState([]);
   const { id } = useParams();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   function date(dm) {
     return `${DateTime.fromISO(dm)
       .setLocale("fr")
