@@ -28,10 +28,10 @@ export default function BigPicture({
         <h3>FIL INFOS</h3>
         {news.slice(1, 4).map((article) => {
           return (
-            <>
-              <h6 key={article.id}>{article.title}</h6>
-              <p key={article.id}>{textShort(`${article.content}`)}</p>
-            </>
+            <div key={article.id}>
+              <h6>{article.title}</h6>
+              <p>{textShort(`${article.content}`)}</p>
+            </div>
           );
         })}
       </div>
