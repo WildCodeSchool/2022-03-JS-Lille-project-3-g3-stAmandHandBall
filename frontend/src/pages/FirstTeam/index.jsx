@@ -12,6 +12,11 @@ export default function FirstTeam() {
     window.scrollTo(0, 0);
   }, []);
   const { staff } = useContext(ctxProvider);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <BigPicture img="test" date="" hour="" club1="" club2="" text="" />

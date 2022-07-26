@@ -30,6 +30,13 @@ export default function PlayerList() {
               }
            `}
               number={player.number}
+              position={player.position}
+              captain={player.captain}
+              matchPlayed={player.matchPlayed}
+              goal={player.goal}
+              goalAverage={player.goalAverage}
+              stop={player.stop}
+              penalty={player.penalty}
             />
           );
         })}
