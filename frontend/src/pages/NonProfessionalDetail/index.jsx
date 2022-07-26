@@ -43,6 +43,7 @@ function NonProfessionalDetail() {
         <TitleLink
           title="CALENDRIER ET RÉSULTATS"
           link="www.https://www.ffhandball.fr/fr/competition/17757#poule-105861"
+          as="test"
         />
       </SNonProfessionalDetail>
       <SNewsList>
