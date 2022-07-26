@@ -19,9 +19,10 @@ export default styled.div`
     text-transform: uppercase;
   }
 
-  @media screen and (max-width: 700px) {
-    h1 {
-      line-height: 1.1em;
+    @media screen and (max-width: 700px) {
+      h1 {
+        line-height: 0.8em;
+      }
     }
   }
 `;
