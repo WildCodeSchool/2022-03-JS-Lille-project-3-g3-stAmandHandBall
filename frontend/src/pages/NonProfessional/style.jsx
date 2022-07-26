@@ -17,11 +17,12 @@ export default styled.div`
   }
   .title {
     height: 8vh;
-    border-bottom: 1px var(--white) solid;
   }
   .subtitle {
     height: 6vh;
     border-bottom: 1px var(--white) solid;
+    border-top: 1px var(--white) solid;
+
     background-color: #ffffff4e;
   }
   .allDivisions {
@@ -46,5 +47,8 @@ export default styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    .subtitle {
+      font-size: 0.8rem;
+    }
   }
 `;
