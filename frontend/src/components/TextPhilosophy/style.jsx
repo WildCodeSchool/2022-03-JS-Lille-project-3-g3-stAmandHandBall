@@ -4,6 +4,7 @@ export default styled.section`
   color: var(--white);
   article {
     height: 100%;
+    margin-bottom: 3rem;
   }
   .presentationText {
     p {
@@ -27,11 +28,21 @@ export default styled.section`
     font-size: 2rem;
     text-align: center;
   }
+  .playerList {
+    font-size: 1.5em;
+    padding-top: 2rem;
+  }
+  .complementary {
+    padding-bottom: 2rem;
+    font-size: 1.5em;
+  }
   .descriptionText {
     width: 50%;
     height: 20%;
     margin-top: 4rem;
     p {
+      font-size: 1.5em;
+
       padding: 2.2em;
     }
   }
