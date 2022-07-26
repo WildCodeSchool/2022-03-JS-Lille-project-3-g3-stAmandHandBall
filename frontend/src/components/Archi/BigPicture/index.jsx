@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import ctxProvider from "@services/context/Ctx";
 import SBigPicture from "./style";
 
 export default function BigPicture({
@@ -9,6 +11,11 @@ export default function BigPicture({
   club2Img,
   text,
 }) {
+  const { news } = useContext(ctxProvider);
+
+  function textShort(content) {
+    return content.slice(1, 90);
+  }
   return (
     <SBigPicture
       img={img}
@@ -19,7 +26,14 @@ export default function BigPicture({
     >
       <div className={`${text === "" ? "none" : "blocInfo"}`}>
         <h3>FIL INFOS</h3>
-        <p>{text}</p>
+        {news.slice(1, 4).map((article) => {
+          return (
+            <>
+              <h6 key={article.id}>{article.title}</h6>
+              <p key={article.id}>{textShort(`${article.content}`)}</p>
+            </>
+          );
+        })}
       </div>
       <div className={`${date === "" ? "none" : "calendar"}`}>
         <h2>PROCHAIN MATCH</h2>
