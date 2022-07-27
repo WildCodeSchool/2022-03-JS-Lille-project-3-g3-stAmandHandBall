@@ -10,7 +10,6 @@ export default styled.section`
       font-size: 1.5em;
       margin-top: 2rem;
       text-align: justify;
-      /* padding-top: 0rem; */
     }
     p:nth-child(3n) {
       padding-bottom: 2rem;
