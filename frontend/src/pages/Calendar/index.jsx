@@ -102,8 +102,8 @@ export default function Calendar() {
                         date={`${dayMonth(match.happenedAt)}`}
                         hour={`${hourMinute(match.happenedAt)}`}
                         place={`${match.isHome ? "domicile" : "exterieur"}`}
-                        club1={`${match.isHome ? "SAH-PH" : match.opponent}`}
-                        club2={`${match.isHome ? match.opponent : "SAH-PH"}`}
+                        club1={`${match.isHome ? "SAH-PH" : match.name}`}
+                        club2={`${match.isHome ? match.name : "SAH-PH"}`}
                         club1Img={`${match.isHome ? "sah-ph.png" : match.logo}`}
                         club2Img={`${match.isHome ? match.logo : "sah-ph.png"}`}
                         result={`${match.result === null ? "-" : match.result}`}

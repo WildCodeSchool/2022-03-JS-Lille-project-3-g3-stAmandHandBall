@@ -4,7 +4,6 @@ import Title from "@components/Archi/Title";
 import uuid from "react-uuid";
 import { useEffect } from "react";
 
-
 import SPartner from "./style";
 
 export default function Partner() {
