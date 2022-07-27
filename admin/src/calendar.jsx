@@ -7,7 +7,6 @@ import {
   SimpleForm,
   TextInput,
   EditButton,
-  DateInput,
   DateField,
   NumberInput,
   BooleanInput,
@@ -15,6 +14,7 @@ import {
   DeleteButton,
   ReferenceInput,
   SelectInput,
+  DateTimeInput,
 } from "react-admin";
 
 export function NewListCalendar() {
@@ -42,7 +42,11 @@ export function NewEditCalendar() {
       <SimpleForm>
         <NumberInput source="day" />
         <BooleanInput source="isHome" />
-        <DateInput source="happenedAt" />
+        <DateTimeInput
+          source="happenedAt"
+          locales="es-UY"
+          options={{ timeZone: "UTC" }}
+        />
         <TextInput source="result" />
         <ReferenceInput
           label="Opponent"
@@ -65,7 +69,7 @@ export function NewCreateCalendar() {
       <SimpleForm>
         <NumberInput source="day" />
         <BooleanInput source="isHome" />
-        <DateInput source="happenedAt" />
+        <DateTimeInput source="happenedAt" />
         <TextInput source="result" />
         <TextInput source="opponent" />
         <NumberInput source="opponent_id" />

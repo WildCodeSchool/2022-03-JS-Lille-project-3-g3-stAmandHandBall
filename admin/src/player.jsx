@@ -21,8 +21,8 @@ export function PlayerList() {
         <TextField source="lastname" />
         <TextField source="number" />
         <TextField source="position" />
-        <TextField source="captain" />
-        <TextField source="cf" />
+        <TextField source="captain" label="capitaine" />
+        <TextField source="cf" label="centre de formation" />
         <TextField source="matchPlayed" />
         <TextField source="goal" />
         <TextField source="goalAverage" />
@@ -49,13 +49,13 @@ export function PostEdit() {
             { id: "Pivot", name: "Pivot" },
             { id: "DemieCentre", name: "Demie centre" },
             { id: "AiliereGauche", name: "Ailière gauche" },
-            { id: "ArriereDroite", name: "Arriàre droite" },
+            { id: "ArriereGauche", name: "Arrière gauche" },
             { id: "Gardienne", name: "Gardienne" },
             { id: "non", name: "non" },
           ]}
         />
-        <BooleanInput label="captain" source="captain" />
-        <BooleanInput label="cf" source="cf" />
+        <BooleanInput label="capitain" source="captain" />
+        <BooleanInput label="centre de formation" source="cf" />
         <NumberInput source="matchPlayed" />
         <NumberInput source="goal" />
         <NumberInput source="goalAverage" />
@@ -81,13 +81,13 @@ export function PostCreate() {
             { id: "Pivot", name: "Pivot" },
             { id: "DemieCentre", name: "Demie centre" },
             { id: "AiliereGauche", name: "Ailière gauche" },
-            { id: "ArriereDroite", name: "Arriàre droite" },
+            { id: "ArriereGauche", name: "Arrière gauche" },
             { id: "Gardienne", name: "Gardienne" },
             { id: "non", name: "non" },
           ]}
         />
-        <BooleanInput label="captain" source="captain" />
-        <BooleanInput label="cf" source="cf" />
+        <BooleanInput label="capitain" source="captain" />
+        <BooleanInput label="centre de formation" source="cf" />
         <NumberInput source="matchPlayed" />
         <NumberInput source="goal" />
         <NumberInput source="goalAverage" />

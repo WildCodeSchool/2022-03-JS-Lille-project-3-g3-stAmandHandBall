@@ -10,14 +10,13 @@ import {
   DeleteButton,
   Create,
 } from "react-admin";
-import { RichTextInput } from "ra-input-rich-text";
 
 export function NewListHistory() {
   return (
     <List>
       <Datagrid rowClick="edit">
         <TextField source="id" />
-        <TextField source="title" />
+        <TextField source="title" label="Date" />
         <TextField source="text" />
         <DeleteButton />
         <EditButton />
@@ -30,8 +29,8 @@ export function NewEditHistory() {
   return (
     <Edit>
       <SimpleForm>
-        <TextInput source="title" />
-        <RichTextInput source="text" />
+        <TextInput source="title" label="Date" />
+        <TextInput source="text" />
       </SimpleForm>
     </Edit>
   );
@@ -41,8 +40,8 @@ export function NewCreateHistory() {
   return (
     <Create>
       <SimpleForm>
-        <TextInput source="title" />
-        <RichTextInput source="text" />
+        <TextInput source="title" label="Date" />
+        <TextInput source="text" />
       </SimpleForm>
     </Create>
   );

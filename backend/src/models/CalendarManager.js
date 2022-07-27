@@ -5,7 +5,7 @@ class CalendarManager extends AbstractManager {
 
   insert(calendar) {
     return this.connection.query(
-      `insert into ${CalendarManager.table} (id, day, isHome, happenedAt, result, opponent, opponent_id, place, news_id) values (?,?,?,?,?,?,?,?,?)`,
+      `insert into ${CalendarManager.table} (day, isHome, happenedAt, result, opponent, opponent_id, place, news_id) values (?,?,?,?,?,?,?,?)`,
       [
         calendar.day,
         calendar.isHome,
