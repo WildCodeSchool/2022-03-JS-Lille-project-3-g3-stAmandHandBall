@@ -33,7 +33,7 @@ export default function FirstTeam() {
                 <CardStaff
                   key={`${person.id}${person.firstname}${person.lastname}`}
                   name={`${person.firstname} ${person.lastname}`}
-                  img={`./src/assets/images/cards/staff/${person.staffImg}`}
+                  img={`./src/assets/images/cards/staff/${person.staff_img}`}
                   role={person.name}
                 />
               );

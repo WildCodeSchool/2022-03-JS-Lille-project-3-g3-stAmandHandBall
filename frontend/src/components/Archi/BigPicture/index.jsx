@@ -26,7 +26,7 @@ export default function BigPicture({
     >
       <div className={`${text === "" ? "none" : "blocInfo"}`}>
         <h3>FIL INFOS</h3>
-        {news.slice(1, 4).map((article) => {
+        {news.slice(0, 3).map((article) => {
           return (
             <div key={article.id}>
               <h6>{article.title}</h6>
