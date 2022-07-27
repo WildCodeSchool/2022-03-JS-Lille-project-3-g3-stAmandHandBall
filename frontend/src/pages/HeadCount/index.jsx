@@ -1,14 +1,13 @@
 import BigTitle from "@components/Archi/BigTitle";
 import BigPicture from "@components/Archi/BigPicture";
 import Title from "@components/Archi/Title";
-import PlayerList from "@components/PlayerList";
 import CardStaff from "@components/CardStaff";
 import { useContext, useEffect } from "react";
 import ctxProvider from "@services/context/Ctx";
 import SHeadCount from "./style";
 
 export default function headCount() {
-  const { staff } = useContext(ctxProvider);
+  const { staff, players } = useContext(ctxProvider);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,7 +17,22 @@ export default function headCount() {
       <BigTitle title="EFFECTIF" />
       <SHeadCount>
         <Title title="JOUEUSES" />
-        <PlayerList />
+        <section className="rowCard">
+          {players
+            .filter((person) => [1].includes(person.cf))
+            .map((person) => {
+              return (
+                <CardStaff
+                  key={person.id}
+                  name={`${person.firstname} ${person.lastname}`}
+                  img={`./src/assets/images/cards/players/${
+                    person.img || "test.png"
+                  } 
+                  `}
+                />
+              );
+            })}
+        </section>{" "}
         <Title title="STAFF" />
         <p className="staffTxt">
           Le Centre de Formation offre un accompagnement complet des structures
@@ -39,19 +53,16 @@ export default function headCount() {
           féminin français <br />
           Réunion prévention et lutte contre les pratiques dopantes
         </p>
-
         <section className="rowCard">
           {staff
-            .filter((person) =>
-              [21, 22, 17, 18, 19, 31, 33, 35].includes(person.role_id)
-            )
+            .filter((person) => [1].includes(person.cf))
             .map((person) => {
               return (
                 <CardStaff
                   key={`${person.id}${person.role_id}${person.staff_id}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  role={person.name}
+                  role={person.roleName}
                 />
               );
             })}

@@ -42,14 +42,6 @@ export function CtxProvider({ children }) {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/staff"}`)
-      .then(({ data }) => {
-        setStaff(data);
-      });
-  }, []);
-
-  useEffect(() => {
-    axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/news"}`)
       .then(({ data }) => {
         setNews(data);
@@ -69,14 +61,6 @@ export function CtxProvider({ children }) {
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/referee"}`)
       .then(({ data }) => {
         setReferee(data);
-      });
-  }, []);
-
-  useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/team"}`)
-      .then(({ data }) => {
-        setTeam(data);
       });
   }, []);
 

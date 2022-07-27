@@ -40,7 +40,7 @@ export default function TextPhilosophy() {
                   key={person.id}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  role={person.name}
+                  role={person.roleName}
                 />
               );
             })}
@@ -66,7 +66,7 @@ export default function TextPhilosophy() {
                   key={person.id}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  role={person.name}
+                  role={person.roleName}
                 />
               );
             })}
@@ -92,7 +92,7 @@ export default function TextPhilosophy() {
                   key={person.id}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  role={person.name}
+                  role={person.roleName}
                 />
               );
             })}
@@ -119,7 +119,7 @@ export default function TextPhilosophy() {
                   key={person.id}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  role={person.name}
+                  role={person.roleName}
                 />
               );
             })}

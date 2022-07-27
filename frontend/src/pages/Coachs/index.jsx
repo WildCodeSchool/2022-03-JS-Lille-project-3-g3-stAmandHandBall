@@ -9,11 +9,11 @@ import { useContext, useEffect } from "react";
 import SCoachs from "./style";
 
 export default function Coachs() {
+  const { staff } = useContext(ctxProvider);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const { staff } = useContext(ctxProvider);
 
   return (
     <>

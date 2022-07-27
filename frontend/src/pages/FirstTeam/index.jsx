@@ -11,7 +11,7 @@ export default function FirstTeam() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const { staff } = useContext(ctxProvider);
+  const { team } = useContext(ctxProvider);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,14 +26,14 @@ export default function FirstTeam() {
         <PlayerList />
         <Title title="STAFF" />
         <section className="rowCard">
-          {staff
-            .filter((person) => [17, 18, 19].includes(person.role_id))
+          {team
+            .filter((person) => ["D1F"].includes(person.title))
             .map((person) => {
               return (
                 <CardStaff
-                  key={`${person.id}${person.role_id}${person.staff_id}`}
+                  key={`${person.id}${person.firstname}${person.lastname}`}
                   name={`${person.firstname} ${person.lastname}`}
-                  img={`./src/assets/images/cards/staff/${person.img}`}
+                  img={`./src/assets/images/cards/staff/${person.staffImg}`}
                   role={person.name}
                 />
               );

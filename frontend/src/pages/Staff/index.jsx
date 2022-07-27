@@ -20,14 +20,14 @@ export default function Staff() {
         <Title title="BUREAU DIRECTEUR" />
         <section className="rowCard">
           {staff
-            .filter((person) => [17, 18, 19].includes(person.role_id))
+            .filter((person) => ["BUREAU DIRECTEUR"].includes(person.groupName))
             .map((person) => {
               return (
                 <CardStaff
                   key={`${person.id}${person.role_id}${person.staff_id}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  role={person.name}
+                  role={person.roleName}
                 />
               );
             })}
@@ -36,14 +36,16 @@ export default function Staff() {
         <Title title="CONSEIL D’ADMINISTRATION" />
         <section className="rowCard">
           {staff
-            .filter((person) => [20].includes(person.role_id))
+            .filter((person) =>
+              ["CONSEIL D'ADMINISTRATION"].includes(person.groupName)
+            )
             .map((person) => {
               return (
                 <CardStaff
                   key={`${person.id}${person.role_id}${person.staff_id}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  role={person.name}
+                  role={person.roleName}
                 />
               );
             })}
@@ -52,14 +54,14 @@ export default function Staff() {
         <Title title="LE SPORTIF" />
         <section className="rowCard">
           {staff
-            .filter((person) => [17, 18, 19].includes(person.role_id))
+            .filter((person) => ["LE SPORTIF"].includes(person.groupName))
             .map((person) => {
               return (
                 <CardStaff
                   key={`${person.id}${person.role_id}${person.staff_id}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  role={person.name}
+                  role={person.roleName}
                 />
               );
             })}
@@ -68,14 +70,14 @@ export default function Staff() {
         <Title title="ADMINISTRATIF" />
         <section className="rowCard">
           {staff
-            .filter((person) => [12, 13, 14, 15, 16].includes(person.role_id))
+            .filter((person) => ["ADMINISTRATIF"].includes(person.groupName))
             .map((person) => {
               return (
                 <CardStaff
                   key={`${person.id}${person.role_id}${person.staff_id}`}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
-                  role={person.name}
+                  role={person.roleName}
                 />
               );
             })}
