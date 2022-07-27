@@ -20,6 +20,7 @@ export default styled.div`
     }
     span {
       font-size: 3em;
+      margin-bottom: 15%;
     }
     p {
       font-size: 1.3em;

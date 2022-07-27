@@ -18,6 +18,10 @@ export default function CardReferee({ name, img, role }) {
 
 CardReferee.propTypes = {
   name: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
+  role: PropTypes.string,
   img: PropTypes.string.isRequired,
+};
+
+CardReferee.defaultProps = {
+  role: "",
 };

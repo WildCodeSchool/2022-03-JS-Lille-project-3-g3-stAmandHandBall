@@ -65,7 +65,7 @@ export default function CardCalendar({
 }
 
 CardCalendar.propTypes = {
-  day: PropTypes.number.isRequired,
+  day: PropTypes.number,
   cup: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   hour: PropTypes.string.isRequired,
@@ -76,4 +76,8 @@ CardCalendar.propTypes = {
   club2Img: PropTypes.string.isRequired,
   result: PropTypes.string.isRequired,
   news: PropTypes.number.isRequired,
+};
+
+CardCalendar.defaultProps = {
+  day: 0,
 };

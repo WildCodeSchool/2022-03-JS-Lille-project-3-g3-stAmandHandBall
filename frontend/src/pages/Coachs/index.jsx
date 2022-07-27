@@ -4,16 +4,16 @@ import BigTitle from "@components/Archi/BigTitle";
 import Title from "@components/Archi/Title";
 import CardStaff from "@components/CardStaff";
 import ctxProvider from "@services/context/Ctx";
+import uuid from "react-uuid";
 import { useContext, useEffect } from "react";
 import SCoachs from "./style";
 
 export default function Coachs() {
-  // const { team } = useContext(ctxProvider);
+  const { staff } = useContext(ctxProvider);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const { staff } = useContext(ctxProvider);
 
   return (
     <>
@@ -27,7 +27,7 @@ export default function Coachs() {
             .map((person) => {
               return (
                 <CardStaff
-                  key={`${person.id}${person.roleName}${person.groupName}`}
+                  key={uuid()}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.title}
@@ -45,7 +45,7 @@ export default function Coachs() {
             .map((person) => {
               return (
                 <CardStaff
-                  key={`${person.id}${person.roleName}${person.groupName}`}
+                  key={uuid()}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.title}
@@ -63,7 +63,7 @@ export default function Coachs() {
             .map((person) => {
               return (
                 <CardStaff
-                  key={`${person.id}${person.roleName}${person.groupName}`}
+                  key={uuid()}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.title}
@@ -81,7 +81,7 @@ export default function Coachs() {
             .map((person) => {
               return (
                 <CardStaff
-                  key={`${person.id}${person.roleName}${person.groupName}`}
+                  key={uuid()}
                   name={`${person.firstname} ${person.lastname}`}
                   img={`./src/assets/images/cards/staff/${person.img}`}
                   role={person.title}
