@@ -12,7 +12,6 @@ export default styled.section`
   justify-content: right;
   text-shadow: var(--text-shadow);
   background-position: center;
-
   .blocInfo {
     text-shadow: none;
     display: flex;
@@ -22,15 +21,21 @@ export default styled.section`
     background-color: #f2f6fa85;
     width: 25vw;
     color: var(--blue);
-    padding-top: 7vh;
+    padding-top: 4vh;
     text-align: center;
     h3 {
       font-size: 2rem;
+      padding-bottom: 3vh;
+    }
+    h6 {
+      font-size: 1.5rem;
+      padding: 0 2vw 0 2vw;
+      line-height: 1.5rem;
     }
     p {
-      font-size: 1rem;
-      line-height: 1.2rem;
-      padding: 4vw;
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+      padding: 0 2vw 3vh 2vw;
     }
   }
   .none {
@@ -56,7 +61,7 @@ export default styled.section`
     }
     .club1 {
       background: ${(props) => {
-        return `url(../src/assets/images/logos/clubs/${props.club1}.png) no-repeat`;
+        return `url(../src/assets/images/logos/clubs/${props.club1Img}) no-repeat`;
       }};
       background-size: contain;
       background-position: center;
@@ -72,7 +77,7 @@ export default styled.section`
     }
     .club2 {
       background: ${(props) => {
-        return `url(../src/assets/images/logos/clubs/${props.club2}.png) no-repeat`;
+        return `url(../src/assets/images/logos/clubs/${props.club2Img}) no-repeat`;
       }};
       background-size: contain;
       background-position: center;
@@ -96,12 +101,11 @@ export default styled.section`
       aspect-ratio: 3/1;
       background-color: var(--yellow);
       color: var(--blue);
-      font-size: 1.5rem;
-      line-height: 1.8rem;
+      font-size: 1.4rem;
+      line-height: 2rem;
       box-shadow: var(--box-shadow);
     }
   }
-
   @media screen and (max-width: 700px) {
     height: 60vh;
     margin-top: 10vh;
@@ -136,7 +140,7 @@ export default styled.section`
       .info {
         width: 45%;
         aspect-ratio: 3/1;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
     .blocInfo {

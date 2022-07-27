@@ -137,9 +137,9 @@ export default function TextPhilosophy() {
         </div>
       </article>
       <article>
-        <p>
+        <p className="complement">
           Pour tout complément d’information, on vous invite à nous solliciter
-          aux coordonnées suivantes : centredeformation@sah-ph.fr
+          aux coordonnées suivantes : <br /> centredeformation@sah-ph.fr
         </p>
         <h3 className="yellow">
           Liste des joueuses passées dans la formation amandinoise :

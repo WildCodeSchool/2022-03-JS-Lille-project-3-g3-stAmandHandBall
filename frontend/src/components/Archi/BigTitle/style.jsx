@@ -21,7 +21,7 @@ export default styled.div`
 
     @media screen and (max-width: 700px) {
       h1 {
-        line-height: 0.8em;
+        line-height: 1.4em;
       }
     }
   }

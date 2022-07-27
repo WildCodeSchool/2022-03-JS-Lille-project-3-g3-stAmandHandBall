@@ -10,7 +10,10 @@ export default styled.section`
       font-size: 1.5em;
       margin-top: 2rem;
       text-align: justify;
-      padding: 0.6rem;
+      /* padding-top: 0rem; */
+    }
+    p:nth-child(3n) {
+      padding-bottom: 2rem;
     }
   }
   .left,
@@ -38,6 +41,15 @@ export default styled.section`
   .image {
     display: flex;
   }
+  .complement {
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+  }
+  .playerList {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 
   @media screen and (max-width: 700px) {
     .left,
@@ -49,10 +61,22 @@ export default styled.section`
     }
     .yellow {
       padding: 0.3rem;
+      padding-bottom: 2rem;
+    }
+    .complement {
+      font-size: 1rem;
+      padding-bottom: 2rem;
+      text-align: justify;
+    }
+    .playerList {
+      font-size: 1.5rem;
     }
     .presentationText {
       p {
-        text-align: start;
+        font-size: 1.2em;
+      }
+      p:nth-child(3n) {
+        padding-bottom: 5rem;
       }
     }
     .image {
@@ -63,7 +87,7 @@ export default styled.section`
       width: 100%;
       p {
         padding: 0.3em;
-        text-align: start;
+        text-align: justify;
       }
     }
   }

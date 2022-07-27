@@ -48,7 +48,6 @@ export default function Referee() {
               );
             })}
         </section>
-        <Arrow />
       </SReferee>
     </>
   );
