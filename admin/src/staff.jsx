@@ -19,7 +19,7 @@ export function NewListStaff() {
         <TextField source="lastname" />
         <TextField source="firstname" />
         <TextField source="img" />
-        <TextField source="cf" />
+        <TextField source="cf" label="centre de formation" />
         <DeleteButton />
         <EditButton />
       </Datagrid>
@@ -34,7 +34,7 @@ export function NewEditStaff() {
         <TextInput source="lastname" />
         <TextInput source="firstname" />
         <TextInput source="img" />
-        <BooleanInput label="cf" source="cf" />
+        <BooleanInput label="centre de formation" source="cf" />
       </SimpleForm>
     </Edit>
   );
@@ -47,7 +47,7 @@ export function NewCreateStaff() {
         <TextInput source="lastname" />
         <TextInput source="firstname" />
         <TextInput source="img" />
-        <BooleanInput label="cf" source="cf" />
+        <BooleanInput label="centre de formation" source="cf" />
       </SimpleForm>
     </Create>
   );
