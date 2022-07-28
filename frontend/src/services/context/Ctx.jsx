@@ -15,6 +15,8 @@ export function CtxProvider({ children }) {
   const [referee, setReferee] = useState([]);
   const [opponent, setOpponent] = useState([]);
   const [history, setHistory] = useState([]);
+  const [nonProfessionnal, setNonProfessionnal] = useState([]);
+  const [newsTeam, setNewsTeam] = useState([]);
 
   useEffect(() => {
     axios
@@ -84,7 +86,15 @@ export function CtxProvider({ children }) {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}${"/news/team"}`)
       .then(({ data }) => {
-        setNews(data);
+        setNewsTeam(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/team"}`)
+      .then(({ data }) => {
+        setNonProfessionnal(data);
       });
   }, []);
 
@@ -118,6 +128,8 @@ export function CtxProvider({ children }) {
         referee,
         opponent,
         role,
+        nonProfessionnal,
+        newsTeam,
       }}
     >
       {children}

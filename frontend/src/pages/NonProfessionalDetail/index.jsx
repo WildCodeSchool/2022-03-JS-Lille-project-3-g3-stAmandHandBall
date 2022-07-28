@@ -8,7 +8,6 @@ import CardStaff from "@components/CardStaff";
 import Title from "@components/Archi/Title";
 import TitleLink from "@components/Archi/TitleLink";
 import CardNews from "@components/CardNews";
-import SNewsList from "@components/NewsList/style";
 import SNonProfessionalDetail from "./style";
 
 function NonProfessionalDetail() {
@@ -48,23 +47,21 @@ function NonProfessionalDetail() {
           link="www.https://www.ffhandball.fr/fr/competition/17757#poule-105861"
           as="test"
         />
-      </SNonProfessionalDetail>
-      <SNewsList>
         <Title title="ARTICLES RÉCAPITULATIFS" />
         {news
-          .filter((article) => article.team_id === id)
+          .filter((article) => article.team_id === Number(id))
           .map((article) => {
             return (
               <CardNews
                 key={article.id}
                 id={article.id}
                 title={article.title}
-                img={article.img}
+                img1={article.img1}
                 content={article.content}
               />
             );
           })}
-      </SNewsList>
+      </SNonProfessionalDetail>
     </>
   );
 }

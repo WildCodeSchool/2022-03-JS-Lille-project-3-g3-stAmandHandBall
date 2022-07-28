@@ -7,7 +7,7 @@ import uuid from "react-uuid";
 import SNonProfessional from "./style";
 
 export default function NonProfessional() {
-  const { team } = useContext(ctxProvider);
+  const { nonProfessionnal } = useContext(ctxProvider);
   const divisions = ["NATIONALE", "TERRITORIALE", "FORMATION"];
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,7 +27,7 @@ export default function NonProfessional() {
                 <div className="subtitle">
                   <h3>{division}</h3>
                 </div>
-                {team
+                {nonProfessionnal
                   .filter((element) => {
                     if (element.id === 2) {
                       return false;
