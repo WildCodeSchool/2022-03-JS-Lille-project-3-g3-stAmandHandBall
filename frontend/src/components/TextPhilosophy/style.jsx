@@ -4,14 +4,15 @@ export default styled.section`
   color: var(--white);
   article {
     height: 100%;
-    margin-bottom: 3rem;
   }
   .presentationText {
     p {
       font-size: 1.5em;
       margin-top: 2rem;
       text-align: justify;
-      padding: 0.6rem;
+    }
+    p:nth-child(3n) {
+      padding-bottom: 2rem;
     }
   }
   .left,
@@ -28,26 +29,25 @@ export default styled.section`
     font-size: 2rem;
     text-align: center;
   }
-  .playerList {
-    font-size: 1.5em;
-    padding-top: 2rem;
-  }
-  .complementary {
-    padding-bottom: 2rem;
-    font-size: 1.5em;
-  }
   .descriptionText {
     width: 50%;
     height: 20%;
     margin-top: 4rem;
     p {
-      font-size: 1.5em;
-
       padding: 2.2em;
     }
   }
   .image {
     display: flex;
+  }
+  .complement {
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+  }
+  .playerList {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   @media screen and (max-width: 700px) {
@@ -60,10 +60,22 @@ export default styled.section`
     }
     .yellow {
       padding: 0.3rem;
+      padding-bottom: 2rem;
+    }
+    .complement {
+      font-size: 1rem;
+      padding-bottom: 2rem;
+      text-align: justify;
+    }
+    .playerList {
+      font-size: 1.5rem;
     }
     .presentationText {
       p {
-        text-align: start;
+        font-size: 1.2em;
+      }
+      p:nth-child(3n) {
+        padding-bottom: 5rem;
       }
     }
     .image {
@@ -74,7 +86,7 @@ export default styled.section`
       width: 100%;
       p {
         padding: 0.3em;
-        text-align: start;
+        text-align: justify;
       }
     }
   }

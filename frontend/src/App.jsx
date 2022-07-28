@@ -67,8 +67,8 @@ function App() {
            */}
         </Routes>
       </main>
-      <Header />
       <Footer />
+      <Header />
     </div>
   );
 }

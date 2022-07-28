@@ -24,8 +24,12 @@ export default function CardPlayer({
           <h3 className={captain ? "" : "none"}>Capitaine</h3>
           <h3 className="position">{position}</h3>
           <p>Matchs : {matchPlayed}</p>
-          <p>Buts marqués : {goal}</p>
-          <p>Moyenne de buts : {goalAverage}</p>
+          <p className={position !== "Gardienne" ? "" : "none"}>
+            Buts marqués : {goal}
+          </p>
+          <p className={position !== "Gardienne" ? "" : "none"}>
+            Moyenne de buts : {goalAverage}
+          </p>
           <p className={position === "Gardienne" ? "" : "none"}>
             Arrêts : {stop}
           </p>
