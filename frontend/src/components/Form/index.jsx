@@ -68,7 +68,7 @@ export default function Form() {
           value={formData.message}
           onChange={hChange}
         />
-        <input type="submit" value="Envoyez" />
+        <input type="submit" value="Envoyer" />
       </form>
     </SForm>
   );
