@@ -8,7 +8,7 @@ import {
   TextInput,
   EditButton,
   Create,
-  DateInput,
+  DateTimeInput,
   DateField,
 } from "react-admin";
 import { RichTextInput } from "ra-input-rich-text";
@@ -31,7 +31,7 @@ export function NewEdit() {
   return (
     <Edit>
       <SimpleForm>
-        <DateInput source="publishedAt" />
+        <DateTimeInput source="publishedAt" />
         <TextInput source="title" />
         <TextInput source="subTitle" />
         <RichTextInput source="content" />
@@ -44,7 +44,7 @@ export function NewCreate() {
   return (
     <Create>
       <SimpleForm>
-        <DateInput source="publishedAt" />
+        <DateTimeInput source="publishedAt" />
         <TextInput source="title" />
         <TextInput source="subTitle" />
         <RichTextInput source="content" />
