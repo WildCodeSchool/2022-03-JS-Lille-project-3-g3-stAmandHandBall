@@ -1,43 +1,53 @@
 import PropTypes from "prop-types";
-import { useTimer } from "react-timer-hook";
+import { useState, useEffect } from "react";
+
 import SCounterDetail from "./style";
 
 export default function CounterDetail({ dateOfNextMatch }) {
   const nextMatch = new Date(dateOfNextMatch);
-  const today = new Date();
+  const [countDown, setCountDown] = useState(nextMatch - new Date().getTime());
 
-  const diffOfDates = (nextMatch - today) / 1000;
+  const getReturnValues = (time) => {
+    const days = Math.floor(time / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
 
-  const expiryTimestamp = new Date();
-  expiryTimestamp.setSeconds(expiryTimestamp.getSeconds() + diffOfDates);
+    return [days, hours, minutes];
+  };
 
-  const { minutes, hours, days } = useTimer({
-    expiryTimestamp,
-  });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCountDown(getReturnValues(nextMatch - new Date().getTime()));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [nextMatch]);
 
   return (
     <SCounterDetail>
       <div className="noMobile">
         <div className="row">
-          <p className="numbersCount">{days}</p>
-          <p>{`${days < 2 ? "JOUR" : "JOURS"}`}</p>
+          <p className="numbersCount">{countDown[0]}</p>
+          <p>{`${countDown[0] < 2 ? "JOUR" : "JOURS"}`}</p>
         </div>
         <span>-</span>
         <div className="row">
-          <p className="numbersCount"> {hours} </p>
-          <p>{`${hours < 2 ? "HEURE" : "HEURES"}`}</p>
+          <p className="numbersCount"> {countDown[1]} </p>
+          <p>{`${countDown[1] < 2 ? "HEURE" : "HEURES"}`}</p>
         </div>
         <span>-</span>
         <div className="row">
-          <p className="numbersCount"> {minutes} </p>
-          <p>{`${minutes < 2 ? "MINUTE" : "MINUTES"}`}</p>
+          <p className="numbersCount"> {countDown[2]} </p>
+          <p>{`${countDown[2] < 2 ? "MINUTE" : "MINUTES"}`}</p>
         </div>
       </div>
       <div className="mobile">
         <p>
-          <em>{days}</em> {`${days < 2 ? "JOUR " : "JOURS "}`} -<em>{hours}</em>
-          {`${hours < 2 ? " HEURE " : " HEURES "}`}- <em>{minutes}</em>
-          {`${minutes < 2 ? " MINUTE" : " MINUTES"}`}
+          <em>{countDown[0]}</em> {`${countDown[0] < 2 ? "JOUR " : "JOURS "}`} -
+          <em>{countDown[1]}</em>
+          {`${countDown[1] < 2 ? " HEURE " : " HEURES "}`}-{" "}
+          <em>{countDown[2]}</em>
+          {`${countDown[2] < 2 ? " MINUTE" : " MINUTES"}`}
         </p>
       </div>
     </SCounterDetail>
